@@ -1,0 +1,268 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:layout_gravity="start"
+android:orientation="horizontal"
+android:windowSoftInputMode="stateHidden"
+android:background="#000000"
+tools:context=".USBHIDTerminal">
+
+
+<Button
+    android:id="@+id/btnSelectHIDDevice"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:minHeight="36dip"
+    android:minWidth="50dip"
+    android:text="@string/selectHIDDevice"
+    android:textAppearance="?android:attr/textAppearanceSmallInverse"
+    android:textColor="#FFFF00"
+    app:layout_constraintBaseline_toBaselineOf="@+id/btnSend"
+    tools:layout_constraintBaseline_creator="1"
+    tools:layout_constraintLeft_creator="1"
+    app:layout_constraintLeft_toLeftOf="@+id/edtxtHidInput">
+
+</Button>
+
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:minHeight="36dip"
+    android:minWidth="50dip"
+    android:text="Calibration"
+    android:textColor="#FFFF00"
+    android:textAppearance="?android:attr/textAppearanceSmallInverse"
+    android:onClick="cali_click"
+    android:id="@+id/button_calibrate"
+    app:layout_constraintBaseline_toBaselineOf="@+id/btnSend"
+    tools:layout_constraintBaseline_creator="1"
+    tools:layout_constraintLeft_creator="1"
+    app:layout_constraintLeft_toRightOf="@+id/btnSend">
+
+</Button>
+
+
+<Button
+    android:id="@+id/btnSend"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:enabled="false"
+    android:minHeight="36dip"
+    android:text="@string/send"
+    android:textAppearance="?android:attr/textAppearanceSmallInverse"
+    android:textColor="#FFFF00"
+    tools:layout_constraintTop_creator="1"
+    tools:layout_constraintLeft_creator="1"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintLeft_toRightOf="@+id/btnSelectHIDDevice">
+
+    <requestFocus />
+</Button>
+
+
+
+<EditText
+    android:id="@+id/edtxtHidInput"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:inputType="text"
+    android:textAppearance="?android:attr/textAppearanceSmallInverse"
+    android:textColor="#FFFF00"
+    tools:layout_constraintTop_creator="1"
+    tools:layout_constraintRight_creator="1"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/btnSelectHIDDevice"
+    tools:layout_constraintLeft_creator="1"
+    app:layout_constraintLeft_toLeftOf="parent">
+
+</EditText>
+
+
+<RadioButton
+    android:id="@+id/rbSendData"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/sendData"
+    android:textColor="#FFFF00"
+    android:textAppearance="?android:attr/textAppearanceSmallInverse"
+    android:checked="false"
+    tools:layout_constraintRight_creator="1"
+    tools:layout_constraintBottom_creator="1"
+    app:layout_constraintBottom_toTopOf="@+id/edtxtHidInput"
+    app:layout_constraintRight_toRightOf="@+id/edtxtHidInput">
+
+</RadioButton>
+
+
+<SeekBar
+    android:layout_width="0dp"
+    android:layout_height="50dp"
+    android:minHeight="50dp"
+    android:maxHeight="100dp"
+    android:id="@+id/sld_LED0int"
+    android:max="255"
+    android:indeterminate="false"
+    android:progress="0"
+    tools:layout_constraintTop_creator="1"
+    tools:layout_constraintRight_creator="1"
+    app:layout_constraintRight_toRightOf="@+id/edtxtHidInput"
+    app:layout_constraintTop_toBottomOf="@+id/edtxtHidInput"
+    tools:layout_constraintLeft_creator="1"
+    app:layout_constraintLeft_toLeftOf="@+id/edtxtHidInput">
+
+</SeekBar>
+
+<SeekBar
+    android:layout_width="0dp"
+    android:layout_height="50dp"
+    android:minHeight="50dp"
+    android:maxHeight="100dp"
+    android:id="@+id/sld_LED1int"
+    android:max="255"
+    android:indeterminate="false"
+    android:progress="0"
+    tools:layout_constraintTop_creator="1"
+    tools:layout_constraintRight_creator="1"
+    app:layout_constraintRight_toRightOf="@+id/sld_LED0int"
+    app:layout_constraintTop_toBottomOf="@+id/sld_LED0int"
+    tools:layout_constraintLeft_creator="1"
+    app:layout_constraintLeft_toLeftOf="@+id/sld_LED0int"
+    app:layout_constraintHorizontal_bias="0.0">
+
+</SeekBar>
+
+<SeekBar
+    android:layout_width="0dp"
+    android:layout_height="50dp"
+    android:minHeight="50dp"
+    android:maxHeight="100dp"
+    android:id="@+id/sld_LED2int"
+    android:max="255"
+    android:indeterminate="false"
+    android:progress="0"
+    tools:layout_constraintTop_creator="1"
+    tools:layout_constraintRight_creator="1"
+    app:layout_constraintRight_toRightOf="@+id/sld_LED1int"
+    app:layout_constraintTop_toBottomOf="@+id/sld_LED1int"
+    tools:layout_constraintLeft_creator="1"
+    app:layout_constraintLeft_toLeftOf="@+id/sld_LED1int">
+
+</SeekBar>
+
+
+<SeekBar
+    android:layout_width="0dp"
+    android:layout_height="100dp"
+    android:minHeight="100dp"
+    android:maxHeight="100dp"
+    android:id="@+id/sld_RG1"
+    android:max="255"
+    android:indeterminate="false"
+    android:progress="0"
+    tools:layout_constraintRight_creator="1"
+    tools:layout_constraintBottom_creator="1"
+    app:layout_constraintBottom_toTopOf="@+id/sld_RG2"
+    app:layout_constraintRight_toRightOf="@+id/sld_RG2"
+    tools:layout_constraintLeft_creator="1"
+    android:layout_marginBottom="66dp"
+    app:layout_constraintLeft_toLeftOf="@+id/sld_RG2">
+
+</SeekBar>
+
+<SeekBar
+    android:layout_width="0dp"
+    android:layout_height="100dp"
+    android:minHeight="100dp"
+    android:maxHeight="100dp"
+    android:id="@+id/sld_RG2"
+    android:max="255"
+    android:indeterminate="false"
+    android:progress="0"
+    tools:layout_constraintRight_creator="1"
+    tools:layout_constraintBottom_creator="1"
+    app:layout_constraintBottom_toTopOf="@+id/sld_RG3"
+    app:layout_constraintRight_toRightOf="parent"
+    tools:layout_constraintLeft_creator="1"
+    android:layout_marginBottom="58dp"
+    app:layout_constraintLeft_toRightOf="@+id/button_calibrate">
+
+</SeekBar>
+
+<SeekBar
+    android:layout_width="0dp"
+    android:layout_height="100dp"
+    android:minHeight="100dp"
+    android:maxHeight="100dp"
+    android:id="@+id/sld_RG3"
+    android:max="255"
+    android:indeterminate="false"
+    android:progress="0"
+    tools:layout_constraintRight_creator="1"
+    tools:layout_constraintBottom_creator="1"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintRight_toRightOf="@+id/sld_RG2"
+    tools:layout_constraintLeft_creator="1"
+    android:layout_marginBottom="98dp"
+    app:layout_constraintLeft_toLeftOf="@+id/sld_RG2">
+
+</SeekBar>
+
+<ImageView
+    android:layout_width="0dp"
+    android:layout_height="166dp"
+    android:id="@+id/iv_circleC"
+    android:src="#FF0000"
+    tools:layout_constraintRight_creator="1"
+    tools:layout_constraintBottom_creator="1"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintRight_toRightOf="@+id/iv_circleB"
+    tools:layout_constraintLeft_creator="1"
+    app:layout_constraintLeft_toLeftOf="@+id/iv_circleB"
+    android:layout_marginBottom="56dp"
+    app:layout_constraintHorizontal_bias="0.0">
+
+</ImageView>
+
+<ImageView
+    android:layout_width="0dp"
+    android:layout_height="166dp"
+    android:id="@+id/iv_circleB"
+    android:src="#FF0000"
+    tools:layout_constraintRight_creator="1"
+    tools:layout_constraintBottom_creator="1"
+    app:layout_constraintBottom_toTopOf="@+id/iv_circleC"
+    app:layout_constraintRight_toRightOf="@+id/iv_circleA"
+    tools:layout_constraintLeft_creator="1"
+    app:layout_constraintLeft_toLeftOf="@+id/iv_circleA"
+    app:layout_constraintHorizontal_bias="0.0">
+
+</ImageView>
+
+<ImageView
+    android:layout_width="166dp"
+    android:layout_height="166dp"
+    android:id="@+id/iv_circleA"
+    android:src="#FF0000"
+    tools:layout_constraintBottom_creator="1"
+    app:layout_constraintBottom_toTopOf="@+id/iv_circleB"
+    tools:layout_constraintLeft_creator="1"
+    app:layout_constraintLeft_toLeftOf="parent">
+
+</ImageView>
+
+<CheckBox
+    android:text="Anomaloscope Attached"
+    android:layout_width="208dp"
+    android:layout_height="35dp"
+    android:textColor="#FFFF00"
+    android:id="@+id/chk_USBattached"
+    android:layout_marginTop="64dp"
+    app:layout_constraintTop_toBottomOf="@+id/sld_RG3"
+    app:layout_constraintRight_toRightOf="parent"
+    android:layout_marginEnd="8dp"
+    android:layout_marginRight="8dp" />
+
+
+</android.support.constraint.ConstraintLayout>
