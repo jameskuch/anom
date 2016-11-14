@@ -16,6 +16,9 @@ import android.graphics.Paint;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.os.Handler.Callback;
 import android.preference.PreferenceManager;
 import android.util.DisplayMetrics;
 import android.view.Menu;
@@ -24,9 +27,12 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.SeekBar;
+import android.widget.TextView;
+
 
 import com.appspot.usbhidterminal.core.Consts;
 import com.appspot.usbhidterminal.core.events.DeviceAttachedEvent;
@@ -53,7 +59,16 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 	private EditText txtHidInput;
 	private Button btnSend;
 	private Button btnSelectHIDDevice;
+	private Button btn_Timer;
 	private RadioButton rbSendDataType;
+
+	private ImageButton btn_0;
+	private ImageButton btn_1;
+	private ImageButton btn_2;
+	private ImageButton btn_3;
+	private ImageButton btn_4;
+	private ImageButton btn_begin;
+	private ImageButton btn_end;
 
 	private SeekBar sbLED0int;
 	private SeekBar sbLED1int;
@@ -68,6 +83,48 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 	private String delimiter;
 
 	protected EventBus eventBus;
+
+	private TextView txt_TimerView;
+	long startTime = 0;
+	public Handler timerHandler = new Handler();
+	Runnable timerRunnable = new Runnable() {
+
+		@Override
+		public void run() {
+			long millis = System.currentTimeMillis() - startTime;
+			int seconds = (int) (millis / 1000);
+			int minutes = seconds / 60;
+			seconds = seconds % 60;
+
+			txt_TimerView.setText(String.format("%d:%02d", minutes, seconds));
+
+			timerHandler.postDelayed(this, 500);
+		}
+	};
+
+	private void SetLED(int LED, int value)
+	{
+		String USBout = "";
+		String whichLED = "";
+
+		// 0 is position 1
+		if (LED==0) {
+			whichLED = "1 ";
+		}
+		else if (LED==1)
+		{
+			whichLED = "2 ";
+		}
+		else if (LED==2)
+		{
+			whichLED = "1 ";
+		}
+		//String msg = "1 " + t + " 0";
+		USBout = whichLED + Integer.toString(value) + " 0";
+
+		eventBus.post(new USBDataSendEvent(USBout));
+
+	}
 
 	private SharedPreferences.OnSharedPreferenceChangeListener listener = new SharedPreferences.OnSharedPreferenceChangeListener() {
 		@Override
@@ -101,6 +158,8 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 		sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
 		sharedPreferences.registerOnSharedPreferenceChangeListener(listener);
 		initUI();
+		startTime = System.currentTimeMillis();
+		timerHandler.postDelayed(timerRunnable, 0);
 	}
 
 	private void initUI() {
@@ -112,7 +171,7 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 		btnSelectHIDDevice.setOnClickListener(this);
 
 		txtHidInput = (EditText) findViewById(R.id.edtxtHidInput);
-
+		txt_TimerView = (TextView) findViewById(R.id.txt_TimerView);
 		rbSendDataType = (RadioButton) findViewById(R.id.rbSendData);
 
 		rbSendDataType.setOnClickListener(this);
@@ -122,109 +181,138 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 		getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 		txtHidInput.setText("0 0 0");
 
-		sbLED0int = (SeekBar) findViewById(R.id.sld_LED0int);
-		sbLED0int.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-			public void onStopTrackingTouch(SeekBar seekBar) {
-			}
+		btn_0 = (ImageButton) findViewById((R.id.btn_0));
+		btn_1 = (ImageButton) findViewById((R.id.btn_1));
+		btn_2 = (ImageButton) findViewById((R.id.btn_2));
+		btn_3 = (ImageButton) findViewById((R.id.btn_3));
+		btn_4 = (ImageButton) findViewById((R.id.btn_4));
+		btn_begin = (ImageButton) findViewById((R.id.btn_Begin));
+		btn_Timer = (Button) findViewById((R.id.btn_Timer));
 
-			public void onStartTrackingTouch(SeekBar seekBar) {
-			}
+		btn_0.setOnClickListener(this);
+		btn_1.setOnClickListener(this);
+		btn_2.setOnClickListener(this);
+		btn_3.setOnClickListener(this);
+		btn_4.setOnClickListener(this);
+		btn_begin.setOnClickListener(this);
+		btn_Timer.setOnClickListener(this);
 
-			public void onProgressChanged(SeekBar sbLED0int, int progress,
-										  boolean fromUser) {
-				String t = String.valueOf(progress);
-				String msg = "0 " + t + " 0";
-				txtHidInput.setText(msg);
-				eventBus.post(new USBDataSendEvent(txtHidInput.getText().toString()));
-			}
-		});
-
-		sbLED1int = (SeekBar) findViewById(R.id.sld_LED1int);
-		sbLED1int.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-			public void onStopTrackingTouch(SeekBar seekBar) {
-			}
-
-			public void onStartTrackingTouch(SeekBar seekBar) {
-			}
-
-			public void onProgressChanged(SeekBar sbLED1int, int progress,
-										  boolean fromUser) {
-				String t = String.valueOf(progress);
-				String msg = "1 " + t + " 0";
-				txtHidInput.setText(msg);
-				eventBus.post(new USBDataSendEvent(txtHidInput.getText().toString()));
-			}
-		});
-
-		sbLED2int = (SeekBar) findViewById(R.id.sld_LED2int);
-		sbLED2int.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-			public void onStopTrackingTouch(SeekBar seekBar) {
-			}
-
-			public void onStartTrackingTouch(SeekBar seekBar) {
-			}
-
-			public void onProgressChanged(SeekBar sbLED2int, int progress,
-										  boolean fromUser) {
-				String t = String.valueOf(progress);
-				String msg = "2 " + t + " 0";
-				txtHidInput.setText(msg);
-				eventBus.post(new USBDataSendEvent(txtHidInput.getText().toString()));
-			}
-		});
+		btn_0.setEnabled(false);
+		btn_1.setEnabled(false);
+		btn_2.setEnabled(false);
+		btn_3.setEnabled(false);
+		btn_4.setEnabled(false);
 
 
-		sbRG0int = (SeekBar) findViewById(R.id.sld_RG1);
-		sbRG0int.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-			public void onStopTrackingTouch(SeekBar seekBar) {
-			}
 
-			public void onStartTrackingTouch(SeekBar seekBar) {
-			}
+		//sbLED0int = (SeekBar) findViewById(R.id.sld_LED0int);
+		//sbLED0int.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+//			public void onStopTrackingTouch(SeekBar seekBar) {
+//			}
+//
+//			public void onStartTrackingTouch(SeekBar seekBar) {
+//			}
+//
+//			public void onProgressChanged(SeekBar sbLED0int, int progress,
+//										  boolean fromUser) {
+//				String t = String.valueOf(progress);
+//				String msg = "0 " + t + " 0";
+//				txtHidInput.setText(msg);
+//				eventBus.post(new USBDataSendEvent(txtHidInput.getText().toString()));
+//			}
+//		});
+//
+//		sbLED1int = (SeekBar) findViewById(R.id.sld_LED1int);
+//		sbLED1int.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+//			public void onStopTrackingTouch(SeekBar seekBar) {
+//			}
+//
+//			public void onStartTrackingTouch(SeekBar seekBar) {
+//			}
+//
+//			public void onProgressChanged(SeekBar sbLED1int, int progress,
+//										  boolean fromUser) {
+//				String t = String.valueOf(progress);
+//				String msg = "1 " + t + " 0";
+//				txtHidInput.setText(msg);
+//				eventBus.post(new USBDataSendEvent(txtHidInput.getText().toString()));
+//			}
+//		});
+//
+//		sbLED2int = (SeekBar) findViewById(R.id.sld_LED2int);
+//		sbLED2int.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+//			public void onStopTrackingTouch(SeekBar seekBar) {
+//			}
+//
+//			public void onStartTrackingTouch(SeekBar seekBar) {
+//			}
+//
+//			public void onProgressChanged(SeekBar sbLED2int, int progress,
+//										  boolean fromUser) {
+//				String t = String.valueOf(progress);
+//				String msg = "2 " + t + " 0";
+//				txtHidInput.setText(msg);
+//				eventBus.post(new USBDataSendEvent(txtHidInput.getText().toString()));
+//			}
+//		});
+//
+//
+//		sbRG0int = (SeekBar) findViewById(R.id.sld_RG1);
+//		sbRG0int.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+//			public void onStopTrackingTouch(SeekBar seekBar) {
+//			}
+//
+//			public void onStartTrackingTouch(SeekBar seekBar) {
+//			}
+//
+//			public void onProgressChanged(SeekBar sbRG0int, int progress, boolean fromUser) {
+//
+//				ImageView ivcircleB = (ImageView) findViewById(R.id.iv_circleA);
+//				ivcircleB.setColorFilter(Color.rgb(255 - progress, progress, 0));
+//			}
+//		});
+//
+//
+//		sbRG1int = (SeekBar) findViewById(R.id.sld_RG2);
+//		sbRG1int.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+//			public void onStopTrackingTouch(SeekBar seekBar) {
+//			}
+//
+//			public void onStartTrackingTouch(SeekBar seekBar) {
+//			}
+//
+//			public void onProgressChanged(SeekBar sbRG1int, int progress, boolean fromUser) {
+//
+//				ImageView ivcircleB = (ImageView) findViewById(R.id.iv_circleB);
+//				ivcircleB.setColorFilter(Color.rgb(255 - progress, progress, 0));
+//			}
+//		});
+//
+//
+//		sbRG2int = (SeekBar) findViewById(R.id.sld_RG3);
+//		sbRG2int.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+//			public void onStopTrackingTouch(SeekBar seekBar) {
+//			}
+//
+//			public void onStartTrackingTouch(SeekBar seekBar) {
+//			}
+//
+//			public void onProgressChanged(SeekBar sbRG2int, int progress, boolean fromUser) {
+//
+//				ImageView ivcircle = (ImageView) findViewById(R.id.iv_circleC);
+//				ivcircle.setColorFilter(Color.rgb(255 - progress, progress, 0));
+//			}
+//		});
 
-			public void onProgressChanged(SeekBar sbRG0int, int progress, boolean fromUser) {
-
-				ImageView ivcircleB = (ImageView) findViewById(R.id.iv_circleA);
-				ivcircleB.setColorFilter(Color.rgb(255 - progress, progress, 0));
-			}
-		});
-
-
-		sbRG1int = (SeekBar) findViewById(R.id.sld_RG2);
-		sbRG1int.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-			public void onStopTrackingTouch(SeekBar seekBar) {
-			}
-
-			public void onStartTrackingTouch(SeekBar seekBar) {
-			}
-
-			public void onProgressChanged(SeekBar sbRG1int, int progress, boolean fromUser) {
-
-				ImageView ivcircleB = (ImageView) findViewById(R.id.iv_circleB);
-				ivcircleB.setColorFilter(Color.rgb(255 - progress, progress, 0));
-			}
-		});
-
-
-		sbRG2int = (SeekBar) findViewById(R.id.sld_RG3);
-		sbRG2int.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-			public void onStopTrackingTouch(SeekBar seekBar) {
-			}
-
-			public void onStartTrackingTouch(SeekBar seekBar) {
-			}
-
-			public void onProgressChanged(SeekBar sbRG2int, int progress, boolean fromUser) {
-
-				ImageView ivcircle = (ImageView) findViewById(R.id.iv_circleC);
-				ivcircle.setColorFilter(Color.rgb(255 - progress, progress, 0));
-			}
-		});
-		rbSendDataType.setChecked(true);
 		//sendToUSBService(Consts.ACTION_USB_DATA_TYPE, true);
 
 	}
-
+	@Override
+	public void onPause() {
+		super.onPause();
+		timerHandler.removeCallbacks(timerRunnable);
+		btn_Timer.setText("start");
+	}
 
 	public void onClick(View v) {
 		if (v == btnSend) {
@@ -234,8 +322,48 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 			//sendToUSBService(Consts.ACTION_USB_DATA_TYPE, true);
 		} else if (v == btnSelectHIDDevice) {
 			eventBus.post(new PrepareDevicesListEvent());
+		} else if (v == btn_0) {
+			txtHidInput.setText("btn0");
+			SetLED(1, 25);
+		} else if (v == btn_1) {
+			txtHidInput.setText("btn1");
+			SetLED(1, 128);
+		} else if (v == btn_2) {
+			txtHidInput.setText("btn2");
+			SetLED(1, 205);
+		} else if (v == btn_3) {
+			txtHidInput.setText("btn3");
+			SetLED(1, 14);
+		} else if (v == btn_4) {
+			txtHidInput.setText("btn4");
+			SetLED(1, 255);
+		} else if (v == btn_begin) {
+			txtHidInput.setText("btnbegin");
+			experiment();
+		} else if (v == btn_Timer) {
+			if (btn_Timer.getText().equals("start")){
+				startTime = System.currentTimeMillis();
+				timerHandler.postDelayed(timerRunnable, 0);
+				btn_Timer.setText("stop");
+			} else{
+				timerHandler.removeCallbacks(timerRunnable);
+				btn_Timer.setText("start");
+			}
+
 		}
+
 	}
+
+	void experiment()
+	{
+		btn_0.setEnabled(true);
+		btn_1.setEnabled(true);
+		btn_2.setEnabled(true);
+		btn_3.setEnabled(true);
+		btn_4.setEnabled(true);
+
+	}
+
 
 	void showListOfDevices(CharSequence devicesName[]) {
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);

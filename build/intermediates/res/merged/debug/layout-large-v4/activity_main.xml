@@ -21,30 +21,12 @@ tools:context=".USBHIDTerminal">
     android:textColor="#FFFF00"
     app:layout_constraintBaseline_toBaselineOf="@+id/btnSend"
     tools:layout_constraintBaseline_creator="1"
-    tools:layout_constraintLeft_creator="1"
-    app:layout_constraintLeft_toLeftOf="@+id/edtxtHidInput">
-
-</Button>
-
-<Button
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:minHeight="36dip"
-    android:minWidth="50dip"
-    android:text="Calibration"
-    android:textColor="#FFFF00"
-    android:textAppearance="?android:attr/textAppearanceSmallInverse"
-    android:onClick="cali_click"
-    android:id="@+id/button_calibrate"
-    app:layout_constraintBaseline_toBaselineOf="@+id/btnSend"
-    tools:layout_constraintBaseline_creator="1"
-    tools:layout_constraintLeft_creator="1"
-    app:layout_constraintLeft_toRightOf="@+id/btnSend">
+    tools:layout_editor_absoluteX="0dp">
 
 </Button>
 
 
-<Button
+    <Button
     android:id="@+id/btnSend"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -65,8 +47,8 @@ tools:context=".USBHIDTerminal">
 
 <EditText
     android:id="@+id/edtxtHidInput"
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
+    android:layout_width="217dp"
+    android:layout_height="36dp"
     android:inputType="text"
     android:textAppearance="?android:attr/textAppearanceSmallInverse"
     android:textColor="#FFFF00"
@@ -74,142 +56,31 @@ tools:context=".USBHIDTerminal">
     tools:layout_constraintRight_creator="1"
     app:layout_constraintRight_toRightOf="parent"
     app:layout_constraintTop_toBottomOf="@+id/btnSelectHIDDevice"
-    tools:layout_constraintLeft_creator="1"
-    app:layout_constraintLeft_toLeftOf="parent">
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="376dp"
+    android:layout_marginRight="376dp">
 
 </EditText>
 
 
 <RadioButton
     android:id="@+id/rbSendData"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_height="36dp"
     android:text="@string/sendData"
     android:textColor="#FFFF00"
     android:textAppearance="?android:attr/textAppearanceSmallInverse"
     android:checked="false"
-    tools:layout_constraintRight_creator="1"
-    tools:layout_constraintBottom_creator="1"
-    app:layout_constraintBottom_toTopOf="@+id/edtxtHidInput"
-    app:layout_constraintRight_toRightOf="@+id/edtxtHidInput">
+    app:layout_constraintVertical_bias="0.0"
+    tools:layout_editor_absoluteY="0dp"
+    android:layout_marginStart="72dp"
+    app:layout_constraintLeft_toRightOf="@+id/btnSelectHIDDevice"
+    android:layout_marginLeft="72dp"
+    android:layout_width="200dp">
 
 </RadioButton>
 
 
-<SeekBar
-    android:layout_width="0dp"
-    android:layout_height="50dp"
-    android:minHeight="50dp"
-    android:maxHeight="100dp"
-    android:id="@+id/sld_LED0int"
-    android:max="255"
-    android:indeterminate="false"
-    android:progress="0"
-    tools:layout_constraintTop_creator="1"
-    tools:layout_constraintRight_creator="1"
-    app:layout_constraintRight_toRightOf="@+id/edtxtHidInput"
-    app:layout_constraintTop_toBottomOf="@+id/edtxtHidInput"
-    tools:layout_constraintLeft_creator="1"
-    app:layout_constraintLeft_toLeftOf="@+id/edtxtHidInput">
-
-</SeekBar>
-
-<SeekBar
-    android:layout_width="0dp"
-    android:layout_height="50dp"
-    android:minHeight="50dp"
-    android:maxHeight="100dp"
-    android:id="@+id/sld_LED1int"
-    android:max="255"
-    android:indeterminate="false"
-    android:progress="0"
-    tools:layout_constraintTop_creator="1"
-    tools:layout_constraintRight_creator="1"
-    app:layout_constraintRight_toRightOf="@+id/sld_LED0int"
-    app:layout_constraintTop_toBottomOf="@+id/sld_LED0int"
-    tools:layout_constraintLeft_creator="1"
-    app:layout_constraintLeft_toLeftOf="@+id/sld_LED0int"
-    app:layout_constraintHorizontal_bias="0.0">
-
-</SeekBar>
-
-<SeekBar
-    android:layout_width="0dp"
-    android:layout_height="50dp"
-    android:minHeight="50dp"
-    android:maxHeight="100dp"
-    android:id="@+id/sld_LED2int"
-    android:max="255"
-    android:indeterminate="false"
-    android:progress="0"
-    tools:layout_constraintTop_creator="1"
-    tools:layout_constraintRight_creator="1"
-    app:layout_constraintRight_toRightOf="@+id/sld_LED1int"
-    app:layout_constraintTop_toBottomOf="@+id/sld_LED1int"
-    tools:layout_constraintLeft_creator="1"
-    app:layout_constraintLeft_toLeftOf="@+id/sld_LED1int">
-
-</SeekBar>
-
-
-<SeekBar
-    android:layout_width="0dp"
-    android:layout_height="100dp"
-    android:minHeight="100dp"
-    android:maxHeight="100dp"
-    android:id="@+id/sld_RG1"
-    android:max="255"
-    android:indeterminate="false"
-    android:progress="0"
-    tools:layout_constraintRight_creator="1"
-    tools:layout_constraintBottom_creator="1"
-    app:layout_constraintBottom_toTopOf="@+id/sld_RG2"
-    app:layout_constraintRight_toRightOf="@+id/sld_RG2"
-    tools:layout_constraintLeft_creator="1"
-    android:layout_marginBottom="66dp"
-    app:layout_constraintLeft_toLeftOf="@+id/sld_RG2">
-
-</SeekBar>
-
-<SeekBar
-    android:layout_width="0dp"
-    android:layout_height="100dp"
-    android:minHeight="100dp"
-    android:maxHeight="100dp"
-    android:id="@+id/sld_RG2"
-    android:max="255"
-    android:indeterminate="false"
-    android:progress="0"
-    tools:layout_constraintRight_creator="1"
-    tools:layout_constraintBottom_creator="1"
-    app:layout_constraintBottom_toTopOf="@+id/sld_RG3"
-    app:layout_constraintRight_toRightOf="parent"
-    tools:layout_constraintLeft_creator="1"
-    android:layout_marginBottom="58dp"
-    app:layout_constraintLeft_toRightOf="@+id/button_calibrate">
-
-</SeekBar>
-
-<SeekBar
-    android:layout_width="0dp"
-    android:layout_height="100dp"
-    android:minHeight="100dp"
-    android:maxHeight="100dp"
-    android:id="@+id/sld_RG3"
-    android:max="255"
-    android:indeterminate="false"
-    android:progress="0"
-    tools:layout_constraintRight_creator="1"
-    tools:layout_constraintBottom_creator="1"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintRight_toRightOf="@+id/sld_RG2"
-    tools:layout_constraintLeft_creator="1"
-    android:layout_marginBottom="98dp"
-    app:layout_constraintLeft_toLeftOf="@+id/sld_RG2">
-
-</SeekBar>
-
-<ImageView
+    <ImageView
     android:layout_width="0dp"
     android:layout_height="166dp"
     android:id="@+id/iv_circleC"
@@ -254,15 +125,103 @@ tools:context=".USBHIDTerminal">
 
 <CheckBox
     android:text="Anomaloscope Attached"
-    android:layout_width="208dp"
-    android:layout_height="35dp"
+    android:layout_width="192dp"
+    android:layout_height="49dp"
     android:textColor="#FFFF00"
     android:id="@+id/chk_USBattached"
-    android:layout_marginTop="64dp"
-    app:layout_constraintTop_toBottomOf="@+id/sld_RG3"
     app:layout_constraintRight_toRightOf="parent"
-    android:layout_marginEnd="8dp"
-    android:layout_marginRight="8dp" />
+    tools:layout_editor_absoluteY="0dp"
+    app:layout_constraintHorizontal_bias="1.0" />
+
+    <ImageButton
+        android:src="@drawable/button_onearrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_0"
+        app:layout_constraintBottom_toTopOf="@+id/btn_1"
+        android:layout_marginBottom="13dp"
+        android:layout_marginEnd="184dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="184dp" />
+
+    <ImageButton
+        android:src="@drawable/button_twoarrows"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_1"
+        android:layout_marginEnd="184dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="184dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_2"
+        android:layout_marginBottom="13dp" />
+
+    <ImageButton
+        android:src="@drawable/button_onearrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_2"
+        android:layout_marginEnd="184dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="184dp"
+        app:layout_constraintVertical_bias="0.33"
+        app:layout_constraintBottom_toTopOf="@+id/btn_3"
+        android:layout_marginBottom="13dp" />
+
+    <ImageButton
+        android:src="@drawable/button_twoarrows"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:id="@+id/btn_3"
+        android:layout_marginEnd="184dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="184dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_4"
+        android:layout_marginBottom="13dp" />
+
+    <ImageButton
+        android:src="@drawable/button_onearrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_4"
+        android:layout_marginEnd="184dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="184dp"
+        app:layout_constraintVertical_bias="0.25"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="100dp" />
+
+    <ImageButton
+        android:src="@drawable/button_begin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_Begin"
+        android:layout_marginStart="184dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="184dp"
+        android:layout_marginTop="144dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="169dp"
+        android:layout_height="36dp"
+        android:id="@+id/txt_TimerView"
+        android:layout_marginStart="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/edtxtHidInput"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintTop_toTopOf="@+id/rbSendData"
+        android:layout_marginTop="44dp" />
+
+    <Button
+        android:text="stop"
+        android:layout_width="192dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_Timer"
+        app:layout_constraintTop_toTopOf="@+id/chk_USBattached"
+        android:layout_marginTop="56dp"
+        android:layout_marginStart="408dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="408dp" />
 
 
 </android.support.constraint.ConstraintLayout>

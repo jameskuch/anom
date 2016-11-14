@@ -2,5 +2,17 @@
     {
         "merged": "C:\\gitprojects\\anom_droid2\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_launcher.png",
         "source": "C:\\gitprojects\\anom_droid2\\res\\drawable-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\gitprojects\\anom_droid2\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_begin.png",
+        "source": "C:\\gitprojects\\anom_droid2\\res\\drawable-xhdpi\\button_begin.png"
+    },
+    {
+        "merged": "C:\\gitprojects\\anom_droid2\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_onearrow.png",
+        "source": "C:\\gitprojects\\anom_droid2\\res\\drawable-xhdpi\\button_onearrow.png"
+    },
+    {
+        "merged": "C:\\gitprojects\\anom_droid2\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_twoarrows.png",
+        "source": "C:\\gitprojects\\anom_droid2\\res\\drawable-xhdpi\\button_twoarrows.png"
     }
 ]

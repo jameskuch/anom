@@ -7,7 +7,7 @@
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
-        sha1="be9bf978fbf2ab8169434718c651adfe807c5b25">
+        sha1="d0ea6a616dac1aaa1579d20cc0ab58371b38765c">
         <dex dex="C:\gitprojects\anom_droid2\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_de39e445d9bff80bd689d90beedcda389603b2a0\classes.dex" />
     </item>
     <item
@@ -16,7 +16,7 @@
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
-        sha1="28cd331820345cd1d550211e8bc3d19b1c0ec251">
+        sha1="a80977295aabb2a4be1159927eab8d507f08e403">
         <dex dex="C:\gitprojects\anom_droid2\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_70805794dffcf317479be44a22032f34bacf07a1\classes.dex" />
     </item>
     <item

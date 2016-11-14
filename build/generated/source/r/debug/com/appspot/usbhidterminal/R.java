@@ -372,42 +372,46 @@ containing a value of this type.
     }
     public static final class drawable {
         public static final int black_large=0x7f020000;
-        public static final int circle_hor=0x7f020001;
-        public static final int circle_vert=0x7f020002;
-        public static final int ic_launcher=0x7f020003;
+        public static final int button_begin=0x7f020001;
+        public static final int button_onearrow=0x7f020002;
+        public static final int button_twoarrows=0x7f020003;
+        public static final int circle_hor=0x7f020004;
+        public static final int circle_vert=0x7f020005;
+        public static final int ic_launcher=0x7f020006;
     }
     public static final class id {
         public static final int btnSelectHIDDevice=0x7f080001;
         public static final int btnSend=0x7f080004;
-        public static final int button_calibrate=0x7f08000a;
-        public static final int chk_USBattached=0x7f080013;
+        public static final int btn_0=0x7f08000d;
+        public static final int btn_1=0x7f08000e;
+        public static final int btn_2=0x7f08000f;
+        public static final int btn_3=0x7f080010;
+        public static final int btn_4=0x7f080011;
+        public static final int btn_Begin=0x7f080012;
+        public static final int btn_Timer=0x7f080014;
+        public static final int chk_USBattached=0x7f08000c;
         public static final int edtxtHidInput=0x7f080005;
-        public static final int iv_circleA=0x7f080012;
+        public static final int iv_circleA=0x7f08000b;
         public static final int iv_circleB=0x7f080009;
-        public static final int iv_circleC=0x7f080011;
+        public static final int iv_circleC=0x7f08000a;
         public static final int iv_circleT=0x7f080008;
-        public static final int menuSettings=0x7f080014;
-        public static final int menuSettingsDelimiter=0x7f08001b;
-        public static final int menuSettingsDelimiterNewLine=0x7f08001e;
-        public static final int menuSettingsDelimiterNone=0x7f08001c;
-        public static final int menuSettingsDelimiterSpace=0x7f08001d;
-        public static final int menuSettingsReceive=0x7f080016;
-        public static final int menuSettingsReceiveBinary=0x7f080017;
-        public static final int menuSettingsReceiveDataFormat=0x7f080015;
-        public static final int menuSettingsReceiveHexadecimal=0x7f080019;
-        public static final int menuSettingsReceiveInteger=0x7f080018;
-        public static final int menuSettingsReceiveText=0x7f08001a;
+        public static final int menuSettings=0x7f080015;
+        public static final int menuSettingsDelimiter=0x7f08001c;
+        public static final int menuSettingsDelimiterNewLine=0x7f08001f;
+        public static final int menuSettingsDelimiterNone=0x7f08001d;
+        public static final int menuSettingsDelimiterSpace=0x7f08001e;
+        public static final int menuSettingsReceive=0x7f080017;
+        public static final int menuSettingsReceiveBinary=0x7f080018;
+        public static final int menuSettingsReceiveDataFormat=0x7f080016;
+        public static final int menuSettingsReceiveHexadecimal=0x7f08001a;
+        public static final int menuSettingsReceiveInteger=0x7f080019;
+        public static final int menuSettingsReceiveText=0x7f08001b;
         public static final int parent=0x7f080000;
         public static final int radioGroup=0x7f080002;
         public static final int rbSendData=0x7f080003;
-        public static final int sld_LED0int=0x7f08000b;
-        public static final int sld_LED1int=0x7f08000c;
-        public static final int sld_LED2int=0x7f08000d;
         public static final int sld_LEDint=0x7f080006;
-        public static final int sld_RG1=0x7f08000e;
-        public static final int sld_RG2=0x7f08000f;
-        public static final int sld_RG3=0x7f080010;
         public static final int sld_RGint=0x7f080007;
+        public static final int txt_TimerView=0x7f080013;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
