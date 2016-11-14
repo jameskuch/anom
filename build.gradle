@@ -4,7 +4,8 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:+'
+        //classpath 'com.android.tools.build:gradle:+'
+        classpath 'com.android.tools.build:gradle:2.2.2+'
     }
 }
 
@@ -29,6 +30,7 @@ android {
     }
 
     compileSdkVersion 22
+    //buildToolsVersion "25.0.0"
     buildToolsVersion "22.0.1"
 
     defaultConfig {

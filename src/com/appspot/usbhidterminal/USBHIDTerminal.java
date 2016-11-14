@@ -221,29 +221,8 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 			}
 		});
 		rbSendDataType.setChecked(true);
-		//sendToUSBService(Consts.ACTION_USB_DATA_TYPE, rbSendDataType.isChecked());
+		//sendToUSBService(Consts.ACTION_USB_DATA_TYPE, true);
 
-		//DisplayMetrics metrics = new DisplayMetrics();
-		//getWindowManager().getDefaultDisplay().getMetrics(metrics);
-		//Bitmap.Config conf = Bitmap.Config.ARGB_4444;
-
-		//Bitmap mNewBitmap = Bitmap.createBitmap(metrics, Color.RED, w, h, conf);
-		//iv.setImageBitmap(mNewBitmap);
-		//iv.setImageBitmap(mNewBitmap);
-	}
-
-	private void changeBitmapColor(Bitmap sourceBitmap, ImageView iv, int color) {
-
-
-		Bitmap workingBitmap = Bitmap.createBitmap(sourceBitmap, 0, 0, sourceBitmap.getWidth(), sourceBitmap.getHeight());
-		Bitmap resultBitmap = workingBitmap.copy(Bitmap.Config.ARGB_8888, true);
-		Paint p = new Paint();
-		ColorFilter filter = new LightingColorFilter(color, 1);
-		p.setColorFilter(filter);
-		iv.setImageBitmap(resultBitmap);
-
-		Canvas canvas = new Canvas(resultBitmap);
-		canvas.drawBitmap(resultBitmap, 0, 0, p);
 	}
 
 
@@ -252,6 +231,7 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 			eventBus.post(new USBDataSendEvent(txtHidInput.getText().toString()));
 		} else if (v == rbSendDataType) {
 			sendToUSBService(Consts.ACTION_USB_DATA_TYPE, rbSendDataType.isChecked());
+			//sendToUSBService(Consts.ACTION_USB_DATA_TYPE, true);
 		} else if (v == btnSelectHIDDevice) {
 			eventBus.post(new PrepareDevicesListEvent());
 		}
@@ -290,6 +270,7 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 
 	public void onEvent(DeviceAttachedEvent event) {
 		btnSend.setEnabled(true);
+
 	}
 
 	public void onEvent(DeviceDetachedEvent event) {

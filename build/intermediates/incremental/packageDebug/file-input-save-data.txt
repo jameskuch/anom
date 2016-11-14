@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Thu Nov 10 16:54:05 PST 2016
+#Sun Nov 13 12:57:49 PST 2016
 5.base=C\:\\gitprojects\\anom_droid2\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\mockito-all-1.9.5_913dc3a671fa9ca6607d9edb64ac1298191566ee
 42.base=C\:\\gitprojects\\anom_droid2\\build\\intermediates\\res\\resources-debug.ap_
 32.set=ANDROID_RESOURCE

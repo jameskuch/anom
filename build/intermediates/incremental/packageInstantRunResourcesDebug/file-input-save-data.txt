@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Thu Nov 10 16:54:05 PST 2016
+#Sun Nov 13 12:57:29 PST 2016
 20.set=ANDROID_RESOURCE
 19.set=ASSET
 8.set=ANDROID_RESOURCE
@@ -24,7 +24,7 @@
 15.file=C\:\\gitprojects\\anom_droid2\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\activity_main.xml
 15.base=C\:\\gitprojects\\anom_droid2\\build\\intermediates\\res\\resources-debug.ap_
 18.set=ANDROID_RESOURCE
-17.file=C\:\\gitprojects\\anom_droid2\\build\\intermediates\\res\\resources-debug.ap_\\res\\xml\\pref_headers.xml
+17.file=C\:\\gitprojects\\anom_droid2\\build\\intermediates\\res\\resources-debug.ap_\\res\\xml\\pref_general.xml
 17.base=C\:\\gitprojects\\anom_droid2\\build\\intermediates\\res\\resources-debug.ap_
 7.set=ANDROID_RESOURCE
 19.file=C\:\\gitprojects\\anom_droid2\\build\\intermediates\\assets\\debug\\webserver\\css\\show-hint.css
@@ -58,7 +58,7 @@
 16.base=C\:\\gitprojects\\anom_droid2\\build\\intermediates\\assets\\debug
 9.set=ASSET
 count=21
-18.file=C\:\\gitprojects\\anom_droid2\\build\\intermediates\\res\\resources-debug.ap_\\res\\xml\\pref_general.xml
+18.file=C\:\\gitprojects\\anom_droid2\\build\\intermediates\\res\\resources-debug.ap_\\res\\xml\\pref_headers.xml
 18.base=C\:\\gitprojects\\anom_droid2\\build\\intermediates\\res\\resources-debug.ap_
 16.set=ASSET
 5.set=ASSET

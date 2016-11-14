@@ -7,17 +7,8 @@
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
-        sha1="ed5fa03b13c3e7253bf2823e444ff87cfd92beb2">
+        sha1="be9bf978fbf2ab8169434718c651adfe807c5b25">
         <dex dex="C:\gitprojects\anom_droid2\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_de39e445d9bff80bd689d90beedcda389603b2a0\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\James\.gradle\caches\modules-2\files-2.1\com.nanohttpd\nanohttpd-websocket\2.1.1\a868f1a987a27fe6900796a3d58dbcd0377f570e\nanohttpd-websocket-2.1.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="22.0.1"
-        sha1="a868f1a987a27fe6900796a3d58dbcd0377f570e">
-        <dex dex="C:\gitprojects\anom_droid2\build\intermediates\transforms\dex\debug\folders\1000\10\nanohttpd-websocket-2.1.1_2cd37ed17b1eb99a84721cecfb48036fdafcceaa\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -25,7 +16,7 @@
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
-        sha1="0362fe5e29a07b03eb554baae5337109a2bb3c47">
+        sha1="28cd331820345cd1d550211e8bc3d19b1c0ec251">
         <dex dex="C:\gitprojects\anom_droid2\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_70805794dffcf317479be44a22032f34bacf07a1\classes.dex" />
     </item>
     <item
@@ -36,15 +27,6 @@
         revision="22.0.1"
         sha1="82595b0b3190c8bdd988f307346e6edec9c09b72">
         <dex dex="C:\gitprojects\anom_droid2\build\intermediates\transforms\dex\debug\folders\1000\10\nanohttpd-2.1.1_e524ac28a38cb8c22209d64c563f82d7546299ad\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\gitprojects\anom_droid2\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\jars\libs\internal_impl-22.1.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="22.0.1"
-        sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
-        <dex dex="C:\gitprojects\anom_droid2\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-22.1.1_8df8bf97496482a2208ab114634b48b94b8928ff\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -75,12 +57,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\James\.gradle\caches\modules-2\files-2.1\org.mockito\mockito-all\1.9.5\79a8984096fc6591c1e3690e07d41be506356fa5\mockito-all-1.9.5.jar"
+        jar="C:\Users\James\.gradle\caches\modules-2\files-2.1\de.greenrobot\eventbus\2.4.0\ddd166d01b3158d1c00576d29f7ed15c030df719\eventbus-2.4.0.jar"
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
-        sha1="79a8984096fc6591c1e3690e07d41be506356fa5">
-        <dex dex="C:\gitprojects\anom_droid2\build\intermediates\transforms\dex\debug\folders\1000\10\mockito-all-1.9.5_913dc3a671fa9ca6607d9edb64ac1298191566ee\classes.dex" />
+        sha1="ddd166d01b3158d1c00576d29f7ed15c030df719">
+        <dex dex="C:\gitprojects\anom_droid2\build\intermediates\transforms\dex\debug\folders\1000\10\eventbus-2.4.0_206f162c41aefd9dd8b9fde74df0fbe4b8e23927\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -93,12 +75,30 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\James\.gradle\caches\modules-2\files-2.1\de.greenrobot\eventbus\2.4.0\ddd166d01b3158d1c00576d29f7ed15c030df719\eventbus-2.4.0.jar"
+        jar="C:\Users\James\.gradle\caches\modules-2\files-2.1\com.nanohttpd\nanohttpd-websocket\2.1.1\a868f1a987a27fe6900796a3d58dbcd0377f570e\nanohttpd-websocket-2.1.1.jar"
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
-        sha1="ddd166d01b3158d1c00576d29f7ed15c030df719">
-        <dex dex="C:\gitprojects\anom_droid2\build\intermediates\transforms\dex\debug\folders\1000\10\eventbus-2.4.0_206f162c41aefd9dd8b9fde74df0fbe4b8e23927\classes.dex" />
+        sha1="a868f1a987a27fe6900796a3d58dbcd0377f570e">
+        <dex dex="C:\gitprojects\anom_droid2\build\intermediates\transforms\dex\debug\folders\1000\10\nanohttpd-websocket-2.1.1_2cd37ed17b1eb99a84721cecfb48036fdafcceaa\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\gitprojects\anom_droid2\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\jars\libs\internal_impl-22.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
+        <dex dex="C:\gitprojects\anom_droid2\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-22.1.1_8df8bf97496482a2208ab114634b48b94b8928ff\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\James\.gradle\caches\modules-2\files-2.1\org.mockito\mockito-all\1.9.5\79a8984096fc6591c1e3690e07d41be506356fa5\mockito-all-1.9.5.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="79a8984096fc6591c1e3690e07d41be506356fa5">
+        <dex dex="C:\gitprojects\anom_droid2\build\intermediates\transforms\dex\debug\folders\1000\10\mockito-all-1.9.5_913dc3a671fa9ca6607d9edb64ac1298191566ee\classes.dex" />
     </item>
 
 </items>
