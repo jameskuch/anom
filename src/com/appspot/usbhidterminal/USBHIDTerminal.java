@@ -26,12 +26,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import java.util.Random;
 
 
 import com.appspot.usbhidterminal.core.Consts;
@@ -59,8 +61,6 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 	private EditText txtHidInput;
 	private Button btnSend;
 	private Button btnSelectHIDDevice;
-	private Button btn_Timer;
-	private RadioButton rbSendDataType;
 
 	private ImageButton btn_0;
 	private ImageButton btn_1;
@@ -70,35 +70,77 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 	private ImageButton btn_begin;
 	private ImageButton btn_end;
 
-	private SeekBar sbLED0int;
-	private SeekBar sbLED1int;
-	private SeekBar sbLED2int;
-	private SeekBar sbRG0int;
-	private SeekBar sbRG1int;
-	private SeekBar sbRG2int;
+
+//	private SeekBar sbLED0int;
+//	private SeekBar sbLED1int;
+//	private SeekBar sbLED2int;
+//	private SeekBar sbRG0int;
+//	private SeekBar sbRG1int;
+//	private SeekBar sbRG2int;
 
 	private String settingsDelimiter;
 
 	private String receiveDataFormat;
 	private String delimiter;
+	private CheckBox chk_AnomAttached;
 
 	protected EventBus eventBus;
 
 	private TextView txt_TimerView;
+
+	private boolean called0 = false;
+	private boolean called1 = false;
 	long startTime = 0;
-	public Handler timerHandler = new Handler();
+	Handler timerHandler = new Handler();
 	Runnable timerRunnable = new Runnable() {
 
 		@Override
 		public void run() {
 			long millis = System.currentTimeMillis() - startTime;
-			int seconds = (int) (millis / 1000);
-			int minutes = seconds / 60;
-			seconds = seconds % 60;
+			//int seconds = (int) (millis / 1000);
+			//int minutes = seconds / 60;
+			//seconds = seconds % 60;
 
-			txt_TimerView.setText(String.format("%d:%02d", minutes, seconds));
+			//txt_TimerView.setText(String.format("%d:%02d", minutes, seconds));
+			timerHandler.postDelayed(this, 25);
 
-			timerHandler.postDelayed(this, 500);
+			// here is where I will check for the USB
+			if (millis >= 50 && millis < 300)
+			{
+				// this one only needs to happen once. I do it once, called0 gets set to true, and
+				// it should never be set again.
+				if (!called0) {
+					called0 = true;
+					sendToUSBService(Consts.ACTION_USB_DATA_TYPE, true);
+				}
+
+
+			}
+			else if (millis >= 300 && millis <= 750)
+			{
+				if (!called1) {
+					eventBus.post(new PrepareDevicesListEvent());
+					called1 = true;
+				}
+
+			}
+			else if (millis > 2000)
+			{
+				if (chk_AnomAttached.isChecked())
+				{
+					//this stops the timer. We will restart it again if the detached device event happens
+					timerHandler.removeCallbacks(timerRunnable);
+				}
+				else
+				{
+					//Device is not connected
+
+					startTime = System.currentTimeMillis();
+					timerHandler.postDelayed(timerRunnable, 0);
+
+				}
+			}
+
 		}
 	};
 
@@ -107,17 +149,22 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 		String USBout = "";
 		String whichLED = "";
 
-		// 0 is position 1
-		if (LED==0) {
+		// top, position 0 is LED 2
+		// middle, position 1 is LED 0
+		// bottom, position 2 is LED 1
+		// 2 is position 1
+		// 1 is position 0
+		// 1 is position 2
+		if (LED==2) {
 			whichLED = "1 ";
 		}
 		else if (LED==1)
 		{
-			whichLED = "2 ";
+			whichLED = "0 ";
 		}
-		else if (LED==2)
+		else if (LED==0)
 		{
-			whichLED = "1 ";
+			whichLED = "2 ";
 		}
 		//String msg = "1 " + t + " 0";
 		USBout = whichLED + Integer.toString(value) + " 0";
@@ -171,10 +218,9 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 		btnSelectHIDDevice.setOnClickListener(this);
 
 		txtHidInput = (EditText) findViewById(R.id.edtxtHidInput);
-		txt_TimerView = (TextView) findViewById(R.id.txt_TimerView);
-		rbSendDataType = (RadioButton) findViewById(R.id.rbSendData);
+		//rbSendDataType = (RadioButton) findViewById(R.id.rbSendData);
 
-		rbSendDataType.setOnClickListener(this);
+		//rbSendDataType.setOnClickListener(this);
 		//rbSendText.setOnClickListener(this);
 
 		mLog("Initialized\nPlease select your USB HID device\n", false);
@@ -187,7 +233,9 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 		btn_3 = (ImageButton) findViewById((R.id.btn_3));
 		btn_4 = (ImageButton) findViewById((R.id.btn_4));
 		btn_begin = (ImageButton) findViewById((R.id.btn_Begin));
-		btn_Timer = (Button) findViewById((R.id.btn_Timer));
+
+		chk_AnomAttached = (CheckBox) findViewById((R.id.chk_USBattached));
+		chk_AnomAttached.setEnabled(false);
 
 		btn_0.setOnClickListener(this);
 		btn_1.setOnClickListener(this);
@@ -195,15 +243,13 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 		btn_3.setOnClickListener(this);
 		btn_4.setOnClickListener(this);
 		btn_begin.setOnClickListener(this);
-		btn_Timer.setOnClickListener(this);
-
-		btn_0.setEnabled(false);
-		btn_1.setEnabled(false);
-		btn_2.setEnabled(false);
-		btn_3.setEnabled(false);
-		btn_4.setEnabled(false);
 
 
+		btn_0.setVisibility(View.INVISIBLE);
+		btn_1.setVisibility(View.INVISIBLE);
+		btn_2.setVisibility(View.INVISIBLE);
+		btn_3.setVisibility(View.INVISIBLE);
+		btn_4.setVisibility(View.INVISIBLE);
 
 		//sbLED0int = (SeekBar) findViewById(R.id.sld_LED0int);
 		//sbLED0int.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -311,77 +357,107 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 	public void onPause() {
 		super.onPause();
 		timerHandler.removeCallbacks(timerRunnable);
-		btn_Timer.setText("start");
 	}
 
 	public void onClick(View v) {
-		if (v == btnSend) {
-			eventBus.post(new USBDataSendEvent(txtHidInput.getText().toString()));
-		} else if (v == rbSendDataType) {
-			sendToUSBService(Consts.ACTION_USB_DATA_TYPE, rbSendDataType.isChecked());
+		//if (v == btnSend) {
+			//eventBus.post(new USBDataSendEvent(txtHidInput.getText().toString()));
+		 //else if (v == rbSendDataType) {
+		//	txtHidInput.setText(Boolean.toString(rbSendDataType.isChecked()));
+		//	sendToUSBService(Consts.ACTION_USB_DATA_TYPE, rbSendDataType.isChecked());
 			//sendToUSBService(Consts.ACTION_USB_DATA_TYPE, true);
-		} else if (v == btnSelectHIDDevice) {
-			eventBus.post(new PrepareDevicesListEvent());
+		//} else if (v == btnSelectHIDDevice) {
+		if (v == btnSelectHIDDevice) {
+			//eventBus.post(new PrepareDevicesListEvent());
+			txtHidInput.setText("btnSelectHID");
 		} else if (v == btn_0) {
 			txtHidInput.setText("btn0");
-			SetLED(1, 25);
+			SetLED(0, 28);
 		} else if (v == btn_1) {
 			txtHidInput.setText("btn1");
 			SetLED(1, 128);
 		} else if (v == btn_2) {
 			txtHidInput.setText("btn2");
-			SetLED(1, 205);
+			SetLED(2, 255);
 		} else if (v == btn_3) {
 			txtHidInput.setText("btn3");
-			SetLED(1, 14);
+			SetLED(1, 0);
 		} else if (v == btn_4) {
 			txtHidInput.setText("btn4");
-			SetLED(1, 255);
+			SetLED(2, 0);
 		} else if (v == btn_begin) {
 			txtHidInput.setText("btnbegin");
 			experiment();
-		} else if (v == btn_Timer) {
-			if (btn_Timer.getText().equals("start")){
-				startTime = System.currentTimeMillis();
-				timerHandler.postDelayed(timerRunnable, 0);
-				btn_Timer.setText("stop");
-			} else{
-				timerHandler.removeCallbacks(timerRunnable);
-				btn_Timer.setText("start");
-			}
 
 		}
 
 	}
+	private int iteration = 0;
 
 	void experiment()
 	{
-		btn_0.setEnabled(true);
-		btn_1.setEnabled(true);
-		btn_2.setEnabled(true);
-		btn_3.setEnabled(true);
-		btn_4.setEnabled(true);
+		if (chk_AnomAttached.isChecked()) {
+			btn_0.setVisibility(View.VISIBLE);
+			btn_1.setVisibility(View.VISIBLE);
+			btn_2.setVisibility(View.VISIBLE);
+			btn_3.setVisibility(View.VISIBLE);
+			btn_4.setVisibility(View.VISIBLE);
+
+
+			//This program is going to work by having certain prescribed presentations of colors
+			//First, we need to separate anomalous trichromats from
+
+			if (iteration == 0)
+			{
+				iteration ++;
+				Random r = new Random();
+				int i1 = r.nextInt(2);
+			}
+
+
+		}
 
 	}
 
 
 	void showListOfDevices(CharSequence devicesName[]) {
-		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
+
+		//So here's my thought. I know that when the "prepare Device list Event" is called,
+		//even though I don't know how it all gets back here, this is where we ultimately build the
+		//pop up menu. The "Builder.show" below pops it up.
+
+		//I'm going to select that integer which is 1 or 0...we'll try both and I'm going to try to
+		//automatically set them.
+
+		//it's either a 0 or a 1...don't know yet.
 		if (devicesName.length == 0) {
-			builder.setTitle(Consts.MESSAGE_CONNECT_YOUR_USB_HID_DEVICE);
-		} else {
-			builder.setTitle(Consts.MESSAGE_SELECT_YOUR_USB_HID_DEVICE);
+			chk_AnomAttached.setChecked(false);
+		}
+		else
+		{
+			eventBus.post(new SelectDeviceEvent(0));
+			chk_AnomAttached.setChecked(true);
 		}
 
-		builder.setItems(devicesName, new DialogInterface.OnClickListener() {
-			@Override
-			public void onClick(DialogInterface dialog, int which) {
-				eventBus.post(new SelectDeviceEvent(which));
-			}
-		});
-		builder.setCancelable(true);
-		builder.show();
+
+
+//		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+//
+//		if (devicesName.length == 0) {
+//			builder.setTitle(Consts.MESSAGE_CONNECT_YOUR_USB_HID_DEVICE);
+//		} else {
+//			builder.setTitle(Consts.MESSAGE_SELECT_YOUR_USB_HID_DEVICE);
+//		}
+//		builder.setItems(devicesName, new DialogInterface.OnClickListener() {
+//			@Override
+//			public void onClick(DialogInterface dialog, int which) {
+//				eventBus.post(new SelectDeviceEvent(which));
+//				txtHidInput.setText(Integer.toString(which));
+//			}
+//		});
+//		builder.setCancelable(true);
+//		builder.show();
 	}
 
 	public void onEvent(USBDataReceiveEvent event) {
@@ -397,12 +473,16 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 	}
 
 	public void onEvent(DeviceAttachedEvent event) {
-		btnSend.setEnabled(true);
-
+		//startTime = System.currentTimeMillis();
+		//timerHandler.postDelayed(timerRunnable, 0);
+		//called1 = false;
 	}
 
-	public void onEvent(DeviceDetachedEvent event) {
-		btnSend.setEnabled(false);
+	public void onEvent(DeviceDetachedEvent event)
+	{
+		//startTime = System.currentTimeMillis();
+		//timerHandler.postDelayed(timerRunnable, 0);
+		//called1 = false;
 	}
 
 	@Override
@@ -574,6 +654,7 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 	private void setVersionToTitle() {
 		try {
 			this.setTitle(Consts.SPACE + this.getTitle() + Consts.SPACE + getPackageManager().getPackageInfo(getPackageName(), 0).versionName);
+			//this.setTitle("Neitz Anomaloscope");
 		} catch (NameNotFoundException e) {
 			e.printStackTrace();
 		}

@@ -116,6 +116,5 @@
     <orderEntry type="library" exported="" name="nanohttpd-2.1.1" level="project" />
     <orderEntry type="library" exported="" name="mockito-all-1.9.5" level="project" />
     <orderEntry type="library" exported="" name="constraint-layout-solver-1.0.0-alpha9" level="project" />
-    <orderEntry type="library" exported="" name="android-android-22" level="project" />
   </component>
 </module>
