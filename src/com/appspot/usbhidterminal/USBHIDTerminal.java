@@ -59,8 +59,6 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 	private Intent usbService;
 
 	private EditText txtHidInput;
-	private Button btnSend;
-	private Button btnSelectHIDDevice;
 
 	private ImageButton btn_0;
 	private ImageButton btn_1;
@@ -71,13 +69,6 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 	private ImageButton btn_end;
 
 
-//	private SeekBar sbLED0int;
-//	private SeekBar sbLED1int;
-//	private SeekBar sbLED2int;
-//	private SeekBar sbRG0int;
-//	private SeekBar sbRG1int;
-//	private SeekBar sbRG2int;
-
 	private String settingsDelimiter;
 
 	private String receiveDataFormat;
@@ -86,7 +77,6 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 
 	protected EventBus eventBus;
 
-	private TextView txt_TimerView;
 
 	private boolean called0 = false;
 	private boolean called1 = false;
@@ -119,8 +109,9 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 			else if (millis >= 300 && millis <= 750)
 			{
 				if (!called1) {
-					eventBus.post(new PrepareDevicesListEvent());
 					called1 = true;
+					eventBus.post(new PrepareDevicesListEvent());
+
 				}
 
 			}
@@ -128,13 +119,17 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 			{
 				if (chk_AnomAttached.isChecked())
 				{
-					//this stops the timer. We will restart it again if the detached device event happens
+					//this stops the timer.
+					// I thought about trying to restart the timer if the device de or reattached
+					// ...it caused weird behavior. Therefore, as is, you have to have the device
+					// connected before you go to the screen. This shouldn't be a problem
 					timerHandler.removeCallbacks(timerRunnable);
 				}
 				else
 				{
 					//Device is not connected
-
+					//Continue looking for it by restarting the timer
+					called1 = false;
 					startTime = System.currentTimeMillis();
 					timerHandler.postDelayed(timerRunnable, 0);
 
@@ -211,11 +206,6 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 
 	private void initUI() {
 		setVersionToTitle();
-		btnSend = (Button) findViewById(R.id.btnSend);
-		btnSend.setOnClickListener(this);
-
-		btnSelectHIDDevice = (Button) findViewById(R.id.btnSelectHIDDevice);
-		btnSelectHIDDevice.setOnClickListener(this);
 
 		txtHidInput = (EditText) findViewById(R.id.edtxtHidInput);
 		//rbSendDataType = (RadioButton) findViewById(R.id.rbSendData);
@@ -225,7 +215,6 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 
 		mLog("Initialized\nPlease select your USB HID device\n", false);
 		getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
-		txtHidInput.setText("0 0 0");
 
 		btn_0 = (ImageButton) findViewById((R.id.btn_0));
 		btn_1 = (ImageButton) findViewById((R.id.btn_1));
@@ -360,17 +349,8 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 	}
 
 	public void onClick(View v) {
-		//if (v == btnSend) {
-			//eventBus.post(new USBDataSendEvent(txtHidInput.getText().toString()));
-		 //else if (v == rbSendDataType) {
-		//	txtHidInput.setText(Boolean.toString(rbSendDataType.isChecked()));
-		//	sendToUSBService(Consts.ACTION_USB_DATA_TYPE, rbSendDataType.isChecked());
-			//sendToUSBService(Consts.ACTION_USB_DATA_TYPE, true);
-		//} else if (v == btnSelectHIDDevice) {
-		if (v == btnSelectHIDDevice) {
-			//eventBus.post(new PrepareDevicesListEvent());
-			txtHidInput.setText("btnSelectHID");
-		} else if (v == btn_0) {
+
+		if (v == btn_0) {
 			txtHidInput.setText("btn0");
 			SetLED(0, 28);
 		} else if (v == btn_1) {

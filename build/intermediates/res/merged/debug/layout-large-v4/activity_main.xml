@@ -10,74 +10,19 @@ android:background="#000000"
 tools:context=".USBHIDTerminal">
 
 
-<Button
-    android:id="@+id/btnSelectHIDDevice"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:minHeight="36dip"
-    android:minWidth="50dip"
-    android:text="@string/selectHIDDevice"
-    android:textAppearance="?android:attr/textAppearanceSmallInverse"
-    android:textColor="#FFFF00"
-    app:layout_constraintBaseline_toBaselineOf="@+id/btnSend"
-    tools:layout_constraintBaseline_creator="1"
-    tools:layout_editor_absoluteX="0dp">
-
-</Button>
-
-
-    <Button
-    android:id="@+id/btnSend"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:enabled="false"
-    android:minHeight="36dip"
-    android:text="@string/send"
-    android:textAppearance="?android:attr/textAppearanceSmallInverse"
-    android:textColor="#FFFF00"
-    tools:layout_constraintTop_creator="1"
-    tools:layout_constraintLeft_creator="1"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintLeft_toRightOf="@+id/btnSelectHIDDevice">
-
-    <requestFocus />
-</Button>
-
-
-
-<EditText
+    <EditText
     android:id="@+id/edtxtHidInput"
-    android:layout_width="217dp"
-    android:layout_height="36dp"
+    android:layout_width="206dp"
+    android:layout_height="46dp"
     android:inputType="text"
     android:textAppearance="?android:attr/textAppearanceSmallInverse"
     android:textColor="#FFFF00"
-    tools:layout_constraintTop_creator="1"
-    tools:layout_constraintRight_creator="1"
-    app:layout_constraintRight_toRightOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/btnSelectHIDDevice"
-    android:layout_marginTop="8dp"
-    android:layout_marginEnd="376dp"
-    android:layout_marginRight="376dp">
+        tools:layout_editor_absoluteY="0dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="8dp">
 
 </EditText>
-
-
-<RadioButton
-    android:id="@+id/rbSendData"
-    android:layout_height="36dp"
-    android:text="@string/sendData"
-    android:textColor="#FFFF00"
-    android:textAppearance="?android:attr/textAppearanceSmallInverse"
-    android:checked="false"
-    app:layout_constraintVertical_bias="0.0"
-    tools:layout_editor_absoluteY="0dp"
-    android:layout_marginStart="72dp"
-    app:layout_constraintLeft_toRightOf="@+id/btnSelectHIDDevice"
-    android:layout_marginLeft="72dp"
-    android:layout_width="200dp">
-
-</RadioButton>
 
 
     <ImageView
@@ -91,7 +36,7 @@ tools:context=".USBHIDTerminal">
     app:layout_constraintRight_toRightOf="@+id/iv_circleB"
     tools:layout_constraintLeft_creator="1"
     app:layout_constraintLeft_toLeftOf="@+id/iv_circleB"
-    android:layout_marginBottom="56dp"
+    android:layout_marginBottom="224dp"
     app:layout_constraintHorizontal_bias="0.0">
 
 </ImageView>
@@ -125,8 +70,8 @@ tools:context=".USBHIDTerminal">
 
 <CheckBox
     android:text="Anomaloscope Attached"
-    android:layout_width="192dp"
-    android:layout_height="49dp"
+    android:layout_width="240dp"
+    android:layout_height="46dp"
     android:textColor="#FFFF00"
     android:id="@+id/chk_USBattached"
     app:layout_constraintRight_toRightOf="parent"
@@ -188,18 +133,18 @@ tools:context=".USBHIDTerminal">
         android:layout_marginRight="184dp"
         app:layout_constraintVertical_bias="0.25"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="100dp" />
+        android:layout_marginBottom="272dp" />
 
     <ImageButton
         android:src="@drawable/button_begintest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btn_Begin"
-        android:layout_marginStart="264dp"
+        android:layout_marginStart="136dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="264dp"
-        android:layout_marginTop="120dp"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginLeft="136dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp" />
 
 
 </android.support.constraint.ConstraintLayout>

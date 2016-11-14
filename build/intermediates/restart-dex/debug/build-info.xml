@@ -5,33 +5,46 @@
     density="mdpi"
     format="8"
     plugin-version="2.2.2"
-    timestamp="369635921940238"
+    timestamp="371198966486458"
     token="-5607778929093306883"
-    verifier="FULL_BUILD_REQUESTED" >
+    verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="257" />
+        duration="650" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="49" />
+        duration="0" />
     <task
         name="verifier"
-        duration="7" />
-
-    <artifact
-        location="E:\Dropbox\AnomaloscopeApp\anom_droid2\build\outputs\apk\anom_droid2-debug.apk"
-        type="MAIN" />
+        duration="0" />
 
     <build
-        timestamp="369635921940238"
+        timestamp="370563056352062"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="E:\Dropbox\AnomaloscopeApp\anom_droid2\build\outputs\apk\anom_droid2-debug.apk"
             type="MAIN" />
     </build>
+    <build
+        timestamp="370799204663121"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="E:\Dropbox\AnomaloscopeApp\anom_droid2\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
+            type="RESOURCES" />
+    </build>
+    <build
+        timestamp="371117154633840"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="E:\Dropbox\AnomaloscopeApp\anom_droid2\build\intermediates\transforms\dex\debug\folders\1000\5\slice_7\classes.dex"
+            type="DEX" />
+    </build>
+    <build
+        timestamp="371198966486458"
+        verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>

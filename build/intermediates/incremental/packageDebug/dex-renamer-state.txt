@@ -1,4 +1,4 @@
-#Mon Nov 14 00:23:16 PST 2016
+#Mon Nov 14 00:38:42 PST 2016
 base.0=E\:\\Dropbox\\AnomaloscopeApp\\anom_droid2\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_25b2e22e689630dfc010e7f6ecd8b865965a84cb
 renamed.1=classes2.dex
 renamed.0=classes.dex
