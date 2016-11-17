@@ -1,7 +1,7 @@
-#Mon Nov 14 00:38:42 PST 2016
-base.0=E\:\\Dropbox\\AnomaloscopeApp\\anom_droid2\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_25b2e22e689630dfc010e7f6ecd8b865965a84cb
-renamed.1=classes2.dex
-renamed.0=classes.dex
-file.1=E\:\\Dropbox\\AnomaloscopeApp\\anom_droid2\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_1eaabc5a0b3e2fa9b66b1a6696064bd5feeca256\\classes.dex
-base.1=E\:\\Dropbox\\AnomaloscopeApp\\anom_droid2\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_1eaabc5a0b3e2fa9b66b1a6696064bd5feeca256
-file.0=E\:\\Dropbox\\AnomaloscopeApp\\anom_droid2\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_25b2e22e689630dfc010e7f6ecd8b865965a84cb\\classes.dex
+#Wed Nov 16 21:02:18 PST 2016
+base.0=C\:\\gitprojects\\anom_droid2\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_70805794dffcf317479be44a22032f34bacf07a1
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=C\:\\gitprojects\\anom_droid2\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_de39e445d9bff80bd689d90beedcda389603b2a0\\classes.dex
+base.1=C\:\\gitprojects\\anom_droid2\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_de39e445d9bff80bd689d90beedcda389603b2a0
+file.0=C\:\\gitprojects\\anom_droid2\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_70805794dffcf317479be44a22032f34bacf07a1\\classes.dex

@@ -33,6 +33,9 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.SeekBar;
 import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 
@@ -59,24 +62,33 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 	private Intent usbService;
 
 	private EditText txtHidInput;
-
+	private TextView txt_inst;
 	private ImageButton btn_0;
 	private ImageButton btn_1;
 	private ImageButton btn_2;
 	private ImageButton btn_3;
 	private ImageButton btn_4;
 	private ImageButton btn_begin;
-	private ImageButton btn_end;
+	private CheckBox chk_AnomAttached;
 
+	private ImageView patch_0;
+	private ImageView patch_1;
+	private ImageView patch_2;
+	//private int RG_0 = 255;
+	//private int RG_1 = 255;
+	//private int RG_2 = 255;
 
 	private String settingsDelimiter;
-
 	private String receiveDataFormat;
 	private String delimiter;
-	private CheckBox chk_AnomAttached;
+
+
 
 	protected EventBus eventBus;
 
+	private int[] sin0;
+	private int[] sin1;
+	private int[] sin2;
 
 	private boolean called0 = false;
 	private boolean called1 = false;
@@ -134,6 +146,88 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 					timerHandler.postDelayed(timerRunnable, 0);
 
 				}
+			}
+
+		}
+	};
+
+	long startTime2 = 0;
+	Handler timerHandler2 = new Handler();
+	Runnable timerRunnable2 = new Runnable() {
+
+		@Override
+		public void run() {
+			long millis = System.currentTimeMillis() - startTime2;
+			int seconds = (int) (millis / 1000);
+			//int minutes = seconds / 60;
+			//seconds = seconds % 60;
+
+			//txt_TimerView.setText(String.format("%d:%02d", minutes, seconds));
+			timerHandler2.postDelayed(this, 25);
+
+			if (seconds >= 4)
+			{
+				txt_inst.setText("");
+				timerHandler2.removeCallbacks(timerRunnable2);
+			}
+
+		}
+	};
+
+	long startTime3 = 0;
+	Handler timerHandler3 = new Handler();
+	Runnable timerRunnable3 = new Runnable() {
+
+		@Override
+		public void run() {
+			long millis = System.currentTimeMillis() - startTime3;
+			//int minutes = seconds / 60;
+			//seconds = seconds % 60;
+
+			//txt_TimerView.setText(String.format("%d:%02d", minutes, seconds));
+			timerHandler3.postDelayed(this, 0);
+			SetLED(0, sin0[(int)millis]);
+			SetLED(1, sin1[(int)millis]);
+			SetLED(2, sin2[(int)millis]);
+			if (millis > 1000)
+			{
+				startTime3 = System.currentTimeMillis();
+			}
+
+		}
+	};
+
+	long startTime4 = 0;
+	Handler timerHandler4 = new Handler();
+	Runnable timerRunnable4 = new Runnable() {
+
+		@Override
+		public void run() {
+			long millis = System.currentTimeMillis() - startTime4;
+			//int minutes = seconds / 60;
+			//seconds = seconds % 60;
+
+			//txt_TimerView.setText(String.format("%d:%02d", minutes, seconds));
+			timerHandler4.postDelayed(this, 0);
+			if (millis > 1000)
+			{
+				startTime4 = System.currentTimeMillis();
+				timerHandler4.removeCallbacks(timerRunnable4);
+				if (iteration >= 10) {
+					btn_0.setVisibility(View.VISIBLE);
+					btn_1.setVisibility(View.VISIBLE);
+					btn_2.setVisibility(View.VISIBLE);
+					btn_3.setVisibility(View.VISIBLE);
+					btn_4.setVisibility(View.VISIBLE);
+				}
+				else {
+					btn_0.setVisibility(View.VISIBLE);
+					btn_2.setVisibility(View.VISIBLE);
+					btn_4.setVisibility(View.VISIBLE);
+				}
+
+
+				Experiment();
 			}
 
 		}
@@ -199,6 +293,7 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 		}
 		sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
 		sharedPreferences.registerOnSharedPreferenceChangeListener(listener);
+
 		initUI();
 		startTime = System.currentTimeMillis();
 		timerHandler.postDelayed(timerRunnable, 0);
@@ -208,6 +303,7 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 		setVersionToTitle();
 
 		txtHidInput = (EditText) findViewById(R.id.edtxtHidInput);
+		txt_inst = (TextView) findViewById(R.id.txt_inst);
 		//rbSendDataType = (RadioButton) findViewById(R.id.rbSendData);
 
 		//rbSendDataType.setOnClickListener(this);
@@ -233,113 +329,37 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 		btn_4.setOnClickListener(this);
 		btn_begin.setOnClickListener(this);
 
-
 		btn_0.setVisibility(View.INVISIBLE);
 		btn_1.setVisibility(View.INVISIBLE);
 		btn_2.setVisibility(View.INVISIBLE);
 		btn_3.setVisibility(View.INVISIBLE);
 		btn_4.setVisibility(View.INVISIBLE);
 
-		//sbLED0int = (SeekBar) findViewById(R.id.sld_LED0int);
-		//sbLED0int.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-//			public void onStopTrackingTouch(SeekBar seekBar) {
-//			}
-//
-//			public void onStartTrackingTouch(SeekBar seekBar) {
-//			}
-//
-//			public void onProgressChanged(SeekBar sbLED0int, int progress,
-//										  boolean fromUser) {
-//				String t = String.valueOf(progress);
-//				String msg = "0 " + t + " 0";
-//				txtHidInput.setText(msg);
-//				eventBus.post(new USBDataSendEvent(txtHidInput.getText().toString()));
-//			}
-//		});
-//
-//		sbLED1int = (SeekBar) findViewById(R.id.sld_LED1int);
-//		sbLED1int.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-//			public void onStopTrackingTouch(SeekBar seekBar) {
-//			}
-//
-//			public void onStartTrackingTouch(SeekBar seekBar) {
-//			}
-//
-//			public void onProgressChanged(SeekBar sbLED1int, int progress,
-//										  boolean fromUser) {
-//				String t = String.valueOf(progress);
-//				String msg = "1 " + t + " 0";
-//				txtHidInput.setText(msg);
-//				eventBus.post(new USBDataSendEvent(txtHidInput.getText().toString()));
-//			}
-//		});
-//
-//		sbLED2int = (SeekBar) findViewById(R.id.sld_LED2int);
-//		sbLED2int.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-//			public void onStopTrackingTouch(SeekBar seekBar) {
-//			}
-//
-//			public void onStartTrackingTouch(SeekBar seekBar) {
-//			}
-//
-//			public void onProgressChanged(SeekBar sbLED2int, int progress,
-//										  boolean fromUser) {
-//				String t = String.valueOf(progress);
-//				String msg = "2 " + t + " 0";
-//				txtHidInput.setText(msg);
-//				eventBus.post(new USBDataSendEvent(txtHidInput.getText().toString()));
-//			}
-//		});
-//
-//
-//		sbRG0int = (SeekBar) findViewById(R.id.sld_RG1);
-//		sbRG0int.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-//			public void onStopTrackingTouch(SeekBar seekBar) {
-//			}
-//
-//			public void onStartTrackingTouch(SeekBar seekBar) {
-//			}
-//
-//			public void onProgressChanged(SeekBar sbRG0int, int progress, boolean fromUser) {
-//
-//				ImageView ivcircleB = (ImageView) findViewById(R.id.iv_circleA);
-//				ivcircleB.setColorFilter(Color.rgb(255 - progress, progress, 0));
-//			}
-//		});
-//
-//
-//		sbRG1int = (SeekBar) findViewById(R.id.sld_RG2);
-//		sbRG1int.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-//			public void onStopTrackingTouch(SeekBar seekBar) {
-//			}
-//
-//			public void onStartTrackingTouch(SeekBar seekBar) {
-//			}
-//
-//			public void onProgressChanged(SeekBar sbRG1int, int progress, boolean fromUser) {
-//
-//				ImageView ivcircleB = (ImageView) findViewById(R.id.iv_circleB);
-//				ivcircleB.setColorFilter(Color.rgb(255 - progress, progress, 0));
-//			}
-//		});
-//
-//
-//		sbRG2int = (SeekBar) findViewById(R.id.sld_RG3);
-//		sbRG2int.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-//			public void onStopTrackingTouch(SeekBar seekBar) {
-//			}
-//
-//			public void onStartTrackingTouch(SeekBar seekBar) {
-//			}
-//
-//			public void onProgressChanged(SeekBar sbRG2int, int progress, boolean fromUser) {
-//
-//				ImageView ivcircle = (ImageView) findViewById(R.id.iv_circleC);
-//				ivcircle.setColorFilter(Color.rgb(255 - progress, progress, 0));
-//			}
-//		});
+		patch_0 = (ImageView) findViewById(R.id.iv_circleA);
+		patch_1 = (ImageView) findViewById(R.id.iv_circleB);
+		patch_2 = (ImageView) findViewById(R.id.iv_circleC);
+		//Position0.setColorFilter(Color.rgb(255 - RG_0, RG_0, 0));
+		//Position1.setColorFilter(Color.rgb(255 - RG_1, RG_1, 0));
+		//Position2.setColorFilter(Color.rgb(255 - RG_2, RG_2, 0));
 
-		//sendToUSBService(Consts.ACTION_USB_DATA_TYPE, true);
+		patch_0.setColorFilter(Color.rgb(0, 0, 0));
+		patch_1.setColorFilter(Color.rgb(0, 0, 0));
+		patch_2.setColorFilter(Color.rgb(0, 0, 0));
+		txt_inst.setText("");
+
+		sin0 = new int[1000];
+		sin1 = new int[1000];
+		sin2 = new int[1000];
+		for (int x = 0; x < 1000; x++)
+		{
+			double d = 255 * (Math.sin((double)x * 2 * Math.PI / 1000.00000) + 0.5);
+			double e = 255 * (Math.sin((double)x * 2 * Math.PI / 1000.00000 + Math.PI / 3.00000) + 0.5);
+			double f = 255 * (Math.sin((double)x * 2 * Math.PI / 1000.00000 + 2 * Math.PI / 3.00000) + 0.5);
+			sin0[x] = (int)d;
+			sin1[x] = (int)e;
+			sin2[x] = (int)f;
+		}
+
 
 	}
 	@Override
@@ -351,51 +371,463 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 	public void onClick(View v) {
 
 		if (v == btn_0) {
-			txtHidInput.setText("btn0");
-			SetLED(0, 28);
+			//txtHidInput.setText("btn0");
+			//RECORD
+			lane00[iteration - 1] = 1;
+			Blank(true);
 		} else if (v == btn_1) {
-			txtHidInput.setText("btn1");
-			SetLED(1, 128);
+			//txtHidInput.setText("btn1");
+			//RECORD
+			lane05[iteration - 1] = 1;
+			Blank(true);
 		} else if (v == btn_2) {
-			txtHidInput.setText("btn2");
-			SetLED(2, 255);
+			//txtHidInput.setText("btn2");
+			//RECORD
+			lane10[iteration - 1] = 1;
+			Blank(true);
+
 		} else if (v == btn_3) {
-			txtHidInput.setText("btn3");
-			SetLED(1, 0);
+			//txtHidInput.setText("btn3");
+			//timerHandler3.removeCallbacks(timerRunnable3);
+			//RECORD
+			lane15[iteration - 1] = 1;
+			Blank(true);
 		} else if (v == btn_4) {
-			txtHidInput.setText("btn4");
-			SetLED(2, 0);
+			//txtHidInput.setText("btn4");
+			//startTime3 = System.currentTimeMillis();
+			//timerHandler3.postDelayed(timerRunnable3, 0);
+			//RECORD
+			lane20[iteration - 1] = 1;
+			Blank(true);
+
 		} else if (v == btn_begin) {
-			txtHidInput.setText("btnbegin");
-			experiment();
+			//txtHidInput.setText("btnbegin");
+			if (intest) {
+				btn_begin.setImageResource(R.drawable.button_begintest);
+				// show the response buttons
+				btn_0.setVisibility(View.INVISIBLE);
+				btn_1.setVisibility(View.INVISIBLE);
+				btn_2.setVisibility(View.INVISIBLE);
+				btn_3.setVisibility(View.INVISIBLE);
+				btn_4.setVisibility(View.INVISIBLE);
+				// set the boolean variable
+
+				Reset();
+				Blank(false);
+
+			}
+			else {
+
+				if (finished)
+				{
+					AlertDialog.Builder meowBuilder = new AlertDialog.Builder(this);
+					meowBuilder.setTitle("?");
+					meowBuilder.setMessage("Clear previous results and continue?");
+					meowBuilder.setCancelable(false);
+					meowBuilder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+						public void onClick(DialogInterface dialog, int id) {
+							Reset();
+							Experiment();
+						}
+					});
+					meowBuilder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+						public void onClick(DialogInterface dialog,int id) {
+							// if this button is clicked, just close
+							// the dialog box and do nothing
+							dialog.cancel();
+						}
+					});
+
+					AlertDialog meow = meowBuilder.create();
+					meow.show();
+
+
+				}
+				else
+				{
+					btn_begin.setImageResource(R.drawable.button_reset);
+					// show the response buttons
+					btn_0.setVisibility(View.VISIBLE);
+					//btn_1.setVisibility(View.VISIBLE);
+					btn_2.setVisibility(View.VISIBLE);
+					//btn_3.setVisibility(View.VISIBLE);
+					btn_4.setVisibility(View.VISIBLE);
+					// set the boolean variable
+					Reset();
+					intest = true;
+					finished = false;
+					Experiment();
+				}
+
+			}
 
 		}
 
 	}
-	private int iteration = 0;
 
-	void experiment()
+	private void Blank(boolean Restart)
 	{
-		if (chk_AnomAttached.isChecked()) {
-			btn_0.setVisibility(View.VISIBLE);
-			btn_1.setVisibility(View.VISIBLE);
-			btn_2.setVisibility(View.VISIBLE);
-			btn_3.setVisibility(View.VISIBLE);
-			btn_4.setVisibility(View.VISIBLE);
+
+		btn_0.setVisibility(View.INVISIBLE);
+		btn_1.setVisibility(View.INVISIBLE);
+		btn_2.setVisibility(View.INVISIBLE);
+		btn_3.setVisibility(View.INVISIBLE);
+		btn_4.setVisibility(View.INVISIBLE);
+		SetLED(0, 0);
+		SetLED(1, 0);
+		SetLED(2, 0);
+		patch_0.setColorFilter(Color.rgb(0, 0, 0));
+		patch_1.setColorFilter(Color.rgb(0, 0, 0));
+		patch_2.setColorFilter(Color.rgb(0, 0, 0));
+		if (Restart) {
+			startTime4 = System.currentTimeMillis();
+			timerHandler4.postDelayed(timerRunnable4, 0);
+		}
+	}
 
 
-			//This program is going to work by having certain prescribed presentations of colors
-			//First, we need to separate anomalous trichromats from
+	private void Reset()
+	{
+		for (int x = 0; x < 500; x++)
+		{
+			lane00[x] = 0;
+			lane05[x] = 0;
+			lane10[x] = 0;
+			lane15[x] = 0;
+			lane20[x] = 0;
+			position[x] = 0;
+		}
+		iteration = 0;
+		intest = false;
+		finished = false;
+		Probably_Normal = false;
+		Probably_Protanomolous = false;
+		Probably_Deuteranomolous = false;
+		Probably_Deuteranope = false;
+		Probably_Protanope = false;
+	}
 
-			if (iteration == 0)
+
+	// p = patch or position
+	// 0, 1, 2 positions , 0 = top, 1 = middle, 2 = bottom
+	// R = red, G will always be 255-R
+	// dev = deviation
+	// jit = jitter (variation away from the deviation (e.g. 50 - 5 or 50 + 2)
+	private int p_dev_p = 50;
+	private int p_dev_d = 50;
+	private int p_jit = 7; // code to make it +/- this
+	private int p_0_R;
+	private int p_1_R;
+	private int p_2_R;
+	private int p_normal = 150; // since light is more orange, need to have a tad more red light.
+	private int l_normal = 100;
+	private int l_0 = 150;
+	private int l_1 = 150;
+	private int l_2 = 150;
+	private int l_pr_0 = 30;
+	private int p_pr_0 = 255;
+	private int l_pr_1 = 30;
+	private int p_pr_1 = 30;
+
+	private int l_de_0 = 180;
+	private int p_de_0 = 100;
+	private int l_de_1 = 50;
+	private int p_de_1 = 100;
+
+	private int l_deut = 40;
+
+	private boolean actual_pos_top = true;
+	private boolean TopOfNormal = true;
+
+	private int iteration = 0;
+	private boolean intest = false;
+	private boolean finished = false;
+	private boolean Probably_Normal = false;
+	private boolean Probably_Protanomolous = false;
+	private boolean Probably_Deuteranomolous = false;
+	private boolean Probably_Deuteranope = false;
+	private boolean Probably_Protanope = false;
+
+	private boolean[] Red = new boolean[500];
+	private boolean[] Grn = new boolean[500];
+	int[] Red_Margin = new int[500];
+	int[] Grn_Margin = new int[500];
+	int[] Missed_Protanopic = new int[500];
+	int[] Missed_Deuteranopic = new int[500];
+
+	private int[] position = new int[500];
+	//class ExperimentResponsesAndVariables{
+	int[] lane00 = new int[500];
+	int[] lane05 = new int[500];
+	int[] lane10 = new int[500];
+	int[] lane15 = new int[500];
+	int[] lane20 = new int[500];
+
+
+	//}
+
+	//List<ExperimentResponsesAndVariables> e = new ArrayList<ExperimentResponsesAndVariables>();
+	private void RecordResponse()
+	{
+
+	}
+
+	void Experiment()
+	{
+		//conventions 0 - 0.5 TopOfNormal
+		//if (!chk_AnomAttached.isChecked()) {
+
+			if (iteration >= 0 && iteration < 10)
 			{
-				iteration ++;
+				// The first 9 presentations will be normal in the middle and 1 deuteranomolous and 1 protanomolous
+				// presentation. Position of the deut or pro will move to either side randomly
+
+				// Deutan
+					// issues with M
+				// Deuteranomous
+					// issues with M, having L and L' (more sensitive to red light)
+
+				// always increment the iteration variable
+				iteration++;
+				// position of the
 				Random r = new Random();
-				int i1 = r.nextInt(2);
+				double rr = 59 * r.nextDouble();
+
+				int[] pn = new int[3]; int[] pp = new int[3]; int[] pd = new int[3];
+				if (rr >= 0 && rr < 10)
+				{
+					// 0 norm
+					// 1 prot
+					// 2 deut
+					position[iteration - 1] = 0;
+ 					pn[0] = 1;  pp[0] = 0;  pd[0] = 0;
+					pn[1] = 0;  pp[1] = 1;  pd[1] = 0;
+					pn[2] = 0;  pp[2] = 0;  pd[2] = 1;
+
+				}
+				else if (rr >= 10 && rr < 20)
+				{
+					// 0 norm
+					// 1 deut
+					// 2 prot
+					position[iteration - 1] = 1;
+					pn[0] = 1;  pp[0] = 0;  pd[0] = 0;
+					pn[1] = 0;  pp[1] = 0;  pd[1] = 1;
+					pn[2] = 0;  pp[2] = 1;  pd[2] = 0;				}
+				else if (rr >= 20 && rr < 30)
+				{
+					// 0 prot
+					// 1 normal
+					// 2 deut
+					position[iteration - 1] = 2;
+					pn[0] = 0;  pp[0] = 1;  pd[0] = 0;
+					pn[1] = 1;  pp[1] = 0;  pd[1] = 0;
+					pn[2] = 0;  pp[2] = 0;  pd[2] = 1;
+				}
+				else if (rr >= 30 && rr < 40)
+				{
+					// 0 deut
+					// 1 norm
+					// 2 prot
+					position[iteration - 1] = 3;
+					pn[0] = 0;  pp[0] = 0;  pd[0] = 1;
+					pn[1] = 1;  pp[1] = 0;  pd[1] = 0;
+					pn[2] = 0;  pp[2] = 1;  pd[2] = 0;
+				}
+				else if (rr >= 40 && rr < 50)
+				{
+					// 0 prot
+					// 1 deut
+					// 2 norm
+					position[iteration - 1] = 4;
+					pn[0] = 0;  pp[0] = 1;  pd[0] = 0;
+					pn[1] = 0;  pp[1] = 0;  pd[1] = 1;
+					pn[2] = 1;  pp[2] = 0;  pd[2] = 0;
+				}
+				else
+				{
+					// 0 deut
+					// 1 prot
+					// 2 norm
+					position[iteration - 1] = 5;
+					pn[0] = 0;  pp[0] = 0;  pd[0] = 1;
+					pn[1] = 0;  pp[1] = 1;  pd[1] = 0;
+					pn[2] = 1;  pp[2] = 0;  pd[2] = 0;
+				}
+
+//				boolean DeutOnTop = r.nextBoolean();
+//				if (DeutOnTop)
+//				{
+//					p_0_R = p_normal - (p_dev + ((int)(r.nextDouble() * p_jit - (p_jit/2))));
+//					p_2_R = p_normal + (p_dev + ((int)(r.nextDouble() * p_jit - (p_jit/2))));
+//				}
+//				else
+//				{
+//					p_0_R = p_normal + (p_dev + ((int)(r.nextDouble() * p_jit - (p_jit/2))));
+//					p_2_R = p_normal - (p_dev + ((int)(r.nextDouble() * p_jit - (p_jit/2))));
+//				}
+
+				p_0_R = pn[0] * p_normal + pp[0] * (p_normal + (p_dev_p + ((int)(r.nextDouble() * p_jit - (p_jit/2))))) + pd[0] * ((p_dev_d - ((int)(r.nextDouble() * p_jit - (p_jit/2)))));
+				p_1_R = pn[1] * p_normal + pp[1] * (p_normal + (p_dev_p + ((int)(r.nextDouble() * p_jit - (p_jit/2))))) + pd[1] * ((p_dev_d - ((int)(r.nextDouble() * p_jit - (p_jit/2)))));
+				p_2_R = pn[2] * p_normal + pp[2] * (p_normal + (p_dev_p + ((int)(r.nextDouble() * p_jit - (p_jit/2))))) + pd[2] * ((p_dev_d - ((int)(r.nextDouble() * p_jit - (p_jit/2)))));
+
+				SetLED(2, l_normal);
+				SetLED(1, l_normal);
+				SetLED(0, l_normal);
+
+				patch_0.setColorFilter(Color.rgb(p_0_R, 255 - p_0_R, 0));
+				patch_1.setColorFilter(Color.rgb(p_1_R, 255 - p_1_R, 0));
+				patch_2.setColorFilter(Color.rgb(p_2_R, 255 - p_2_R, 0));
+				//txt_inst.setText(Integer.toString(iteration));
+			}
+			else if (iteration >= 10 && !finished)
+			{
+				double deut_anom = 0;
+				double prot_anom = 0;
+				double normal = 0;
+				//this is the first time we need to do some processing.
+				if (iteration == 10)
+				{
+
+					for (int x = 0; x < 10; x++)
+					{
+						int[] pn = new int[3]; int[] pp = new int[3]; int[] pd = new int[3];
+						if (position[x] == 0)
+						{
+							// 0 norm
+							// 1 prot
+							// 2 deut
+							pn[0] = 1;  pp[0] = 0;  pd[0] = 0;
+							pn[1] = 0;  pp[1] = 1;  pd[1] = 0;
+							pn[2] = 0;  pp[2] = 0;  pd[2] = 1;
+
+						}
+						else if (position[x] == 1)
+						{
+							// 0 norm
+							// 1 deut
+							// 2 prot
+							pn[0] = 1;  pp[0] = 0;  pd[0] = 0;
+							pn[1] = 0;  pp[1] = 0;  pd[1] = 1;
+							pn[2] = 0;  pp[2] = 1;  pd[2] = 0;
+						}
+						else if (position[x] == 2)
+						{
+							// 0 prot
+							// 1 normal
+							// 2 deut
+							pn[0] = 0;  pp[0] = 1;  pd[0] = 0;
+							pn[1] = 1;  pp[1] = 0;  pd[1] = 0;
+							pn[2] = 0;  pp[2] = 0;  pd[2] = 1;
+						}
+						else if (position[x] == 3)
+						{
+							// 0 deut
+							// 1 norm
+							// 2 prot
+							pn[0] = 0;  pp[0] = 0;  pd[0] = 1;
+							pn[1] = 1;  pp[1] = 0;  pd[1] = 0;
+							pn[2] = 0;  pp[2] = 1;  pd[2] = 0;
+						}
+						else if (position[x] == 4)
+						{
+							// 0 prot
+							// 1 deut
+							// 2 norm
+							pn[0] = 0;  pp[0] = 1;  pd[0] = 0;
+							pn[1] = 0;  pp[1] = 0;  pd[1] = 1;
+							pn[2] = 1;  pp[2] = 0;  pd[2] = 0;
+						}
+						else
+						{
+							// 0 deut
+							// 1 prot
+							// 2 norm
+							pn[0] = 0;  pp[0] = 0;  pd[0] = 1;
+							pn[1] = 0;  pp[1] = 1;  pd[1] = 0;
+							pn[2] = 1;  pp[2] = 0;  pd[2] = 0;
+
+						}
+						prot_anom += pp[0] * lane00[x] + pp[1] * lane10[x] + pp[2] * lane20[x];
+						normal += pn[0] * lane00[x] + pn[1] * lane10[x] + pn[2] * lane20[x];
+						deut_anom += pd[0] * lane00[x] + pd[1] * lane10[x] + pd[2] * lane20[x];
+					}
+					if (deut_anom >= normal)
+					{
+						Probably_Deuteranomolous = true;
+					}
+					else if (prot_anom >= normal)
+					{
+						Probably_Protanomolous = true;
+					}
+					else
+					{
+						Probably_Normal = true;
+					}
+				}
+				iteration++;
+
+				//Now we know what pathway
+
+				//first, let's program the normal pathway
+
+				if (Probably_Protanomolous)
+				{
+					txt_inst.setText("Probably Protanomolous. Prot: " + Double.toString(prot_anom) +  " Deut: " + Double.toString(deut_anom) + " Norm: " + Double.toString(normal));
+					startTime2 = System.currentTimeMillis();
+					timerHandler2.postDelayed(timerRunnable2, 0);
+				}
+				else if (Probably_Deuteranomolous)
+				{
+					txt_inst.setText("Probably Deuteranomolous. Prot: " + Double.toString(prot_anom) +  " Deut: " + Double.toString(deut_anom) + " Norm: " + Double.toString(normal));
+					startTime2 = System.currentTimeMillis();
+					timerHandler2.postDelayed(timerRunnable2, 0);
+				}
+				else
+				{
+					//probably normal pathway
+					txt_inst.setText("Probably Normal. Prot: " + Double.toString(prot_anom) +  " Deut: " + Double.toString(deut_anom) + " Norm: " + Double.toString(normal));
+					startTime2 = System.currentTimeMillis();
+					timerHandler2.postDelayed(timerRunnable2, 0);
+
+
+
+
+					Random r = new Random();
+
+					if (r.nextBoolean())
+					{
+						//red side
+						if (iteration == 11)
+						{
+							Red_Margin[0] = p_dev_p + 50;
+						}
+						Red_Margin[iteration - 11] = Red_Margin[iteration - 10] - 5
+
+					}
+					else
+					{
+						//green side
+					}
+
+
+
+
+
+
+				}
 			}
 
-
-		}
+		//}
+		//else
+		//{
+		//	intest = false;
+		//	Blank(false);
+		//	Reset();
+		//	txt_inst.setText("The anomaloscope device is not attached. Cannot proceed.");
+		//	startTime2 = System.currentTimeMillis();
+		//	timerHandler2.postDelayed(timerRunnable2, 0);
+		//}
 
 	}
 

@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "E:\\Dropbox\\AnomaloscopeApp\\anom_droid2\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v11\\values-v11.xml",
+        "outputFile": "C:\\gitprojects\\anom_droid2\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v11\\values-v11.xml",
         "map": [
             {
                 "to": {
@@ -12,7 +12,7 @@
                     "endOffset": 187
                 },
                 "from": {
-                    "file": "E:\\Dropbox\\AnomaloscopeApp\\anom_droid2\\res\\values-v11\\styles.xml",
+                    "file": "C:\\gitprojects\\anom_droid2\\res\\values-v11\\styles.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,

@@ -10,22 +10,22 @@ android:background="#000000"
 tools:context=".USBHIDTerminal">
 
 
-    <EditText
+<EditText
     android:id="@+id/edtxtHidInput"
     android:layout_width="206dp"
     android:layout_height="46dp"
     android:inputType="text"
     android:textAppearance="?android:attr/textAppearanceSmallInverse"
     android:textColor="#FFFF00"
-        tools:layout_editor_absoluteY="0dp"
-        android:layout_marginStart="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="8dp">
+    tools:layout_editor_absoluteY="0dp"
+    android:layout_marginStart="8dp"
+    app:layout_constraintLeft_toLeftOf="parent"
+    android:layout_marginLeft="8dp">
 
 </EditText>
 
 
-    <ImageView
+<ImageView
     android:layout_width="0dp"
     android:layout_height="166dp"
     android:id="@+id/iv_circleC"
@@ -36,8 +36,8 @@ tools:context=".USBHIDTerminal">
     app:layout_constraintRight_toRightOf="@+id/iv_circleB"
     tools:layout_constraintLeft_creator="1"
     app:layout_constraintLeft_toLeftOf="@+id/iv_circleB"
-    android:layout_marginBottom="224dp"
-    app:layout_constraintHorizontal_bias="0.0">
+    android:layout_marginBottom="264dp"
+    app:layout_constraintHorizontal_bias="1.0">
 
 </ImageView>
 
@@ -133,7 +133,7 @@ tools:context=".USBHIDTerminal">
         android:layout_marginRight="184dp"
         app:layout_constraintVertical_bias="0.25"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="272dp" />
+        android:layout_marginBottom="320dp" />
 
     <ImageButton
         android:src="@drawable/button_begintest"
@@ -144,7 +144,21 @@ tools:context=".USBHIDTerminal">
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginLeft="136dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="16dp" />
+        android:layout_marginBottom="24dp" />
+
+    <TextView
+        android:textColor="#FFFF00"
+        android:layout_width="574dp"
+        android:layout_height="43dp"
+        android:id="@+id/txt_inst"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="120dp"
+        android:layout_marginStart="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="15dp"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:gravity="center"/>
 
 
 </android.support.constraint.ConstraintLayout>

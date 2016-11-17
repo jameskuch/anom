@@ -3,48 +3,57 @@
 
     <item
         is-multidex="true"
+        jar="C:\gitprojects\anom_droid2\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="e68903bbc458dd011cef0838516b5c332b230611">
+        <dex dex="C:\gitprojects\anom_droid2\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_de39e445d9bff80bd689d90beedcda389603b2a0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\gitprojects\anom_droid2\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="be42b42521d4fd90c05d3f771a70ec415edf2a69">
+        <dex dex="C:\gitprojects\anom_droid2\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_70805794dffcf317479be44a22032f34bacf07a1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\James\.gradle\caches\modules-2\files-2.1\com.nanohttpd\nanohttpd\2.1.1\82595b0b3190c8bdd988f307346e6edec9c09b72\nanohttpd-2.1.1.jar"
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
         sha1="82595b0b3190c8bdd988f307346e6edec9c09b72">
-        <dex dex="E:\Dropbox\AnomaloscopeApp\anom_droid2\build\intermediates\transforms\dex\debug\folders\1000\10\nanohttpd-2.1.1_e524ac28a38cb8c22209d64c563f82d7546299ad\classes.dex" />
+        <dex dex="C:\gitprojects\anom_droid2\build\intermediates\transforms\dex\debug\folders\1000\10\nanohttpd-2.1.1_e524ac28a38cb8c22209d64c563f82d7546299ad\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="E:\Dropbox\AnomaloscopeApp\anom_droid2\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="22.0.1"
-        sha1="c95ba8152923e4872e86a82cfcba9a51c0214328">
-        <dex dex="E:\Dropbox\AnomaloscopeApp\anom_droid2\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-22.1.1_1280d2c58ad8a63be0a5e125109627246e3e8c1c\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\James\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\22.1.1\support-annotations-22.1.1.jar"
+        jar="C:\Users\James\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.1.1\support-annotations-22.1.1.jar"
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
         sha1="01d051a6bfb1218b1db2d3a5af0480ac2c25c42a">
-        <dex dex="E:\Dropbox\AnomaloscopeApp\anom_droid2\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-22.1.1_784e10dc2e4691ac578c47b093475952f6a5c32c\classes.dex" />
+        <dex dex="C:\gitprojects\anom_droid2\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-22.1.1_0d15aba36b7f37f925e49bb8e161387dc0194d78\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\James\AppData\Local\Android\Sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.0-alpha9\constraint-layout-solver-1.0.0-alpha9.jar"
+        jar="C:\Users\James\AppData\Local\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.0-alpha9\constraint-layout-solver-1.0.0-alpha9.jar"
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
         sha1="6a908fd0803cc5f65b007101002aec06dc7544da">
-        <dex dex="E:\Dropbox\AnomaloscopeApp\anom_droid2\build\intermediates\transforms\dex\debug\folders\1000\10\constraint-layout-solver-1.0.0-alpha9_aa2d31af260c49e7f7cdcd46d979299e4e0a434c\classes.dex" />
+        <dex dex="C:\gitprojects\anom_droid2\build\intermediates\transforms\dex\debug\folders\1000\10\constraint-layout-solver-1.0.0-alpha9_f8286eacfebb25e857836c4ecd1622f9e7ae2344\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="E:\Dropbox\AnomaloscopeApp\anom_droid2\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jar="C:\gitprojects\anom_droid2\build\intermediates\exploded-aar\com.android.support.constraint\constraint-layout\1.0.0-alpha9\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
-        sha1="0722a2c84f37e2f7f659b8f26084ce92b132dd15">
-        <dex dex="E:\Dropbox\AnomaloscopeApp\anom_droid2\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_1eaabc5a0b3e2fa9b66b1a6696064bd5feeca256\classes.dex" />
+        sha1="f2b64f6a762f61a2379d6a79af03e2ee56eefe0b">
+        <dex dex="C:\gitprojects\anom_droid2\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support.constraint-constraint-layout-1.0.0-alpha9_0ca7a764e5c903e86b4420b79abb0510c7863977\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -53,25 +62,16 @@
         optimize="true"
         revision="22.0.1"
         sha1="ddd166d01b3158d1c00576d29f7ed15c030df719">
-        <dex dex="E:\Dropbox\AnomaloscopeApp\anom_droid2\build\intermediates\transforms\dex\debug\folders\1000\10\eventbus-2.4.0_206f162c41aefd9dd8b9fde74df0fbe4b8e23927\classes.dex" />
+        <dex dex="C:\gitprojects\anom_droid2\build\intermediates\transforms\dex\debug\folders\1000\10\eventbus-2.4.0_206f162c41aefd9dd8b9fde74df0fbe4b8e23927\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="E:\Dropbox\AnomaloscopeApp\anom_droid2\build\intermediates\exploded-aar\com.android.support.constraint\constraint-layout\1.0.0-alpha9\jars\classes.jar"
+        jar="C:\gitprojects\anom_droid2\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
-        sha1="f2b64f6a762f61a2379d6a79af03e2ee56eefe0b">
-        <dex dex="E:\Dropbox\AnomaloscopeApp\anom_droid2\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support.constraint-constraint-layout-1.0.0-alpha9_41a28a0bc4ae7287209c5ed5e5036110275930bc\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="E:\Dropbox\AnomaloscopeApp\anom_droid2\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="22.0.1"
-        sha1="28628c505595459d6c0c6a2c4280de9acca90520">
-        <dex dex="E:\Dropbox\AnomaloscopeApp\anom_droid2\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_25b2e22e689630dfc010e7f6ecd8b865965a84cb\classes.dex" />
+        sha1="c95ba8152923e4872e86a82cfcba9a51c0214328">
+        <dex dex="C:\gitprojects\anom_droid2\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-22.1.1_96ce374d4f42df1f547e63d0155cc8e07af4a16b\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -80,16 +80,16 @@
         optimize="true"
         revision="22.0.1"
         sha1="a868f1a987a27fe6900796a3d58dbcd0377f570e">
-        <dex dex="E:\Dropbox\AnomaloscopeApp\anom_droid2\build\intermediates\transforms\dex\debug\folders\1000\10\nanohttpd-websocket-2.1.1_2cd37ed17b1eb99a84721cecfb48036fdafcceaa\classes.dex" />
+        <dex dex="C:\gitprojects\anom_droid2\build\intermediates\transforms\dex\debug\folders\1000\10\nanohttpd-websocket-2.1.1_2cd37ed17b1eb99a84721cecfb48036fdafcceaa\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="E:\Dropbox\AnomaloscopeApp\anom_droid2\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\jars\libs\internal_impl-22.1.1.jar"
+        jar="C:\gitprojects\anom_droid2\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\jars\libs\internal_impl-22.1.1.jar"
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
         sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
-        <dex dex="E:\Dropbox\AnomaloscopeApp\anom_droid2\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-22.1.1_92ca17727663f33d926cd3deaa2a24d65b026ec8\classes.dex" />
+        <dex dex="C:\gitprojects\anom_droid2\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-22.1.1_8df8bf97496482a2208ab114634b48b94b8928ff\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -98,7 +98,7 @@
         optimize="true"
         revision="22.0.1"
         sha1="79a8984096fc6591c1e3690e07d41be506356fa5">
-        <dex dex="E:\Dropbox\AnomaloscopeApp\anom_droid2\build\intermediates\transforms\dex\debug\folders\1000\10\mockito-all-1.9.5_913dc3a671fa9ca6607d9edb64ac1298191566ee\classes.dex" />
+        <dex dex="C:\gitprojects\anom_droid2\build\intermediates\transforms\dex\debug\folders\1000\10\mockito-all-1.9.5_913dc3a671fa9ca6607d9edb64ac1298191566ee\classes.dex" />
     </item>
 
 </items>
