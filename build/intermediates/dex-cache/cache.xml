@@ -3,33 +3,6 @@
 
     <item
         is-multidex="true"
-        jar="C:\gitlocal\anom\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="22.0.1"
-        sha1="7c89371e635ab9981691b4ecc81a69c2d55a7460">
-        <dex dex="C:\gitlocal\anom\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_0f849d3f114b76487d06956270018989f058336f\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\James\.gradle\caches\modules-2\files-2.1\com.nanohttpd\nanohttpd-websocket\2.1.1\a868f1a987a27fe6900796a3d58dbcd0377f570e\nanohttpd-websocket-2.1.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="22.0.1"
-        sha1="a868f1a987a27fe6900796a3d58dbcd0377f570e">
-        <dex dex="C:\gitlocal\anom\build\intermediates\transforms\dex\debug\folders\1000\10\nanohttpd-websocket-2.1.1_2cd37ed17b1eb99a84721cecfb48036fdafcceaa\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\gitlocal\anom\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="22.0.1"
-        sha1="9cbaa035ce3718d2e00a25e3e35936e135bb12c0">
-        <dex dex="C:\gitlocal\anom\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_e5209204f667431db10000459098e4eac6880986\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\James\.gradle\caches\modules-2\files-2.1\com.nanohttpd\nanohttpd\2.1.1\82595b0b3190c8bdd988f307346e6edec9c09b72\nanohttpd-2.1.1.jar"
         jumboMode="true"
         optimize="true"
@@ -57,30 +30,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\gitlocal\anom\build\intermediates\exploded-aar\com.android.support.constraint\constraint-layout\1.0.0-alpha9\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="22.0.1"
-        sha1="f2b64f6a762f61a2379d6a79af03e2ee56eefe0b">
-        <dex dex="C:\gitlocal\anom\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support.constraint-constraint-layout-1.0.0-alpha9_176bd5b25b6deb54147a6b7ddaef10a78dc0c8c6\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\James\AppData\Local\Android\Sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.0-alpha9\constraint-layout-solver-1.0.0-alpha9.jar"
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
         sha1="6a908fd0803cc5f65b007101002aec06dc7544da">
         <dex dex="C:\gitlocal\anom\build\intermediates\transforms\dex\debug\folders\1000\10\constraint-layout-solver-1.0.0-alpha9_aa2d31af260c49e7f7cdcd46d979299e4e0a434c\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\James\.gradle\caches\modules-2\files-2.1\org.mockito\mockito-all\1.9.5\79a8984096fc6591c1e3690e07d41be506356fa5\mockito-all-1.9.5.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="22.0.1"
-        sha1="79a8984096fc6591c1e3690e07d41be506356fa5">
-        <dex dex="C:\gitlocal\anom\build\intermediates\transforms\dex\debug\folders\1000\10\mockito-all-1.9.5_913dc3a671fa9ca6607d9edb64ac1298191566ee\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -99,6 +54,51 @@
         revision="22.0.1"
         sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
         <dex dex="C:\gitlocal\anom\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-22.1.1_822d40e7dd1ebb7609a0f4131685df761655f487\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\gitlocal\anom\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="3f5d690c3d6e662e7b551960b9a3596a05152eec">
+        <dex dex="C:\gitlocal\anom\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_0f849d3f114b76487d06956270018989f058336f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\James\.gradle\caches\modules-2\files-2.1\com.nanohttpd\nanohttpd-websocket\2.1.1\a868f1a987a27fe6900796a3d58dbcd0377f570e\nanohttpd-websocket-2.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="a868f1a987a27fe6900796a3d58dbcd0377f570e">
+        <dex dex="C:\gitlocal\anom\build\intermediates\transforms\dex\debug\folders\1000\10\nanohttpd-websocket-2.1.1_2cd37ed17b1eb99a84721cecfb48036fdafcceaa\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\gitlocal\anom\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="8a6eeda60e58b61cf3827af12b69ab18e0356c1e">
+        <dex dex="C:\gitlocal\anom\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_e5209204f667431db10000459098e4eac6880986\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\gitlocal\anom\build\intermediates\exploded-aar\com.android.support.constraint\constraint-layout\1.0.0-alpha9\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="f2b64f6a762f61a2379d6a79af03e2ee56eefe0b">
+        <dex dex="C:\gitlocal\anom\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support.constraint-constraint-layout-1.0.0-alpha9_176bd5b25b6deb54147a6b7ddaef10a78dc0c8c6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\James\.gradle\caches\modules-2\files-2.1\org.mockito\mockito-all\1.9.5\79a8984096fc6591c1e3690e07d41be506356fa5\mockito-all-1.9.5.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="79a8984096fc6591c1e3690e07d41be506356fa5">
+        <dex dex="C:\gitlocal\anom\build\intermediates\transforms\dex\debug\folders\1000\10\mockito-all-1.9.5_913dc3a671fa9ca6607d9edb64ac1298191566ee\classes.dex" />
     </item>
 
 </items>

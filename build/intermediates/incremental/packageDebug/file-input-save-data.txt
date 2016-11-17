@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Thu Nov 17 00:09:41 PST 2016
+#Thu Nov 17 01:28:45 PST 2016
 5.base=C\:\\gitlocal\\anom\\build\\intermediates\\transforms\\mergeJavaRes\\debug\\jars\\2\\1f\\main.jar
 42.base=C\:\\gitlocal\\anom\\build\\intermediates\\assets\\debug
 32.set=DEX
@@ -39,7 +39,7 @@
 19.file=C\:\\gitlocal\\anom\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\activity_main.xml
 2.base=C\:\\gitlocal\\anom\\build\\intermediates\\res\\resources-debug.ap_
 29.file=C\:\\gitlocal\\anom\\build\\intermediates\\res\\resources-debug.ap_\\res\\xml\\usb_device_filter.xml
-11.file=C\:\\gitlocal\\anom\\build\\intermediates\\res\\resources-debug.ap_\\res\\xml\\pref_general.xml
+11.file=C\:\\gitlocal\\anom\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-hdpi-v4\\black_large.png
 39.file=C\:\\gitlocal\\anom\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_0\\classes.dex
 6.base=C\:\\gitlocal\\anom\\build\\intermediates\\assets\\debug
 43.base=C\:\\gitlocal\\anom\\build\\intermediates\\transforms\\mergeJavaRes\\debug\\jars\\2\\1f\\main.jar
@@ -156,7 +156,7 @@ count=53
 18.file=C\:\\gitlocal\\anom\\build\\intermediates\\res\\resources-debug.ap_\\resources.arsc
 1.base=C\:\\gitlocal\\anom\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_0f849d3f114b76487d06956270018989f058336f
 28.file=C\:\\gitlocal\\anom\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xhdpi-v4\\button_reset.png
-10.file=C\:\\gitlocal\\anom\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-hdpi-v4\\black_large.png
+10.file=C\:\\gitlocal\\anom\\build\\intermediates\\res\\resources-debug.ap_\\res\\xml\\pref_general.xml
 5.set=JAVA_RESOURCE
 38.file=C\:\\gitlocal\\anom\\build\\intermediates\\assets\\debug\\webserver\\css\\fullscreen.css
 43.set=JAVA_RESOURCE

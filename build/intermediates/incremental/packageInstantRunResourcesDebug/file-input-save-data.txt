@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Thu Nov 17 00:31:37 PST 2016
+#Thu Nov 17 01:28:44 PST 2016
 25.file=C\:\\gitlocal\\anom\\build\\intermediates\\assets\\debug\\webserver\\index.html
 25.base=C\:\\gitlocal\\anom\\build\\intermediates\\assets\\debug
 22.set=ANDROID_RESOURCE
@@ -21,10 +21,10 @@ count=26
 10.set=ASSET
 15.file=C\:\\gitlocal\\anom\\build\\intermediates\\res\\resources-debug.ap_\\resources.arsc
 15.base=C\:\\gitlocal\\anom\\build\\intermediates\\res\\resources-debug.ap_
-7.file=C\:\\gitlocal\\anom\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-hdpi-v4\\black_large.png
+7.file=C\:\\gitlocal\\anom\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout-large-v17\\activity_main.xml
 7.base=C\:\\gitlocal\\anom\\build\\intermediates\\res\\resources-debug.ap_
 15.set=ANDROID_RESOURCE
-1.file=C\:\\gitlocal\\anom\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xhdpi-v4\\button_reset.png
+1.file=C\:\\gitlocal\\anom\\build\\intermediates\\res\\resources-debug.ap_\\res\\xml\\usb_device_filter.xml
 1.base=C\:\\gitlocal\\anom\\build\\intermediates\\res\\resources-debug.ap_
 1.set=ANDROID_RESOURCE
 21.file=C\:\\gitlocal\\anom\\build\\intermediates\\assets\\debug\\webserver\\favicon.ico
@@ -41,13 +41,13 @@ count=26
 10.file=C\:\\gitlocal\\anom\\build\\intermediates\\assets\\debug\\webserver\\css\\fullscreen.css
 10.base=C\:\\gitlocal\\anom\\build\\intermediates\\assets\\debug
 14.set=ASSET
-2.file=C\:\\gitlocal\\anom\\build\\intermediates\\res\\resources-debug.ap_\\res\\xml\\usb_device_filter.xml
+2.file=C\:\\gitlocal\\anom\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xhdpi-v4\\button_reset.png
 2.base=C\:\\gitlocal\\anom\\build\\intermediates\\res\\resources-debug.ap_
 22.file=C\:\\gitlocal\\anom\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout-large-v4\\activity_main.xml
 22.base=C\:\\gitlocal\\anom\\build\\intermediates\\res\\resources-debug.ap_
 0.set=ANDROID_RESOURCE
 19.set=ASSET
-9.file=C\:\\gitlocal\\anom\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout-large-v17\\activity_main.xml
+9.file=C\:\\gitlocal\\anom\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-hdpi-v4\\black_large.png
 5.set=ANDROID_RESOURCE
 18.file=C\:\\gitlocal\\anom\\build\\intermediates\\res\\resources-debug.ap_\\res\\menu\\activity_main.xml
 9.base=C\:\\gitlocal\\anom\\build\\intermediates\\res\\resources-debug.ap_

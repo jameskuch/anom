@@ -8,10 +8,6 @@
         "source": "C:\\gitlocal\\anom\\res\\xml\\pref_general.xml"
     },
     {
-        "merged": "C:\\gitlocal\\anom\\build\\intermediates\\res\\merged\\debug\\xml\\accessory_filter.xml",
-        "source": "C:\\gitlocal\\anom\\res\\xml\\accessory_filter.xml"
-    },
-    {
         "merged": "C:\\gitlocal\\anom\\build\\intermediates\\res\\merged\\debug\\xml\\pref_headers.xml",
         "source": "C:\\gitlocal\\anom\\res\\xml\\pref_headers.xml"
     }

@@ -523,26 +523,21 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 	private int l_normal = 200;
     private int p_normal_jit = 2;
     private int l_normal_jit = 5;
-	private int l_0 = 150;
-	private int l_1 = 150;
-	private int l_2 = 150;
 	private int l_pr_0 = 30;
-	private int p_pr_0 = 255;
 	private int l_pr_1 = 30;
-	private int p_pr_1 = 30;
+	private int p_pr_0 = 255;
+	private int p_pr_1 = 255;
 
-	private int l_de_0 = 180;
-	private int p_de_0 = 100;
+	private int l_de_0 = 50;
 	private int l_de_1 = 50;
-	private int p_de_1 = 100;
+	private int p_de_0 = 128;
+	private int p_de_1 = 128;
 
     private int InitialIterations = 15;
-	//private int l_deut = 40;
-
-	private boolean actual_pos_top = true;
-	private boolean TopOfNormal = true;
-
 	private int iteration = 0;
+	private int iterR = 0;
+	private int iterG = 0;
+
 	private boolean intest = false;
 	private boolean finished = false;
 	private boolean Probably_Normal = false;
@@ -582,7 +577,7 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 
 			if (iteration >= 0 && iteration < InitialIterations)
 			{
-				// The first 9 presentations will be normal in the middle and 1 deuteranomolous and 1 protanomolous
+				// The first X, currently 15, presentations will be normal in the middle and 1 deuteranomolous and 1 protanomolous
 				// presentation. Position of the deut or pro will move to either side randomly
 
 				// Deutan
@@ -691,7 +686,7 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 				patch_2.setColorFilter(Color.rgb(p_2_R, 255 - p_2_R, 0));
 				//txt_inst.setText(Integer.toString(iteration));
 			}
-			else if (iteration >= 10 && !finished)
+			else if (iteration >= InitialIterations && !finished)
 			{
 				double deut_anom = 0;
 				double prot_anom = 0;
@@ -803,7 +798,6 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 
 
 
-					int margin;
 					int L_0;
 					int L_2;
 					Random r = new Random();
@@ -811,15 +805,14 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 					if (r.nextBoolean())
 					{
 						//red side
-						if (iteration == (InitialIterations + 1))
+
+						if (iterR == 0)
 						{
-							Red_Margin[0] = p_normal - p_dev_p;
-							margin = Red_Margin[0];
+							Red_Margin[iterR] = p_normal + p_dev_p;
 						}
 						else
 						{
-							Red_Margin[iteration - (InitialIterations + 1)] = Red_Margin[iteration - InitialIterations] - 5;
-							margin = Red_Margin[iteration - 11];
+							Red_Margin[iterR] = Red_Margin[iterR - 1] - 5;
 						}
 						Red[iteration - (InitialIterations + 1)] = true;
 						Grn[iteration - (InitialIterations + 1)] = false;
@@ -838,8 +831,7 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 								p_2_R = p_pr_1;
 							}
 							L_0 = l_normal;
-							p_0_R = margin;
-
+							p_0_R = Red_Margin[iterR];
 						}
 						else
 						{
@@ -854,23 +846,19 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 								p_0_R = p_pr_1;
 							}
 							L_2 = l_normal;
-							p_2_R = p_normal + margin;
-
+							p_2_R = Red_Margin[iterR];
 						}
-
+						iterR ++;
 					}
 					else {
 						//green side
 						if (iteration == (InitialIterations+1))
 						{
-							Grn_Margin[0] = p_normal - p_dev_d;
-							margin = Grn_Margin[0];
+							Grn_Margin[iterG] = p_normal - p_dev_d;
 						}
 						else
 						{
-							Grn_Margin[iteration - (InitialIterations + 1)] = Grn_Margin[iteration - InitialIterations] - 5;
-							margin = Grn_Margin[iteration - 11];
-
+							Grn_Margin[iterG] = Grn_Margin[iterG - 1] + 5;
 						}
 						Red[iteration - (InitialIterations + 1)] = false;
 						Grn[iteration - (InitialIterations + 1)] = true;
@@ -888,8 +876,7 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 								p_2_R = p_de_1;
 							}
 							L_0 = l_normal;
-							p_0_R = margin;
-
+							p_0_R = Grn_Margin[iterG];
 						}
 						else
 						{
@@ -904,9 +891,9 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 								p_0_R = p_de_1;
 							}
 							L_2 = l_normal;
-							p_2_R = p_normal - margin;
-
+							p_2_R = Grn_Margin[iterG];
 						}
+						iterG++;
 					}
 					SetLED(0, L_0);
 					SetLED(1, l_normal);

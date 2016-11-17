@@ -5,7 +5,7 @@
     density="mdpi"
     format="8"
     plugin-version="2.2.2"
-    timestamp="629333442677749"
+    timestamp="635884126731806"
     token="-6750429794346025192"
     verifier="COLD_SWAP_REQUESTED" >
 
@@ -22,30 +22,22 @@
         name="verifier"
         duration="0" />
 
-    <artifact
-        location="C:\gitlocal\anom\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
-        type="RESOURCES" />
-
     <build
-        timestamp="628013230977773"
+        timestamp="632760502722403"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\gitlocal\anom\build\outputs\apk\anom-debug.apk"
             type="MAIN" />
     </build>
     <build
-        timestamp="628236017752616"
+        timestamp="635793815508822"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\gitlocal\anom\build\intermediates\transforms\dex\debug\folders\1000\5\slice_7\classes.dex"
             type="DEX" />
     </build>
     <build
-        timestamp="629333442677749"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="C:\gitlocal\anom\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
-            type="RESOURCES" />
-    </build>
+        timestamp="635884126731806"
+        verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>

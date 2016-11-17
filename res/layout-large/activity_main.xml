@@ -81,11 +81,11 @@ tools:context=".USBHIDTerminal">
     <ImageButton
         android:src="@drawable/button_onearrow"
         android:layout_width="wrap_content"
-        android:layout_height="57dp"
+        android:layout_height="80dp"
         android:id="@+id/btn_0"
         android:background="@null"
         app:layout_constraintBottom_toTopOf="@+id/btn_1"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="184dp"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginRight="184dp" />
@@ -93,19 +93,19 @@ tools:context=".USBHIDTerminal">
     <ImageButton
         android:src="@drawable/button_twoarrows"
         android:layout_width="wrap_content"
-        android:layout_height="57dp"
+        android:layout_height="76dp"
         android:id="@+id/btn_1"
         android:background="@null"
-        android:layout_marginEnd="184dp"
+        android:layout_marginEnd="240dp"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginRight="184dp"
+        android:layout_marginRight="240dp"
         app:layout_constraintBottom_toTopOf="@+id/btn_2"
-        android:layout_marginBottom="24dp" />
+        android:layout_marginBottom="8dp" />
 
     <ImageButton
         android:src="@drawable/button_onearrow"
         android:layout_width="wrap_content"
-        android:layout_height="57dp"
+        android:layout_height="80dp"
         android:id="@+id/btn_2"
         android:background="@null"
         android:layout_marginEnd="184dp"
@@ -113,24 +113,24 @@ tools:context=".USBHIDTerminal">
         android:layout_marginRight="184dp"
         app:layout_constraintVertical_bias="0.33"
         app:layout_constraintBottom_toTopOf="@+id/btn_3"
-        android:layout_marginBottom="24dp" />
+        android:layout_marginBottom="8dp" />
 
     <ImageButton
         android:src="@drawable/button_twoarrows"
         android:layout_width="wrap_content"
-        android:layout_height="57dp"
+        android:layout_height="69dp"
         android:id="@+id/btn_3"
         android:background="@null"
-        android:layout_marginEnd="184dp"
+        android:layout_marginEnd="240dp"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginRight="184dp"
+        android:layout_marginRight="240dp"
         app:layout_constraintBottom_toTopOf="@+id/btn_4"
-        android:layout_marginBottom="24dp" />
+        android:layout_marginBottom="8dp" />
 
     <ImageButton
         android:src="@drawable/button_onearrow"
         android:layout_width="wrap_content"
-        android:layout_height="57dp"
+        android:layout_height="80dp"
         android:id="@+id/btn_4"
         android:background="@null"
         android:layout_marginEnd="184dp"
@@ -138,7 +138,7 @@ tools:context=".USBHIDTerminal">
         android:layout_marginRight="184dp"
         app:layout_constraintVertical_bias="0.25"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="320dp" />
+        android:layout_marginBottom="304dp" />
 
     <ImageButton
         android:src="@drawable/button_begintest"
