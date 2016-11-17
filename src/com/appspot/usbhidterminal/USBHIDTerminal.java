@@ -613,7 +613,8 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 					position[iteration - 1] = 1;
 					pn[0] = 1;  pp[0] = 0;  pd[0] = 0;
 					pn[1] = 0;  pp[1] = 0;  pd[1] = 1;
-					pn[2] = 0;  pp[2] = 1;  pd[2] = 0;				}
+					pn[2] = 0;  pp[2] = 1;  pd[2] = 0;
+				}
 				else if (rr >= 20 && rr < 30)
 				{
 					// 0 prot
@@ -802,17 +803,24 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 						{
 							Red_Margin[0] = p_dev_p + 50;
 						}
-						Red_Margin[iteration - 11] = Red_Margin[iteration - 10] - 5
+						else
+						{
+							Red_Margin[iteration - 11] = Red_Margin[iteration - 10] - 5;
+						}
+
 
 					}
-					else
-					{
+					else {
 						//green side
+						if (iteration == 11) {
+							Grn_Margin[0] = p_dev_d + 50;
+						} else {
+							Grn_Margin[iteration - 11] = Grn_Margin[iteration - 10] - 5;
+
+						}
+
+
 					}
-
-
-
-
 
 
 				}
