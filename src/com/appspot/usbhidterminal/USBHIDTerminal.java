@@ -213,7 +213,7 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 			{
 				startTime4 = System.currentTimeMillis();
 				timerHandler4.removeCallbacks(timerRunnable4);
-				if (iteration >= 10) {
+				if (iteration >= InitialIterations) {
 					btn_0.setVisibility(View.VISIBLE);
 					btn_1.setVisibility(View.VISIBLE);
 					btn_2.setVisibility(View.VISIBLE);
@@ -519,8 +519,10 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 	private int p_0_R;
 	private int p_1_R;
 	private int p_2_R;
-	private int p_normal = 150; // since light is more orange, need to have a tad more red light.
-	private int l_normal = 100;
+	private int p_normal = 179; // since light is more orange, need to have a tad more red light.
+	private int l_normal = 200;
+    private int p_normal_jit = 2;
+    private int l_normal_jit = 5;
 	private int l_0 = 150;
 	private int l_1 = 150;
 	private int l_2 = 150;
@@ -534,7 +536,8 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 	private int l_de_1 = 50;
 	private int p_de_1 = 100;
 
-	private int l_deut = 40;
+    private int InitialIterations = 15;
+	//private int l_deut = 40;
 
 	private boolean actual_pos_top = true;
 	private boolean TopOfNormal = true;
@@ -577,7 +580,7 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 		//conventions 0 - 0.5 TopOfNormal
 		//if (!chk_AnomAttached.isChecked()) {
 
-			if (iteration >= 0 && iteration < 10)
+			if (iteration >= 0 && iteration < InitialIterations)
 			{
 				// The first 9 presentations will be normal in the middle and 1 deuteranomolous and 1 protanomolous
 				// presentation. Position of the deut or pro will move to either side randomly
@@ -668,13 +671,20 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 //					p_2_R = p_normal - (p_dev + ((int)(r.nextDouble() * p_jit - (p_jit/2))));
 //				}
 
-				p_0_R = pn[0] * p_normal + pp[0] * (p_normal + (p_dev_p + ((int)(r.nextDouble() * p_jit - (p_jit/2))))) + pd[0] * ((p_dev_d - ((int)(r.nextDouble() * p_jit - (p_jit/2)))));
-				p_1_R = pn[1] * p_normal + pp[1] * (p_normal + (p_dev_p + ((int)(r.nextDouble() * p_jit - (p_jit/2))))) + pd[1] * ((p_dev_d - ((int)(r.nextDouble() * p_jit - (p_jit/2)))));
-				p_2_R = pn[2] * p_normal + pp[2] * (p_normal + (p_dev_p + ((int)(r.nextDouble() * p_jit - (p_jit/2))))) + pd[2] * ((p_dev_d - ((int)(r.nextDouble() * p_jit - (p_jit/2)))));
+				p_0_R = pn[0] * (p_normal + (r.nextInt(p_normal_jit * 2) - p_normal_jit)) +
+                        pp[0] * (p_normal + (p_dev_p + ((r.nextInt(2 * p_jit) - p_jit)))) +
+                        pd[0] * (p_normal - (p_dev_d + ((r.nextInt(2 * p_jit) - p_jit))));
+				p_1_R = pn[1] * (p_normal + (r.nextInt(p_normal_jit * 2) - p_normal_jit)) +
+                        pp[1] * (p_normal + (p_dev_p + ((r.nextInt(2 * p_jit) - p_jit)))) +
+                        pd[1] * (p_normal - (p_dev_d + ((r.nextInt(2 * p_jit) - p_jit))));
+				p_2_R = pn[2] * (p_normal + (r.nextInt(p_normal_jit * 2) - p_normal_jit)) +
+                        pp[2] * (p_normal + (p_dev_p + ((r.nextInt(2 * p_jit) - p_jit)))) +
+                        pd[2] * (p_normal - (p_dev_d + ((r.nextInt(2 * p_jit) - p_jit))));
 
-				SetLED(2, l_normal);
-				SetLED(1, l_normal);
-				SetLED(0, l_normal);
+                int led = l_normal + r.nextInt(l_normal_jit * 2) - l_normal_jit;
+				SetLED(0, led);
+				SetLED(1, led);
+				SetLED(2, led);
 
 				patch_0.setColorFilter(Color.rgb(p_0_R, 255 - p_0_R, 0));
 				patch_1.setColorFilter(Color.rgb(p_1_R, 255 - p_1_R, 0));
@@ -687,10 +697,10 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 				double prot_anom = 0;
 				double normal = 0;
 				//this is the first time we need to do some processing.
-				if (iteration == 10)
+				if (iteration == InitialIterations)
 				{
 
-					for (int x = 0; x < 10; x++)
+					for (int x = 0; x < InitialIterations; x++)
 					{
 						int[] pn = new int[3]; int[] pp = new int[3]; int[] pd = new int[3];
 						if (position[x] == 0)
@@ -793,35 +803,118 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 
 
 
-
+					int margin;
+					int L_0;
+					int L_2;
 					Random r = new Random();
-
+					//
 					if (r.nextBoolean())
 					{
 						//red side
-						if (iteration == 11)
+						if (iteration == (InitialIterations + 1))
 						{
-							Red_Margin[0] = p_dev_p + 50;
+							Red_Margin[0] = p_normal - p_dev_p;
+							margin = Red_Margin[0];
 						}
 						else
 						{
-							Red_Margin[iteration - 11] = Red_Margin[iteration - 10] - 5;
+							Red_Margin[iteration - (InitialIterations + 1)] = Red_Margin[iteration - InitialIterations] - 5;
+							margin = Red_Margin[iteration - 11];
 						}
+						Red[iteration - (InitialIterations + 1)] = true;
+						Grn[iteration - (InitialIterations + 1)] = false;
 
+						if (r.nextBoolean())
+						{
+							// position 0 margin,
+							// position 2 protan
+
+							if (r.nextBoolean()) {
+								L_2 = l_pr_0;
+								p_2_R = p_pr_0;
+							}
+							else {
+								L_2 = l_pr_1;
+								p_2_R = p_pr_1;
+							}
+							L_0 = l_normal;
+							p_0_R = margin;
+
+						}
+						else
+						{
+							// position 0 protan,
+							// position 2 margin
+							if (r.nextBoolean()) {
+								L_0 = l_pr_0;
+								p_0_R = p_pr_0;
+							}
+							else {
+								L_0 = l_pr_1;
+								p_0_R = p_pr_1;
+							}
+							L_2 = l_normal;
+							p_2_R = p_normal + margin;
+
+						}
 
 					}
 					else {
 						//green side
-						if (iteration == 11) {
-							Grn_Margin[0] = p_dev_d + 50;
-						} else {
-							Grn_Margin[iteration - 11] = Grn_Margin[iteration - 10] - 5;
+						if (iteration == (InitialIterations+1))
+						{
+							Grn_Margin[0] = p_normal - p_dev_d;
+							margin = Grn_Margin[0];
+						}
+						else
+						{
+							Grn_Margin[iteration - (InitialIterations + 1)] = Grn_Margin[iteration - InitialIterations] - 5;
+							margin = Grn_Margin[iteration - 11];
 
 						}
+						Red[iteration - (InitialIterations + 1)] = false;
+						Grn[iteration - (InitialIterations + 1)] = true;
+						if (r.nextBoolean())
+						{
+							// position 0 margin,
+							// position 2 deutan
 
+							if (r.nextBoolean()) {
+								L_2 = l_de_0;
+								p_2_R = p_de_0;
+							}
+							else {
+								L_2 = l_de_1;
+								p_2_R = p_de_1;
+							}
+							L_0 = l_normal;
+							p_0_R = margin;
 
+						}
+						else
+						{
+							// position 0 deutan,
+							// position 2 margin
+							if (r.nextBoolean()) {
+								L_0 = l_de_0;
+								p_0_R = p_de_0;
+							}
+							else {
+								L_0 = l_de_1;
+								p_0_R = p_de_1;
+							}
+							L_2 = l_normal;
+							p_2_R = p_normal - margin;
+
+						}
 					}
+					SetLED(0, L_0);
+					SetLED(1, l_normal);
+					SetLED(2, L_2);
 
+					patch_0.setColorFilter(Color.rgb(p_0_R, 255 - p_0_R, 0));
+					patch_1.setColorFilter(Color.rgb(p_normal, 255 - p_normal, 0));
+					patch_2.setColorFilter(Color.rgb(p_2_R, 255 - p_2_R, 0));
 
 				}
 			}

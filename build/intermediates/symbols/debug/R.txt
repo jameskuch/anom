@@ -196,3 +196,4 @@ int[] styleable LinearConstraintLayout { 0x010100c4 }
 int styleable LinearConstraintLayout_android_orientation 0
 int xml pref_general 0x7f040000
 int xml pref_headers 0x7f040001
+int xml usb_device_filter 0x7f040002

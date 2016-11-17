@@ -5,8 +5,8 @@
     density="mdpi"
     format="8"
     plugin-version="2.2.2"
-    timestamp="452488832963"
-    token="-3810110405850710979"
+    timestamp="629333442677749"
+    token="-6750429794346025192"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
@@ -23,29 +23,29 @@
         duration="0" />
 
     <artifact
-        location="C:\gitprojects\anom_droid2\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
+        location="C:\gitlocal\anom\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
         type="RESOURCES" />
 
     <build
-        timestamp="392171148491"
+        timestamp="628013230977773"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="C:\gitprojects\anom_droid2\build\outputs\apk\anom_droid2-debug.apk"
+            location="C:\gitlocal\anom\build\outputs\apk\anom-debug.apk"
             type="MAIN" />
     </build>
     <build
-        timestamp="452488832963"
+        timestamp="628236017752616"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="C:\gitprojects\anom_droid2\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
-            type="RESOURCES" />
+            location="C:\gitlocal\anom\build\intermediates\transforms\dex\debug\folders\1000\5\slice_7\classes.dex"
+            type="DEX" />
     </build>
     <build
-        timestamp="12156627195258"
-        verifier="FULL_BUILD_REQUESTED" >
+        timestamp="629333442677749"
+        verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="C:\gitprojects\anom_droid2\build\outputs\apk\anom_droid2-debug.apk"
-            type="MAIN" />
+            location="C:\gitlocal\anom\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
+            type="RESOURCES" />
     </build>
 
 </instant-run>

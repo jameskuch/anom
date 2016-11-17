@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/anom_droid2.iml" filepath="$PROJECT_DIR$/anom_droid2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anom.iml" filepath="$PROJECT_DIR$/anom.iml" />
     </modules>
   </component>
 </project>
