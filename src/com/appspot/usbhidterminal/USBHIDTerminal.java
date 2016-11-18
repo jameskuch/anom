@@ -213,7 +213,7 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 			{
 				startTime4 = System.currentTimeMillis();
 				timerHandler4.removeCallbacks(timerRunnable4);
-				if (iteration >= InitialIterations) {
+				if (separation_of_normals_PA_and_DA_complete) {
 					btn_0.setVisibility(View.VISIBLE);
 					btn_1.setVisibility(View.VISIBLE);
 					btn_2.setVisibility(View.VISIBLE);
@@ -225,8 +225,6 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 					btn_2.setVisibility(View.VISIBLE);
 					btn_4.setVisibility(View.VISIBLE);
 				}
-
-
 				Experiment();
 			}
 
@@ -368,39 +366,90 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 		timerHandler.removeCallbacks(timerRunnable);
 	}
 
+	private void Iterate_and_Direct_Experiment_Flow_Variables()
+	{
+		//This function always iterates first. It is called by the buttons that record the response,
+		//that means the functions
+		it++;
+
+
+		if (it == Consts.NUMBER_OF_PRE_TRIALS && !separation_of_normals_PA_and_DA_complete)
+		{
+			Process_Inputs_Separation();
+			separation_of_normals_PA_and_DA_complete = true;
+			it = 0;
+		}
+		else if (!finished)
+		{
+			Process_Response_To_Find_Boundaries();
+
+            if (which_staircase[it - 1] == Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES + 1)
+            {
+                //this was the training case
+            }
+            else
+            {
+                //increment the specific staircase
+                it_staircase[which_staircase[it - 1]] ++;
+            }
+		}
+
+
+	}
+
 	public void onClick(View v) {
 
 		if (v == btn_0) {
 			//txtHidInput.setText("btn0");
 			//RECORD
-			lane00[iteration - 1] = 1;
-			Blank(true);
-		} else if (v == btn_1) {
-			//txtHidInput.setText("btn1");
-			//RECORD
-			lane05[iteration - 1] = 1;
-			Blank(true);
-		} else if (v == btn_2) {
-			//txtHidInput.setText("btn2");
-			//RECORD
-			lane10[iteration - 1] = 1;
+			lane00[it] = 1;
+
+			Iterate_and_Direct_Experiment_Flow_Variables();
+
 			Blank(true);
 
-		} else if (v == btn_3) {
+		}
+		else if (v == btn_1) {
+			//txtHidInput.setText("btn1");
+			//RECORD
+			lane05[it] = 1;
+
+			Iterate_and_Direct_Experiment_Flow_Variables();
+
+			Blank(true);
+		}
+		else if (v == btn_2) {
+			//txtHidInput.setText("btn2");
+			//RECORD
+			lane10[it] = 1;
+
+			Iterate_and_Direct_Experiment_Flow_Variables();
+
+			Blank(true);
+
+		}
+		else if (v == btn_3) {
 			//txtHidInput.setText("btn3");
 			//timerHandler3.removeCallbacks(timerRunnable3);
 			//RECORD
-			lane15[iteration - 1] = 1;
+			lane15[it] = 1;
+
+			Iterate_and_Direct_Experiment_Flow_Variables();
+
 			Blank(true);
-		} else if (v == btn_4) {
+		}
+		else if (v == btn_4) {
 			//txtHidInput.setText("btn4");
 			//startTime3 = System.currentTimeMillis();
 			//timerHandler3.postDelayed(timerRunnable3, 0);
 			//RECORD
-			lane20[iteration - 1] = 1;
-			Blank(true);
+			lane20[it] = 1;
 
-		} else if (v == btn_begin) {
+			Iterate_and_Direct_Experiment_Flow_Variables();
+
+			Blank(true);
+		}
+		else if (v == btn_begin) {
 			//txtHidInput.setText("btnbegin");
 			if (intest) {
 				btn_begin.setImageResource(R.drawable.button_begintest);
@@ -412,7 +461,7 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 				btn_4.setVisibility(View.INVISIBLE);
 				// set the boolean variable
 
-				Reset();
+				Reset_Experimental_Variables();
 				Blank(false);
 
 			}
@@ -426,7 +475,7 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 					meowBuilder.setCancelable(false);
 					meowBuilder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int id) {
-							Reset();
+							Reset_Experimental_Variables();
 							Experiment();
 						}
 					});
@@ -453,7 +502,7 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 					//btn_3.setVisibility(View.VISIBLE);
 					btn_4.setVisibility(View.VISIBLE);
 					// set the boolean variable
-					Reset();
+					Reset_Experimental_Variables();
 					intest = true;
 					finished = false;
 					Experiment();
@@ -486,20 +535,32 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 	}
 
 
-	private void Reset()
+	private void Reset_Experimental_Variables()
 	{
-		for (int x = 0; x < 500; x++)
+		for (int x = 0; x < Consts.MAX_TRIALS; x++)
 		{
 			lane00[x] = 0;
 			lane05[x] = 0;
 			lane10[x] = 0;
 			lane15[x] = 0;
 			lane20[x] = 0;
+            which_staircase[x] = 0;
+		}
+		for (int x = 0; x < Consts.NUMBER_OF_PRE_TRIALS; x++)
+		{
 			position[x] = 0;
 		}
-		iteration = 0;
-		intest = false;
+		for (int x = 0; x < Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES; x++)
+		{
+			staircasefinished[x] = false;
+
+		}
 		finished = false;
+
+		it = 0;
+		intest = false;
+
+        separation_of_normals_PA_and_DA_complete = false;
 		Probably_Normal = false;
 		Probably_Protanomolous = false;
 		Probably_Deuteranomolous = false;
@@ -513,412 +574,407 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 	// R = red, G will always be 255-R
 	// dev = deviation
 	// jit = jitter (variation away from the deviation (e.g. 50 - 5 or 50 + 2)
-	private int p_dev_p = 50;
-	private int p_dev_d = 50;
-	private int p_jit = 7; // code to make it +/- this
 	private int p_0_R;
 	private int p_1_R;
 	private int p_2_R;
-	private int p_normal = 179; // since light is more orange, need to have a tad more red light.
-	private int l_normal = 200;
-    private int p_normal_jit = 2;
-    private int l_normal_jit = 5;
-	private int l_pr_0 = 30;
-	private int l_pr_1 = 30;
-	private int p_pr_0 = 255;
-	private int p_pr_1 = 255;
+	private int led_0;
+	private int led_1;
+	private int led_2;
 
-	private int l_de_0 = 50;
-	private int l_de_1 = 50;
-	private int p_de_0 = 128;
-	private int p_de_1 = 128;
 
-    private int InitialIterations = 15;
-	private int iteration = 0;
-	private int iterR = 0;
-	private int iterG = 0;
+
+	private int it = 0; //iterations
+	private int[] it_staircase = new int[Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES];
+	private int[] which_staircase = new int[Consts.MAX_TRIALS];
+//	private int it_PA_0 = 0; //iterations for protanomolous trichromat staircase 0
+//	private int it_PA_1 = 0; //iterations for protanomolous trichromat staircase 1
+//	private int it_DA_0 = 0; //iterations for deuteranomolous trichromat staircase 0
+//	private int it_DA_1 = 0; //iterations for deuteranomolous trichromat staircase 1
+
 
 	private boolean intest = false;
+	private boolean separation_of_normals_PA_and_DA_complete = false;
 	private boolean finished = false;
+	private boolean[] staircasefinished = new boolean[Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES];
+	private int[][] sc_valG = new int[Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES][Consts.MAX_TRIALS];
+	private int[][] sc_valR = new int[Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES][Consts.MAX_TRIALS];
+	private boolean[][] sc_dir_R_to_G = new boolean[Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES][Consts.MAX_TRIALS];
 	private boolean Probably_Normal = false;
 	private boolean Probably_Protanomolous = false;
 	private boolean Probably_Deuteranomolous = false;
 	private boolean Probably_Deuteranope = false;
 	private boolean Probably_Protanope = false;
+	private boolean[] Red = new boolean[Consts.MAX_TRIALS];
+	private boolean[] Grn = new boolean[Consts.MAX_TRIALS];
+	private int[] Red_Margin = new int[Consts.MAX_TRIALS];
+	private int[] Grn_Margin = new int[Consts.MAX_TRIALS];
+	private int[] Missed_Protanopic = new int[Consts.MAX_TRIALS];
+	private int[] Missed_Deuteranopic = new int[Consts.MAX_TRIALS];
 
-	private boolean[] Red = new boolean[500];
-	private boolean[] Grn = new boolean[500];
-	int[] Red_Margin = new int[500];
-	int[] Grn_Margin = new int[500];
-	int[] Missed_Protanopic = new int[500];
-	int[] Missed_Deuteranopic = new int[500];
+	private int prb_dist0 = 10;
 
-	private int[] position = new int[500];
+	private boolean[] stimulus_on_patch0_and_patch1 = new boolean[Consts.MAX_TRIALS];
+	private int[] position = new int[Consts.NUMBER_OF_PRE_TRIALS];
 	//class ExperimentResponsesAndVariables{
-	int[] lane00 = new int[500];
-	int[] lane05 = new int[500];
-	int[] lane10 = new int[500];
-	int[] lane15 = new int[500];
-	int[] lane20 = new int[500];
+	private int[] lane00 = new int[Consts.MAX_TRIALS];
+	private int[] lane05 = new int[Consts.MAX_TRIALS];
+	private int[] lane10 = new int[Consts.MAX_TRIALS];
+	private int[] lane15 = new int[Consts.MAX_TRIALS];
+	private int[] lane20 = new int[Consts.MAX_TRIALS];
 
 
-	//}
 
-	//List<ExperimentResponsesAndVariables> e = new ArrayList<ExperimentResponsesAndVariables>();
-	private void RecordResponse()
-	{
 
-	}
 
-	void Experiment()
-	{
+
+	private void Experiment() {
 		//conventions 0 - 0.5 TopOfNormal
 		//if (!chk_AnomAttached.isChecked()) {
 
-			if (iteration >= 0 && iteration < InitialIterations)
-			{
-				// The first X, currently 15, presentations will be normal in the middle and 1 deuteranomolous and 1 protanomolous
-				// presentation. Position of the deut or pro will move to either side randomly
-
-				// Deutan
-					// issues with M
-				// Deuteranomous
-					// issues with M, having L and L' (more sensitive to red light)
-
-				// always increment the iteration variable
-				iteration++;
-				// position of the
-				Random r = new Random();
-				double rr = 59 * r.nextDouble();
-
-				int[] pn = new int[3]; int[] pp = new int[3]; int[] pd = new int[3];
-				if (rr >= 0 && rr < 10)
-				{
-					// 0 norm
-					// 1 prot
-					// 2 deut
-					position[iteration - 1] = 0;
- 					pn[0] = 1;  pp[0] = 0;  pd[0] = 0;
-					pn[1] = 0;  pp[1] = 1;  pd[1] = 0;
-					pn[2] = 0;  pp[2] = 0;  pd[2] = 1;
-
-				}
-				else if (rr >= 10 && rr < 20)
-				{
-					// 0 norm
-					// 1 deut
-					// 2 prot
-					position[iteration - 1] = 1;
-					pn[0] = 1;  pp[0] = 0;  pd[0] = 0;
-					pn[1] = 0;  pp[1] = 0;  pd[1] = 1;
-					pn[2] = 0;  pp[2] = 1;  pd[2] = 0;
-				}
-				else if (rr >= 20 && rr < 30)
-				{
-					// 0 prot
-					// 1 normal
-					// 2 deut
-					position[iteration - 1] = 2;
-					pn[0] = 0;  pp[0] = 1;  pd[0] = 0;
-					pn[1] = 1;  pp[1] = 0;  pd[1] = 0;
-					pn[2] = 0;  pp[2] = 0;  pd[2] = 1;
-				}
-				else if (rr >= 30 && rr < 40)
-				{
-					// 0 deut
-					// 1 norm
-					// 2 prot
-					position[iteration - 1] = 3;
-					pn[0] = 0;  pp[0] = 0;  pd[0] = 1;
-					pn[1] = 1;  pp[1] = 0;  pd[1] = 0;
-					pn[2] = 0;  pp[2] = 1;  pd[2] = 0;
-				}
-				else if (rr >= 40 && rr < 50)
-				{
-					// 0 prot
-					// 1 deut
-					// 2 norm
-					position[iteration - 1] = 4;
-					pn[0] = 0;  pp[0] = 1;  pd[0] = 0;
-					pn[1] = 0;  pp[1] = 0;  pd[1] = 1;
-					pn[2] = 1;  pp[2] = 0;  pd[2] = 0;
-				}
-				else
-				{
-					// 0 deut
-					// 1 prot
-					// 2 norm
-					position[iteration - 1] = 5;
-					pn[0] = 0;  pp[0] = 0;  pd[0] = 1;
-					pn[1] = 0;  pp[1] = 1;  pd[1] = 0;
-					pn[2] = 1;  pp[2] = 0;  pd[2] = 0;
-				}
-
-//				boolean DeutOnTop = r.nextBoolean();
-//				if (DeutOnTop)
-//				{
-//					p_0_R = p_normal - (p_dev + ((int)(r.nextDouble() * p_jit - (p_jit/2))));
-//					p_2_R = p_normal + (p_dev + ((int)(r.nextDouble() * p_jit - (p_jit/2))));
-//				}
-//				else
-//				{
-//					p_0_R = p_normal + (p_dev + ((int)(r.nextDouble() * p_jit - (p_jit/2))));
-//					p_2_R = p_normal - (p_dev + ((int)(r.nextDouble() * p_jit - (p_jit/2))));
-//				}
-
-				p_0_R = pn[0] * (p_normal + (r.nextInt(p_normal_jit * 2) - p_normal_jit)) +
-                        pp[0] * (p_normal + (p_dev_p + ((r.nextInt(2 * p_jit) - p_jit)))) +
-                        pd[0] * (p_normal - (p_dev_d + ((r.nextInt(2 * p_jit) - p_jit))));
-				p_1_R = pn[1] * (p_normal + (r.nextInt(p_normal_jit * 2) - p_normal_jit)) +
-                        pp[1] * (p_normal + (p_dev_p + ((r.nextInt(2 * p_jit) - p_jit)))) +
-                        pd[1] * (p_normal - (p_dev_d + ((r.nextInt(2 * p_jit) - p_jit))));
-				p_2_R = pn[2] * (p_normal + (r.nextInt(p_normal_jit * 2) - p_normal_jit)) +
-                        pp[2] * (p_normal + (p_dev_p + ((r.nextInt(2 * p_jit) - p_jit)))) +
-                        pd[2] * (p_normal - (p_dev_d + ((r.nextInt(2 * p_jit) - p_jit))));
-
-                int led = l_normal + r.nextInt(l_normal_jit * 2) - l_normal_jit;
-				SetLED(0, led);
-				SetLED(1, led);
-				SetLED(2, led);
-
-				patch_0.setColorFilter(Color.rgb(p_0_R, 255 - p_0_R, 0));
-				patch_1.setColorFilter(Color.rgb(p_1_R, 255 - p_1_R, 0));
-				patch_2.setColorFilter(Color.rgb(p_2_R, 255 - p_2_R, 0));
-				//txt_inst.setText(Integer.toString(iteration));
-			}
-			else if (iteration >= InitialIterations && !finished)
-			{
-				double deut_anom = 0;
-				double prot_anom = 0;
-				double normal = 0;
-				//this is the first time we need to do some processing.
-				if (iteration == InitialIterations)
-				{
-
-					for (int x = 0; x < InitialIterations; x++)
-					{
-						int[] pn = new int[3]; int[] pp = new int[3]; int[] pd = new int[3];
-						if (position[x] == 0)
-						{
-							// 0 norm
-							// 1 prot
-							// 2 deut
-							pn[0] = 1;  pp[0] = 0;  pd[0] = 0;
-							pn[1] = 0;  pp[1] = 1;  pd[1] = 0;
-							pn[2] = 0;  pp[2] = 0;  pd[2] = 1;
-
-						}
-						else if (position[x] == 1)
-						{
-							// 0 norm
-							// 1 deut
-							// 2 prot
-							pn[0] = 1;  pp[0] = 0;  pd[0] = 0;
-							pn[1] = 0;  pp[1] = 0;  pd[1] = 1;
-							pn[2] = 0;  pp[2] = 1;  pd[2] = 0;
-						}
-						else if (position[x] == 2)
-						{
-							// 0 prot
-							// 1 normal
-							// 2 deut
-							pn[0] = 0;  pp[0] = 1;  pd[0] = 0;
-							pn[1] = 1;  pp[1] = 0;  pd[1] = 0;
-							pn[2] = 0;  pp[2] = 0;  pd[2] = 1;
-						}
-						else if (position[x] == 3)
-						{
-							// 0 deut
-							// 1 norm
-							// 2 prot
-							pn[0] = 0;  pp[0] = 0;  pd[0] = 1;
-							pn[1] = 1;  pp[1] = 0;  pd[1] = 0;
-							pn[2] = 0;  pp[2] = 1;  pd[2] = 0;
-						}
-						else if (position[x] == 4)
-						{
-							// 0 prot
-							// 1 deut
-							// 2 norm
-							pn[0] = 0;  pp[0] = 1;  pd[0] = 0;
-							pn[1] = 0;  pp[1] = 0;  pd[1] = 1;
-							pn[2] = 1;  pp[2] = 0;  pd[2] = 0;
-						}
-						else
-						{
-							// 0 deut
-							// 1 prot
-							// 2 norm
-							pn[0] = 0;  pp[0] = 0;  pd[0] = 1;
-							pn[1] = 0;  pp[1] = 1;  pd[1] = 0;
-							pn[2] = 1;  pp[2] = 0;  pd[2] = 0;
-
-						}
-						prot_anom += pp[0] * lane00[x] + pp[1] * lane10[x] + pp[2] * lane20[x];
-						normal += pn[0] * lane00[x] + pn[1] * lane10[x] + pn[2] * lane20[x];
-						deut_anom += pd[0] * lane00[x] + pd[1] * lane10[x] + pd[2] * lane20[x];
-					}
-					if (deut_anom >= normal)
-					{
-						Probably_Deuteranomolous = true;
-					}
-					else if (prot_anom >= normal)
-					{
-						Probably_Protanomolous = true;
-					}
-					else
-					{
-						Probably_Normal = true;
-					}
-				}
-				iteration++;
-
-				//Now we know what pathway
-
-				//first, let's program the normal pathway
-
-				if (Probably_Protanomolous)
-				{
-					txt_inst.setText("Probably Protanomolous. Prot: " + Double.toString(prot_anom) +  " Deut: " + Double.toString(deut_anom) + " Norm: " + Double.toString(normal));
-					startTime2 = System.currentTimeMillis();
-					timerHandler2.postDelayed(timerRunnable2, 0);
-				}
-				else if (Probably_Deuteranomolous)
-				{
-					txt_inst.setText("Probably Deuteranomolous. Prot: " + Double.toString(prot_anom) +  " Deut: " + Double.toString(deut_anom) + " Norm: " + Double.toString(normal));
-					startTime2 = System.currentTimeMillis();
-					timerHandler2.postDelayed(timerRunnable2, 0);
-				}
-				else
-				{
-					//probably normal pathway
-					txt_inst.setText("Probably Normal. Prot: " + Double.toString(prot_anom) +  " Deut: " + Double.toString(deut_anom) + " Norm: " + Double.toString(normal));
-					startTime2 = System.currentTimeMillis();
-					timerHandler2.postDelayed(timerRunnable2, 0);
-
-
-
-					int L_0;
-					int L_2;
-					Random r = new Random();
-					//
-					if (r.nextBoolean())
-					{
-						//red side
-
-						if (iterR == 0)
-						{
-							Red_Margin[iterR] = p_normal + p_dev_p;
-						}
-						else
-						{
-							Red_Margin[iterR] = Red_Margin[iterR - 1] - 5;
-						}
-						Red[iteration - (InitialIterations + 1)] = true;
-						Grn[iteration - (InitialIterations + 1)] = false;
-
-						if (r.nextBoolean())
-						{
-							// position 0 margin,
-							// position 2 protan
-
-							if (r.nextBoolean()) {
-								L_2 = l_pr_0;
-								p_2_R = p_pr_0;
-							}
-							else {
-								L_2 = l_pr_1;
-								p_2_R = p_pr_1;
-							}
-							L_0 = l_normal;
-							p_0_R = Red_Margin[iterR];
-						}
-						else
-						{
-							// position 0 protan,
-							// position 2 margin
-							if (r.nextBoolean()) {
-								L_0 = l_pr_0;
-								p_0_R = p_pr_0;
-							}
-							else {
-								L_0 = l_pr_1;
-								p_0_R = p_pr_1;
-							}
-							L_2 = l_normal;
-							p_2_R = Red_Margin[iterR];
-						}
-						iterR ++;
-					}
-					else {
-						//green side
-						if (iteration == (InitialIterations+1))
-						{
-							Grn_Margin[iterG] = p_normal - p_dev_d;
-						}
-						else
-						{
-							Grn_Margin[iterG] = Grn_Margin[iterG - 1] + 5;
-						}
-						Red[iteration - (InitialIterations + 1)] = false;
-						Grn[iteration - (InitialIterations + 1)] = true;
-						if (r.nextBoolean())
-						{
-							// position 0 margin,
-							// position 2 deutan
-
-							if (r.nextBoolean()) {
-								L_2 = l_de_0;
-								p_2_R = p_de_0;
-							}
-							else {
-								L_2 = l_de_1;
-								p_2_R = p_de_1;
-							}
-							L_0 = l_normal;
-							p_0_R = Grn_Margin[iterG];
-						}
-						else
-						{
-							// position 0 deutan,
-							// position 2 margin
-							if (r.nextBoolean()) {
-								L_0 = l_de_0;
-								p_0_R = p_de_0;
-							}
-							else {
-								L_0 = l_de_1;
-								p_0_R = p_de_1;
-							}
-							L_2 = l_normal;
-							p_2_R = Grn_Margin[iterG];
-						}
-						iterG++;
-					}
-					SetLED(0, L_0);
-					SetLED(1, l_normal);
-					SetLED(2, L_2);
-
-					patch_0.setColorFilter(Color.rgb(p_0_R, 255 - p_0_R, 0));
-					patch_1.setColorFilter(Color.rgb(p_normal, 255 - p_normal, 0));
-					patch_2.setColorFilter(Color.rgb(p_2_R, 255 - p_2_R, 0));
-
-				}
-			}
-
-		//}
-		//else
-		//{
-		//	intest = false;
-		//	Blank(false);
-		//	Reset();
-		//	txt_inst.setText("The anomaloscope device is not attached. Cannot proceed.");
-		//	startTime2 = System.currentTimeMillis();
-		//	timerHandler2.postDelayed(timerRunnable2, 0);
-		//}
+		if (it >= 0 && it < Consts.NUMBER_OF_PRE_TRIALS && !separation_of_normals_PA_and_DA_complete) {
+			Separate_Normals_PA_DA();
+		} else if (it >= 0 && it < Consts.MAX_TRIALS && !finished) {
+			Create_and_Show_Stimuli_to_find_Boundary_Thresholds();
+		}
 
 	}
 
+	private void Create_and_Show_Stimuli_to_find_Boundary_Thresholds() {
+
+
+		// every n trials with a small variation, we set a training set where the two
+		// are identical. is this one of those?
+		Random q = new Random();
+		int jit = q.nextInt(2 * Consts.NUMBER_OF_TRIALS_BETWEEN_TRAINING_TRIAL_PLUS_MINUS) - Consts.NUMBER_OF_TRIALS_BETWEEN_TRAINING_TRIAL_PLUS_MINUS;
+		int m = it % (Consts.NUMBER_OF_TRIALS_BETWEEN_TRAINING_TRIAL + jit);
+		//txt_inst.setText(Integer.toString(m));
+		if (m == 0)
+		{
+			//it is a canned trial!
+			//txt_inst.setText("training presentation");
+            which_staircase[it] = Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES + 1; //tells recording program that it's the training paradigm
+		}
+		else {
+			// it is a normal trial...which staircase will we present?
+			// which staircase will we present?
+			//txt_inst.setText("normal presentation");
+			Random r = new Random();
+			int staircase = r.nextInt(Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES);
+			// The random number generator chose a staircase, has that staircase finished? If yes,
+			// then continually choose until
+			while (staircasefinished[staircase]) {
+				staircase = r.nextInt(Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES);
+			}
+			//txt_inst.setText(Integer.toString(staircase));
+			which_staircase[it] = staircase;
+
+
+		}
+
+
+
+
+	}
+
+	void Process_Response_To_Find_Boundaries() {
+//		int L_0;
+//		int L_2;
+//		Random r = new Random();
+//		//
+//		if (r.nextBoolean()) {
+//			//red side
+//
+//			if (iterR == 0) {
+//				Red_Margin[iterR] = p_normal + p_dev_p;
+//			} else {
+//				Red_Margin[iterR] = Red_Margin[iterR - 1] - 5;
+//			}
+//			Red[iteration - (InitialIterations + 1)] = true;
+//			Grn[iteration - (InitialIterations + 1)] = false;
+//
+//			if (r.nextBoolean()) {
+//				// position 0 margin,
+//				// position 2 protan
+//
+//				if (r.nextBoolean()) {
+//					L_2 = l_pr_0;
+//					p_2_R = p_pr_0;
+//				} else {
+//					L_2 = l_pr_1;
+//					p_2_R = p_pr_1;
+//				}
+//				L_0 = l_normal;
+//				p_0_R = Red_Margin[iterR];
+//			} else {
+//				// position 0 protan,
+//				// position 2 margin
+//				if (r.nextBoolean()) {
+//					L_0 = l_pr_0;
+//					p_0_R = p_pr_0;
+//				} else {
+//					L_0 = l_pr_1;
+//					p_0_R = p_pr_1;
+//				}
+//				L_2 = l_normal;
+//				p_2_R = Red_Margin[iterR];
+//			}
+//			iterR++;
+//		} else {
+//			//green side
+//			if (iteration == (InitialIterations + 1)) {
+//				Grn_Margin[iterG] = p_normal - p_dev_d;
+//			} else {
+//				Grn_Margin[iterG] = Grn_Margin[iterG - 1] + 5;
+//			}
+//			Red[iteration - (InitialIterations + 1)] = false;
+//			Grn[iteration - (InitialIterations + 1)] = true;
+//			if (r.nextBoolean()) {
+//				// position 0 margin,
+//				// position 2 deutan
+//
+//				if (r.nextBoolean()) {
+//					L_2 = l_de_0;
+//					p_2_R = p_de_0;
+//				} else {
+//					L_2 = l_de_1;
+//					p_2_R = p_de_1;
+//				}
+//				L_0 = l_normal;
+//				p_0_R = Grn_Margin[iterG];
+//			} else {
+//				// position 0 deutan,
+//				// position 2 margin
+//				if (r.nextBoolean()) {
+//					L_0 = l_de_0;
+//					p_0_R = p_de_0;
+//				} else {
+//					L_0 = l_de_1;
+//					p_0_R = p_de_1;
+//				}
+//				L_2 = l_normal;
+//				p_2_R = Grn_Margin[iterG];
+//			}
+//			iterG++;
+//		}
+//		SetLED(0, L_0);
+//		SetLED(1, l_normal);
+//		SetLED(2, L_2);
+//
+//		patch_0.setColorFilter(Color.rgb(p_0_R, 255 - p_0_R, 0));
+//		patch_1.setColorFilter(Color.rgb(p_normal, 255 - p_normal, 0));
+//		patch_2.setColorFilter(Color.rgb(p_2_R, 255 - p_2_R, 0));
+	}
+
+
+	private void Separate_Normals_PA_DA()
+	{
+//		public static final int PA_RED_START_L = 50;
+//		public static final int PA_RED_START_R = 255;
+//		public static final int DA_RED_START_L = 50;
+//		public static final int DA_RED_START_R = 255;
+//
+//		public static final int LED_INT_NORMAL = 200;
+//		public static final int LED_INT_DA = 200;
+//		public static final int LED_INT_PA = 200;
+//		public static final int PATCH_RED_NORMAL = 179;
+//		public static final int PATCH_RED_DA = 139; //deuteranomolous trichromats are less sensitive to GRN
+//		public static final int PATCH_RED_PA = 229; //protanomolous trichromats are less sensitive to RED
+//		public static final int NUMBER_OF_PRE_TRIALS = 3;
+
+		Random r = new Random();
+		double rr = 59 * r.nextDouble();
+
+		int[] pn = new int[3]; int[] pp = new int[3]; int[] pd = new int[3];
+		if (rr >= 0 && rr < 10)
+		{
+			// 0 norm
+			// 1 prot
+			// 2 deut
+			position[it] = 0;
+			pn[0] = 1;  pp[0] = 0;  pd[0] = 0;
+			pn[1] = 0;  pp[1] = 1;  pd[1] = 0;
+			pn[2] = 0;  pp[2] = 0;  pd[2] = 1;
+
+		}
+		else if (rr >= 10 && rr < 20)
+		{
+			// 0 norm
+			// 1 deut
+			// 2 prot
+			position[it] = 1;
+			pn[0] = 1;  pp[0] = 0;  pd[0] = 0;
+			pn[1] = 0;  pp[1] = 0;  pd[1] = 1;
+			pn[2] = 0;  pp[2] = 1;  pd[2] = 0;
+		}
+		else if (rr >= 20 && rr < 30)
+		{
+			// 0 prot
+			// 1 normal
+			// 2 deut
+			position[it] = 2;
+			pn[0] = 0;  pp[0] = 1;  pd[0] = 0;
+			pn[1] = 1;  pp[1] = 0;  pd[1] = 0;
+			pn[2] = 0;  pp[2] = 0;  pd[2] = 1;
+		}
+		else if (rr >= 30 && rr < 40)
+		{
+			// 0 deut
+			// 1 norm
+			// 2 prot
+			position[it] = 3;
+			pn[0] = 0;  pp[0] = 0;  pd[0] = 1;
+			pn[1] = 1;  pp[1] = 0;  pd[1] = 0;
+			pn[2] = 0;  pp[2] = 1;  pd[2] = 0;
+		}
+		else if (rr >= 40 && rr < 50)
+		{
+			// 0 prot
+			// 1 deut
+			// 2 norm
+			position[it] = 4;
+			pn[0] = 0;  pp[0] = 1;  pd[0] = 0;
+			pn[1] = 0;  pp[1] = 0;  pd[1] = 1;
+			pn[2] = 1;  pp[2] = 0;  pd[2] = 0;
+		}
+		else
+		{
+			// 0 deut
+			// 1 prot
+			// 2 norm
+			position[it] = 5;
+			pn[0] = 0;  pp[0] = 0;  pd[0] = 1;
+			pn[1] = 0;  pp[1] = 1;  pd[1] = 0;
+			pn[2] = 1;  pp[2] = 0;  pd[2] = 0;
+		}
+
+		p_0_R = pn[0] * Consts.PATCH_RED_NORMAL +
+				pp[0] * Consts.PATCH_RED_PA +
+				pd[0] * Consts.PATCH_RED_DA;
+		p_1_R = pn[1] * Consts.PATCH_RED_NORMAL +
+				pp[1] * Consts.PATCH_RED_PA +
+				pd[1] * Consts.PATCH_RED_DA;
+		p_2_R = pn[2] * Consts.PATCH_RED_NORMAL +
+				pp[2] * Consts.PATCH_RED_PA +
+				pd[2] * Consts.PATCH_RED_DA;
+
+		led_0 = pn[0] * Consts.LED_INT_NORMAL +
+				pp[0] * Consts.LED_INT_PA +
+				pd[0] * Consts.LED_INT_DA;
+		led_1 = pn[1] * Consts.LED_INT_NORMAL +
+				pp[1] * Consts.LED_INT_PA +
+				pd[1] * Consts.LED_INT_DA;
+		led_2 = pn[2] * Consts.LED_INT_NORMAL +
+				pp[2] * Consts.LED_INT_PA +
+				pd[2] * Consts.LED_INT_DA;
+
+
+		Output_LED_and_PATCH(led_0, led_1, led_2, p_0_R, p_1_R, p_2_R);
+
+	}
+
+	private void Process_Inputs_Separation(){
+		double deut_anom = 0;
+		double prot_anom = 0;
+		double normal = 0;
+		for (int x = 0; x < Consts.NUMBER_OF_PRE_TRIALS; x++)
+		{
+			int[] pn = new int[3]; int[] pp = new int[3]; int[] pd = new int[3];
+			if (position[x] == 0)
+			{
+				// 0 norm
+				// 1 prot
+				// 2 deut
+				pn[0] = 1;  pp[0] = 0;  pd[0] = 0;
+				pn[1] = 0;  pp[1] = 1;  pd[1] = 0;
+				pn[2] = 0;  pp[2] = 0;  pd[2] = 1;
+
+			}
+			else if (position[x] == 1)
+			{
+				// 0 norm
+				// 1 deut
+				// 2 prot
+				pn[0] = 1;  pp[0] = 0;  pd[0] = 0;
+				pn[1] = 0;  pp[1] = 0;  pd[1] = 1;
+				pn[2] = 0;  pp[2] = 1;  pd[2] = 0;
+			}
+			else if (position[x] == 2)
+			{
+				// 0 prot
+				// 1 normal
+				// 2 deut
+				pn[0] = 0;  pp[0] = 1;  pd[0] = 0;
+				pn[1] = 1;  pp[1] = 0;  pd[1] = 0;
+				pn[2] = 0;  pp[2] = 0;  pd[2] = 1;
+			}
+			else if (position[x] == 3)
+			{
+				// 0 deut
+				// 1 norm
+				// 2 prot
+				pn[0] = 0;  pp[0] = 0;  pd[0] = 1;
+				pn[1] = 1;  pp[1] = 0;  pd[1] = 0;
+				pn[2] = 0;  pp[2] = 1;  pd[2] = 0;
+			}
+			else if (position[x] == 4)
+			{
+				// 0 prot
+				// 1 deut
+				// 2 norm
+				pn[0] = 0;  pp[0] = 1;  pd[0] = 0;
+				pn[1] = 0;  pp[1] = 0;  pd[1] = 1;
+				pn[2] = 1;  pp[2] = 0;  pd[2] = 0;
+			}
+			else
+			{
+				// 0 deut
+				// 1 prot
+				// 2 norm
+				pn[0] = 0;  pp[0] = 0;  pd[0] = 1;
+				pn[1] = 0;  pp[1] = 1;  pd[1] = 0;
+				pn[2] = 1;  pp[2] = 0;  pd[2] = 0;
+
+			}
+			prot_anom += pp[0] * lane00[x] + pp[1] * lane10[x] + pp[2] * lane20[x];
+			normal += pn[0] * lane00[x] + pn[1] * lane10[x] + pn[2] * lane20[x];
+			deut_anom += pd[0] * lane00[x] + pd[1] * lane10[x] + pd[2] * lane20[x];
+		}
+		if (deut_anom >= normal)
+		{
+			Probably_Deuteranomolous = true;
+			txt_inst.setText("Probably Deuteranomolous. Prot: " + Double.toString(prot_anom) + " Deut: " + Double.toString(deut_anom) + " Norm: " + Double.toString(normal));
+			startTime2 = System.currentTimeMillis();
+			timerHandler2.postDelayed(timerRunnable2, 0);
+		}
+		else if (prot_anom >= normal)
+		{
+			Probably_Protanomolous = true;
+			txt_inst.setText("Probably Protanomolous. Prot: " + Double.toString(prot_anom) + " Deut: " + Double.toString(deut_anom) + " Norm: " + Double.toString(normal));
+			startTime2 = System.currentTimeMillis();
+			timerHandler2.postDelayed(timerRunnable2, 0);
+		}
+		else
+		{
+			Probably_Normal = true;
+			txt_inst.setText("Probably Normal. Prot: " + Double.toString(prot_anom) + " Deut: " + Double.toString(deut_anom) + " Norm: " + Double.toString(normal));
+			startTime2 = System.currentTimeMillis();
+			timerHandler2.postDelayed(timerRunnable2, 0);
+		}
+
+
+	}
+
+
+
+	private void Output_LED_and_PATCH(int l0, int l1, int l2, int p0, int p1, int p2){
+		SetLED(0, l0);
+		SetLED(1, l1);
+		SetLED(2, l2);
+
+		patch_0.setColorFilter(Color.rgb(p0, 255 - p0, 0));
+		patch_1.setColorFilter(Color.rgb(p1, 255 - p1, 0));
+		patch_2.setColorFilter(Color.rgb(p2, 255 - p2, 0));
+	}
 
 	void showListOfDevices(CharSequence devicesName[]) {
 
@@ -942,22 +998,6 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 
 
 
-//		AlertDialog.Builder builder = new AlertDialog.Builder(this);
-//
-//		if (devicesName.length == 0) {
-//			builder.setTitle(Consts.MESSAGE_CONNECT_YOUR_USB_HID_DEVICE);
-//		} else {
-//			builder.setTitle(Consts.MESSAGE_SELECT_YOUR_USB_HID_DEVICE);
-//		}
-//		builder.setItems(devicesName, new DialogInterface.OnClickListener() {
-//			@Override
-//			public void onClick(DialogInterface dialog, int which) {
-//				eventBus.post(new SelectDeviceEvent(which));
-//				txtHidInput.setText(Integer.toString(which));
-//			}
-//		});
-//		builder.setCancelable(true);
-//		builder.show();
 	}
 
 	public void onEvent(USBDataReceiveEvent event) {

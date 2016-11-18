@@ -5,39 +5,40 @@
     density="mdpi"
     format="8"
     plugin-version="2.2.2"
-    timestamp="635884126731806"
-    token="-6750429794346025192"
+    timestamp="94164304810463"
+    token="-3810110405850710979"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="161" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="20" />
     <task
         name="verifier"
-        duration="0" />
+        duration="5" />
+
+    <artifact
+        location="C:\gitprojects\anom_droid2\build\intermediates\transforms\dex\debug\folders\1000\5\slice_7\classes.dex"
+        type="DEX" />
 
     <build
-        timestamp="632760502722403"
+        timestamp="93868111756177"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="C:\gitlocal\anom\build\outputs\apk\anom-debug.apk"
+            location="C:\gitprojects\anom_droid2\build\outputs\apk\anom_droid2-debug.apk"
             type="MAIN" />
     </build>
     <build
-        timestamp="635793815508822"
+        timestamp="94164304810463"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="C:\gitlocal\anom\build\intermediates\transforms\dex\debug\folders\1000\5\slice_7\classes.dex"
+            location="C:\gitprojects\anom_droid2\build\intermediates\transforms\dex\debug\folders\1000\5\slice_7\classes.dex"
             type="DEX" />
     </build>
-    <build
-        timestamp="635884126731806"
-        verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>
