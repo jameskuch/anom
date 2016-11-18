@@ -5,39 +5,53 @@
     density="mdpi"
     format="8"
     plugin-version="2.2.2"
-    timestamp="94164304810463"
-    token="-3810110405850710979"
+    timestamp="7583340774092"
+    token="-6750429794346025192"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="161" />
+        duration="191" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="20" />
+        duration="30" />
     <task
         name="verifier"
-        duration="5" />
+        duration="9" />
 
     <artifact
-        location="C:\gitprojects\anom_droid2\build\intermediates\transforms\dex\debug\folders\1000\5\slice_7\classes.dex"
+        location="C:\gitlocal\anom\build\intermediates\transforms\dex\debug\folders\1000\5\slice_7\classes.dex"
         type="DEX" />
 
     <build
-        timestamp="93868111756177"
+        timestamp="1624300015270"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="C:\gitprojects\anom_droid2\build\outputs\apk\anom_droid2-debug.apk"
+            location="C:\gitlocal\anom\build\outputs\apk\anom-debug.apk"
             type="MAIN" />
     </build>
     <build
-        timestamp="94164304810463"
+        timestamp="2672991546184"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="C:\gitprojects\anom_droid2\build\intermediates\transforms\dex\debug\folders\1000\5\slice_7\classes.dex"
+            location="C:\gitlocal\anom\build\intermediates\transforms\dex\debug\folders\1000\5\slice_6\classes.dex"
+            type="DEX" />
+    </build>
+    <build
+        timestamp="2811568366832"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\gitlocal\anom\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
+            type="RESOURCES" />
+    </build>
+    <build
+        timestamp="7583340774092"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\gitlocal\anom\build\intermediates\transforms\dex\debug\folders\1000\5\slice_7\classes.dex"
             type="DEX" />
     </build>
 

@@ -61,7 +61,7 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 
 	private Intent usbService;
 
-	private EditText txtHidInput;
+	//private EditText txtHidInput;
 	private TextView txt_inst;
 	private ImageButton btn_0;
 	private ImageButton btn_1;
@@ -293,6 +293,7 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 		sharedPreferences.registerOnSharedPreferenceChangeListener(listener);
 
 		initUI();
+		Reset_Experimental_Variables();
 		startTime = System.currentTimeMillis();
 		timerHandler.postDelayed(timerRunnable, 0);
 	}
@@ -300,7 +301,7 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 	private void initUI() {
 		setVersionToTitle();
 
-		txtHidInput = (EditText) findViewById(R.id.edtxtHidInput);
+	//	txtHidInput = (EditText) findViewById(R.id.edtxtHidInput);
 		txt_inst = (TextView) findViewById(R.id.txt_inst);
 		//rbSendDataType = (RadioButton) findViewById(R.id.rbSendData);
 
@@ -383,14 +384,14 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 		{
 			Process_Response_To_Find_Boundaries();
 
-            if (which_staircase[it - 1] == Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES + 1)
+            if (which_sc[it - 1] == Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES)
             {
                 //this was the training case
             }
             else
             {
                 //increment the specific staircase
-                it_staircase[which_staircase[it - 1]] ++;
+                it_sc[which_sc[it - 1]] ++;
             }
 		}
 
@@ -544,28 +545,39 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 			lane10[x] = 0;
 			lane15[x] = 0;
 			lane20[x] = 0;
-            which_staircase[x] = 0;
+
 		}
-		for (int x = 0; x < Consts.NUMBER_OF_PRE_TRIALS; x++)
+
+		for (int x = 0; x < Consts.MAX_TRIALS * Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES; x++)
+		{
+			which_sc[x] = 0;
+			sc_led_int[x] = 0;
+			sc_pat_valR[x] = 0;
+			sc_dir_R_to_G[x] = false;
+		}
+
+        for (int x = 0; x < Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES; x++)
+        {
+            staircasefinished[x] = false;
+			it_sc[x] = 0;
+			firsttime[x] = true;
+		}
+		firsttime[Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES] = true;
+        finished = false;
+		it = 0;
+
+        for (int x = 0; x < Consts.NUMBER_OF_PRE_TRIALS; x++)
 		{
 			position[x] = 0;
 		}
-		for (int x = 0; x < Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES; x++)
-		{
-			staircasefinished[x] = false;
 
-		}
-		finished = false;
-
-		it = 0;
 		intest = false;
-
         separation_of_normals_PA_and_DA_complete = false;
 		Probably_Normal = false;
 		Probably_Protanomolous = false;
 		Probably_Deuteranomolous = false;
-		Probably_Deuteranope = false;
-		Probably_Protanope = false;
+		//Probably_Deuteranope = false;
+		//Probably_Protanope = false;
 	}
 
 
@@ -584,38 +596,38 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 
 
 	private int it = 0; //iterations
-	private int[] it_staircase = new int[Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES];
-	private int[] which_staircase = new int[Consts.MAX_TRIALS];
+	private int[] it_sc = new int[Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES];
+	private int[] which_sc = new int[Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES * Consts.MAX_TRIALS];
 //	private int it_PA_0 = 0; //iterations for protanomolous trichromat staircase 0
 //	private int it_PA_1 = 0; //iterations for protanomolous trichromat staircase 1
 //	private int it_DA_0 = 0; //iterations for deuteranomolous trichromat staircase 0
 //	private int it_DA_1 = 0; //iterations for deuteranomolous trichromat staircase 1
 
-
+	private boolean[] firsttime = new boolean[Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES + 1];
 	private boolean intest = false;
 	private boolean separation_of_normals_PA_and_DA_complete = false;
 	private boolean finished = false;
 	private boolean[] staircasefinished = new boolean[Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES];
-	private int[][] sc_valG = new int[Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES][Consts.MAX_TRIALS];
-	private int[][] sc_valR = new int[Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES][Consts.MAX_TRIALS];
-	private boolean[][] sc_dir_R_to_G = new boolean[Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES][Consts.MAX_TRIALS];
+	private int[] sc_led_int = new int[Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES * Consts.MAX_TRIALS];
+	private int[] sc_pat_valR = new int[Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES * Consts.MAX_TRIALS]; //sc = staircase. pat = patch, val = value these will be the values
+    private boolean[] sc_dir_R_to_G = new boolean[Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES * Consts.MAX_TRIALS];
+    //private boolean[] sc_dir_R_to_G = new boolean[Consts.MAX_TRIALS];
 	private boolean Probably_Normal = false;
 	private boolean Probably_Protanomolous = false;
 	private boolean Probably_Deuteranomolous = false;
-	private boolean Probably_Deuteranope = false;
-	private boolean Probably_Protanope = false;
-	private boolean[] Red = new boolean[Consts.MAX_TRIALS];
-	private boolean[] Grn = new boolean[Consts.MAX_TRIALS];
-	private int[] Red_Margin = new int[Consts.MAX_TRIALS];
-	private int[] Grn_Margin = new int[Consts.MAX_TRIALS];
-	private int[] Missed_Protanopic = new int[Consts.MAX_TRIALS];
-	private int[] Missed_Deuteranopic = new int[Consts.MAX_TRIALS];
+	//private boolean Probably_Deuteranope = false;
+	//private boolean Probably_Protanope = false;
+	//private boolean[] Red = new boolean[Consts.MAX_TRIALS];
+	//private boolean[] Grn = new boolean[Consts.MAX_TRIALS];
+	//private int[] Red_Margin = new int[Consts.MAX_TRIALS];
+	//private int[] Grn_Margin = new int[Consts.MAX_TRIALS];
+	//private int[] Missed_Protanopic = new int[Consts.MAX_TRIALS];
+	//private int[] Missed_Deuteranopic = new int[Consts.MAX_TRIALS];
 
 	private int prb_dist0 = 10;
 
 	private boolean[] stimulus_on_patch0_and_patch1 = new boolean[Consts.MAX_TRIALS];
 	private int[] position = new int[Consts.NUMBER_OF_PRE_TRIALS];
-	//class ExperimentResponsesAndVariables{
 	private int[] lane00 = new int[Consts.MAX_TRIALS];
 	private int[] lane05 = new int[Consts.MAX_TRIALS];
 	private int[] lane10 = new int[Consts.MAX_TRIALS];
@@ -645,6 +657,7 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 		// every n trials with a small variation, we set a training set where the two
 		// are identical. is this one of those?
 		Random q = new Random();
+		Random r = new Random();
 		int jit = q.nextInt(2 * Consts.NUMBER_OF_TRIALS_BETWEEN_TRAINING_TRIAL_PLUS_MINUS) - Consts.NUMBER_OF_TRIALS_BETWEEN_TRAINING_TRIAL_PLUS_MINUS;
 		int m = it % (Consts.NUMBER_OF_TRIALS_BETWEEN_TRAINING_TRIAL + jit);
 		//txt_inst.setText(Integer.toString(m));
@@ -652,25 +665,186 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 		{
 			//it is a canned trial!
 			//txt_inst.setText("training presentation");
-            which_staircase[it] = Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES + 1; //tells recording program that it's the training paradigm
+            which_sc[it] = Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES; //tells recording program that it's the training paradigm
 		}
-		else {
+		else
+		{
 			// it is a normal trial...which staircase will we present?
 			// which staircase will we present?
 			//txt_inst.setText("normal presentation");
-			Random r = new Random();
-			int staircase = r.nextInt(Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES);
+			//txt_inst.setText(Integer.toString(it));
+
+			int sc = r.nextInt(Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES);
 			// The random number generator chose a staircase, has that staircase finished? If yes,
 			// then continually choose until
-			while (staircasefinished[staircase]) {
-				staircase = r.nextInt(Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES);
+			while (staircasefinished[sc]) {
+				sc = r.nextInt(Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES);
 			}
 			//txt_inst.setText(Integer.toString(staircase));
-			which_staircase[it] = staircase;
+			which_sc[it] = sc;
+		}
 
+
+		int Dichromat_Patch = 0;
+		int Dichromat_LED = 0;
+		if (r.nextBoolean())
+		{
+			Dichromat_Patch = Consts.PPE_PATCH;
+			Dichromat_LED = Consts.PPE_LED;
+		}
+		else
+		{
+			Dichromat_Patch = Consts.DPE_PATCH;
+			Dichromat_LED = Consts.DPE_LED;
+		}
+		if (Probably_Protanomolous && firsttime[which_sc[it]]) {
+			firsttime[which_sc[it]] = false;
+			//match with too much red light compared to normals
+			for (int x = 0; x < Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES; x++) {
+				if (x % 2 == 0) {
+					sc_led_int[it] = Consts.LED_INT_PA;
+					sc_pat_valR[it] = Consts.PA_RED_START_HIGH;
+					sc_dir_R_to_G[it] = true;
+				} else {
+					sc_led_int[it] = Consts.LED_INT_PA;
+					sc_pat_valR[it] = Consts.PA_RED_START_LOW;
+					sc_dir_R_to_G[it] = false;
+				}
+			}
+		} else if (Probably_Deuteranomolous && firsttime[which_sc[it]]) {
+			firsttime[which_sc[it]] = false;
+			//match with too much green light compared to normals
+			for (int x = 0; x < Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES; x++) {
+				if (x % 2 == 0) {
+					sc_led_int[it] = Consts.LED_INT_DA;
+					sc_pat_valR[it] = Consts.DA_RED_START_HIGH;
+					sc_dir_R_to_G[it] = true;
+				} else {
+					sc_led_int[it] = Consts.LED_INT_DA;
+					sc_pat_valR[it] = Consts.DA_RED_START_LOW;
+					sc_dir_R_to_G[it] = false;
+				}
+			}
+		} else if (Probably_Normal && firsttime[which_sc[it]]) {
+			firsttime[which_sc[it]] = false;
+
+			if (which_sc[it] % 2 == 0) {
+				sc_led_int[it] = Consts.LED_INT_NORMAL;
+				sc_pat_valR[it] = Consts.NO_RED_START_HIGH;
+				sc_dir_R_to_G[it] = true;
+			} else {
+				sc_led_int[it] = Consts.LED_INT_NORMAL;
+				sc_pat_valR[it] = Consts.NO_RED_START_LOW;
+				sc_dir_R_to_G[it] = false;
+			}
+		} else {
+			if (which_sc[it] % 2 == 0) {
+				sc_led_int[it] = sc_led_int[it - 1];
+				sc_pat_valR[it] -= sc_pat_valR[it - 1];
+				sc_dir_R_to_G[it] = true;
+			} else {
+				sc_led_int[it] = sc_led_int[it - 1];
+				sc_pat_valR[it] += sc_pat_valR[it - 1];
+				sc_dir_R_to_G[it] = false;
+			}
+		}
+
+
+		// We now have our initial guesses. Set LEDs and PATCH colors for all three areas
+		if (r.nextBoolean())
+		{
+			stimulus_on_patch0_and_patch1[it] = true;
+			if (sc_dir_R_to_G[it])
+			{
+				p_0_R = sc_pat_valR[it];
+				if (which_sc[it]==Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES)
+				{
+					p_1_R = sc_pat_valR[it];
+				}
+				else
+				{
+					p_1_R = sc_pat_valR[it] - Consts.INITIAL_SEPARATION;
+				}
+				p_2_R = Dichromat_Patch;
+				led_0 = sc_led_int[it];
+				led_1 = sc_led_int[it];
+				led_2 = Dichromat_LED;
+			}
+			else
+			{
+				p_0_R = sc_pat_valR[it];
+				if (which_sc[it]==Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES)
+				{
+					p_1_R = sc_pat_valR[it];
+				}
+				else
+				{
+					p_1_R = sc_pat_valR[it] + Consts.INITIAL_SEPARATION;
+				}
+				p_2_R = Dichromat_Patch;
+				led_0 = sc_led_int[it];
+				led_1 = sc_led_int[it];
+				led_2 = Dichromat_LED;
+			}
+
+		}
+		else
+		{
+			stimulus_on_patch0_and_patch1[it] = false;
+			if (sc_dir_R_to_G[it])
+			{
+				p_0_R = Dichromat_Patch;
+				if (which_sc[it]==Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES)
+				{
+					p_1_R = sc_pat_valR[it];
+				}
+				else
+				{
+					p_1_R = sc_pat_valR[it] - Consts.INITIAL_SEPARATION;
+				}
+				p_2_R = sc_pat_valR[it];
+				led_0 = Dichromat_LED;
+				led_1 = sc_led_int[it];
+				led_2 = sc_led_int[it];
+			}
+			else
+			{
+				p_0_R = Dichromat_Patch;
+				if (which_sc[it]==Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES)
+				{
+					p_1_R = sc_pat_valR[it];
+				}
+				else
+				{
+					p_1_R = sc_pat_valR[it] + Consts.INITIAL_SEPARATION;
+				}
+				p_2_R = sc_pat_valR[it];
+				led_0 = Dichromat_LED;
+				led_1 = sc_led_int[it];
+				led_2 = sc_led_int[it];
+			}
 
 		}
 
+
+
+
+		//txt_inst.setText(Boolean.toString(Probably_Normal) + " " +  Integer.toString(led_0) + " " + Integer.toString(led_1) + " " + Integer.toString(led_2) + " " + Integer.toString(p_0_R) + " " + Integer.toString(p_1_R) + " " + Integer.toString(p_2_R));
+		String msg = "";
+		if (Probably_Protanomolous)
+		{
+			msg = "prot, top patch = ";
+		}
+		else if (Probably_Deuteranomolous)
+		{
+			msg = "deut, top patch = ";
+		}
+		else
+		{
+			msg = "normal, top patch = ";
+		}
+		txt_inst.setText(msg + Integer.toString(p_0_R) + ", mid patch = " + Integer.toString(p_1_R) + ", bot patch = " + Integer.toString(p_2_R) + ", staircase = " + Integer.toString(which_sc[it]));
+		Output_LED_and_PATCH(led_0, led_1, led_2, p_0_R, p_1_R, p_2_R);
 
 
 

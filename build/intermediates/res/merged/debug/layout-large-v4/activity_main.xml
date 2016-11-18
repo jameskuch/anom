@@ -10,20 +10,6 @@ android:background="#000000"
 tools:context=".USBHIDTerminal">
 
 
-<EditText
-    android:id="@+id/edtxtHidInput"
-    android:layout_width="206dp"
-    android:layout_height="46dp"
-    android:inputType="text"
-    android:textAppearance="?android:attr/textAppearanceSmallInverse"
-    android:textColor="#FFFF00"
-    tools:layout_editor_absoluteY="0dp"
-    android:layout_marginStart="8dp"
-    app:layout_constraintLeft_toLeftOf="parent"
-    android:layout_marginLeft="8dp">
-
-</EditText>
-
 
 <ImageView
     android:layout_width="0dp"
