@@ -1,4 +1,4 @@
-#Fri Nov 18 02:06:39 PST 2016
+#Sat Nov 19 01:35:44 PST 2016
 base.0=C\:\\gitlocal\\anom\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_e5209204f667431db10000459098e4eac6880986
 renamed.1=classes2.dex
 renamed.0=classes.dex

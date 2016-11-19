@@ -152,5 +152,33 @@ tools:context=".USBHIDTerminal">
         android:textAlignment="center"
         android:gravity="center"/>
 
+    <TextView
+        android:textColor="#FFFF00"
+        android:layout_width="574dp"
+        android:layout_height="43dp"
+        android:id="@+id/txt_inst3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="200dp"
+        android:layout_marginStart="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="15dp"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:gravity="center" />
+
+    <TextView
+        android:textColor="#FFFF00"
+        android:layout_width="574dp"
+        android:layout_height="43dp"
+        android:id="@+id/txt_inst2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="160dp"
+        android:layout_marginStart="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="15dp"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:gravity="center" />
+
 
 </android.support.constraint.ConstraintLayout>

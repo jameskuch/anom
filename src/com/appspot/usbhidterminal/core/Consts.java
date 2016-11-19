@@ -34,21 +34,28 @@ public abstract class Consts {
 	public static final int NO_RED_START_LOW = 140;
 	public static final int NO_RED_START_HIGH = 219;
 	public static final int INITIAL_SEPARATION = 20;
-	public static final int PPE_LED = 10;
-	public static final int PPE_PATCH = 255;
-	public static final int DPE_LED = 255;
-	public static final int DPE_PATCH = 20;
-	public static final int LED_INT_NORMAL = 200;
-	public static final int LED_INT_DA = 200;
-	public static final int LED_INT_PA = 200;
-	public static final int PATCH_RED_NORMAL = 179;
-	public static final int PATCH_RED_DA = 139; //deuteranomolous trichromats are less sensitive to GRN
-	public static final int PATCH_RED_PA = 229; //protanomolous trichromats are less sensitive to RED
+	//public static final int PROTANOPE_LED = 10;
+	//public static final int PROTANOPE_PATCH = 255;
+	//public static final int DEUTERANOPE_LED = 245;
+	//public static final int DEUTERANOPE_PATCH = 30;
+	public static final int PROTANOPE_LED = 0;
+	public static final int PROTANOPE_PATCH = 0;
+	public static final int DEUTERANOPE_LED = 0;
+	public static final int DEUTERANOPE_PATCH = 0;
+
+	public static final int LED_INT_NORMAL = 255;
+	public static final int LED_INT_DA = 255;
+	public static final int LED_INT_PA = 150;
+	public static final int PATCH_RED_NORMAL = 187;
+	public static final int PATCH_RED_DA = 160; //deuteranomolous trichromats are less sensitive to GRN
+	public static final int PATCH_RED_PA = 245; //protanomolous trichromats are less sensitive to RED
 	public static final int NUMBER_OF_PRE_TRIALS = 3;
 	public static final int MAX_TRIALS = 500;
 	public static final int NUMBER_OF_SIMULTANEOUS_STAIRCASES = 2; //Keep number even
 	public static final int NUMBER_OF_TRIALS_BETWEEN_TRAINING_TRIAL  = 5;
 	public static final int NUMBER_OF_TRIALS_BETWEEN_TRAINING_TRIAL_PLUS_MINUS = 1;
+	public static final int NUMBER_OF_REPEATS_BEFORE_MOVE = 2;
+	//public static final int NUMBER_OF_MISSED_EQUALS_BETWEEN_STOPPING = 5;
 
 	private Consts() {
 	}

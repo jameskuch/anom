@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="armeabi-v7a,armeabi"
-    api-level="22"
-    density="mdpi"
+    abi="x86_64,x86"
+    api-level="23"
+    density="xhdpi"
     format="8"
     plugin-version="2.2.2"
-    timestamp="7583340774092"
+    timestamp="87811995393040"
     token="-6750429794346025192"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="191" />
+        duration="228" />
     <task
         name="instant-run-dex"
         duration="0" />
@@ -20,35 +20,28 @@
         duration="30" />
     <task
         name="verifier"
-        duration="9" />
+        duration="13" />
 
     <artifact
         location="C:\gitlocal\anom\build\intermediates\transforms\dex\debug\folders\1000\5\slice_7\classes.dex"
         type="DEX" />
 
     <build
-        timestamp="1624300015270"
+        timestamp="86155240363033"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\gitlocal\anom\build\outputs\apk\anom-debug.apk"
             type="MAIN" />
     </build>
     <build
-        timestamp="2672991546184"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="C:\gitlocal\anom\build\intermediates\transforms\dex\debug\folders\1000\5\slice_6\classes.dex"
-            type="DEX" />
-    </build>
-    <build
-        timestamp="2811568366832"
+        timestamp="86680222937263"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\gitlocal\anom\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
             type="RESOURCES" />
     </build>
     <build
-        timestamp="7583340774092"
+        timestamp="87811995393040"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\gitlocal\anom\build\intermediates\transforms\dex\debug\folders\1000\5\slice_7\classes.dex"
