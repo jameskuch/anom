@@ -2,5 +2,9 @@
     {
         "merged": "C:\\gitprojects\\anom_droid2\\build\\intermediates\\res\\merged\\debug\\layout-normal-v4\\activity_main.xml",
         "source": "C:\\gitprojects\\anom_droid2\\res\\layout-normal\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\gitlocal\\anom\\build\\intermediates\\res\\merged\\debug\\layout-normal-v4\\activity_main.xml",
+        "source": "C:\\gitlocal\\anom\\res\\layout-normal\\activity_main.xml"
     }
 ]
