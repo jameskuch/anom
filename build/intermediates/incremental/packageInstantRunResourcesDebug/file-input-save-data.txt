@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sat Nov 19 01:43:52 PST 2016
+#Sun Nov 20 09:22:53 PST 2016
 25.file=C\:\\gitlocal\\anom\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xhdpi-v4\\ic_launcher.png
 25.base=C\:\\gitlocal\\anom\\build\\intermediates\\res\\resources-debug.ap_
 22.set=ANDROID_RESOURCE
@@ -12,7 +12,7 @@ count=26
 6.file=C\:\\gitlocal\\anom\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-hdpi-v4\\black_large.png
 6.base=C\:\\gitlocal\\anom\\build\\intermediates\\res\\resources-debug.ap_
 2.set=ASSET
-0.file=C\:\\gitlocal\\anom\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xhdpi-v4\\button_reset.png
+0.file=C\:\\gitlocal\\anom\\build\\intermediates\\res\\resources-debug.ap_\\res\\xml\\usb_device_filter.xml
 0.base=C\:\\gitlocal\\anom\\build\\intermediates\\res\\resources-debug.ap_
 21.set=ANDROID_RESOURCE
 20.file=C\:\\gitlocal\\anom\\build\\intermediates\\assets\\debug\\webserver\\favicon.ico
@@ -24,7 +24,7 @@ count=26
 7.file=C\:\\gitlocal\\anom\\build\\intermediates\\res\\resources-debug.ap_\\res\\xml\\pref_general.xml
 7.base=C\:\\gitlocal\\anom\\build\\intermediates\\res\\resources-debug.ap_
 15.set=ANDROID_RESOURCE
-1.file=C\:\\gitlocal\\anom\\build\\intermediates\\res\\resources-debug.ap_\\res\\xml\\usb_device_filter.xml
+1.file=C\:\\gitlocal\\anom\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xhdpi-v4\\button_reset.png
 1.base=C\:\\gitlocal\\anom\\build\\intermediates\\res\\resources-debug.ap_
 1.set=ANDROID_RESOURCE
 21.file=C\:\\gitlocal\\anom\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout-large-v4\\activity_main.xml

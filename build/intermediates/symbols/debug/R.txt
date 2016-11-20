@@ -73,10 +73,10 @@ int id rbSendData 0x7f080003
 int id sld_LEDint 0x7f080006
 int id sld_RGint 0x7f080007
 int id txt_inst 0x7f080014
-int id txt_inst2 0x7f080017
-int id txt_inst3 0x7f080015
-int id txt_inst4 0x7f080016
-int id txt_inst5 0x7f08000a
+int id txt_inst2 0x7f08000a
+int id txt_inst3 0x7f080017
+int id txt_inst4 0x7f080015
+int id txt_inst5 0x7f080016
 int layout activity_main 0x7f030000
 int menu activity_main 0x7f070000
 int string action_exit 0x7f060000

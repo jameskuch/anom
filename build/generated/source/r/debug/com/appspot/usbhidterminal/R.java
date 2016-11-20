@@ -412,10 +412,10 @@ containing a value of this type.
         public static final int sld_LEDint=0x7f080006;
         public static final int sld_RGint=0x7f080007;
         public static final int txt_inst=0x7f080014;
-        public static final int txt_inst2=0x7f080017;
-        public static final int txt_inst3=0x7f080015;
-        public static final int txt_inst4=0x7f080016;
-        public static final int txt_inst5=0x7f08000a;
+        public static final int txt_inst2=0x7f08000a;
+        public static final int txt_inst3=0x7f080017;
+        public static final int txt_inst4=0x7f080015;
+        public static final int txt_inst5=0x7f080016;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;

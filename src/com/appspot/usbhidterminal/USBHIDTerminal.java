@@ -307,10 +307,10 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 
 	//	txtHidInput = (EditText) findViewById(R.id.edtxtHidInput);
 		txt_inst = (TextView) findViewById(R.id.txt_inst);
-        txt_inst5 = (TextView) findViewById(R.id.txt_inst5);
 		txt_inst2 = (TextView) findViewById(R.id.txt_inst2);
 		txt_inst3 = (TextView) findViewById(R.id.txt_inst3);
 		txt_inst4 = (TextView) findViewById(R.id.txt_inst4);
+		txt_inst5 = (TextView) findViewById(R.id.txt_inst5);
 		//rbSendDataType = (RadioButton) findViewById(R.id.rbSendData);
 
 		//rbSendDataType.setOnClickListener(this);
@@ -720,6 +720,7 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
             }
 
             if (finished) {
+				btn_begin.setImageResource(R.drawable.button_begintest);
                 int LboundaryAvg = 0;
                 int RboundaryAvg = 0;
 
@@ -731,21 +732,21 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
                 RboundaryAvg = RboundaryAvg / Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES;
 
                 txt_inst.setText("Test finished");
-                //txt_inst5.setText("Left boundary = " + Integer.toString(LboundaryAvg) + ", Right boundary = " + Integer.toString(RboundaryAvg));
-                txt_inst5.setText("L1 = " + Integer.toString(LeftBoundary[0]) + ", L2 = " + Integer.toString(LeftBoundary[1]) + ", R1 = " + Integer.toString(RightBoundary[0]) + ", R2 = " + Integer.toString(RightBoundary[1]));
-
+                //txt_inst2.setText("Left boundary = " + Integer.toString(LboundaryAvg) + ", Right boundary = " + Integer.toString(RboundaryAvg));
+                txt_inst2.setText("L1 = " + Integer.toString(LeftBoundary[0]) + ", L2 = " + Integer.toString(LeftBoundary[1]) + ", R1 = " + Integer.toString(RightBoundary[0]) + ", R2 = " + Integer.toString(RightBoundary[1]));
+				txt_inst3.setText("iterations = " + Integer.toString(it));
                 intest = false;
             }
 
-			if (Consts.DEBUG_PROCESS_RESPONSE) {
+			if (Consts.DEBUG_PROCESS_RESPONSE && !finished) {
 				String msg = "";
 
 
 				//msg = "Last: MoveRightInt = " + Integer.toString(MoveRightInt[which_sc[it-1]]) + ", MoveLeftInt = " + Integer.toString(MoveLeftInt[which_sc[it-1]]) + ", sc = " + Integer.toString(which_sc[it-1]);
-				txt_inst2.setText(msg);
+				txt_inst3.setText(msg);
 				//msg2 = "Last: MoveRightBoolean = " + Boolean.toString(MoveRight[which_sc[it-1]]) + ", MoveLeftBoolean = " + Boolean.toString(MoveLeft[which_sc[it-1]]);
-                txt_inst3.setText(msg2);
-                txt_inst.setText("Left and Right Boundary Found = " + Boolean.toString(sc_finished[which_sc[it-1]]) + ", Finished = " + Boolean.toString(finished));
+                txt_inst4.setText(msg2);
+                //txt_inst.setText("Left and Right Boundary Found = " + Boolean.toString(sc_finished[which_sc[it-1]]) + ", Finished = " + Boolean.toString(finished));
 				//txt_inst4.setText("Last:  Dichromat++ = " + Integer.toString(Dichromat_Hits) + " bot if");
 
 			}
@@ -858,6 +859,8 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 
                             btn_4.setVisibility(View.VISIBLE);
 							Reset_Experimental_Variables();
+							intest = true;
+							finished = false;
 
 							Experiment();
 						}
@@ -1229,13 +1232,13 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
             }
             //txt_inst.setText(msg + Integer.toString(p_0_R) + ", p1 = " + Integer.toString(p_1_R) + ", p2 = " + Integer.toString(p_2_R) + ", sc = " + Integer.toString(which_sc[it]) + ", it = " + Integer.toString(it) + ", Separation = " + Integer.toString(Separation[which_sc[it]]));
             txt_inst.setText(msg + Integer.toString(p_0_R) + ", p1 = " + Integer.toString(p_1_R) + ", p2 = " + Integer.toString(p_2_R) + ", sc = " + Integer.toString(which_sc[it]) + " Separation = " + Integer.toString(Separation[which_sc[it]]));
-            txt_inst5.setText("Top = " + Boolean.toString(stimulus_on_patch0_and_patch1[it]) + ", sc_patch_ValR = " + Integer.toString(sc_pat_valR[it]));
+            txt_inst2.setText("Top = " + Boolean.toString(stimulus_on_patch0_and_patch1[it]) + ", sc_patch_ValR = " + Integer.toString(sc_pat_valR[it]));
         }
 
         if (Consts.DEBUG_ALTERNATE_1)
         {
             String msg = "l_0 = " + Integer.toString(led_0) + ", l_1 = " + Integer.toString(led_1) + ", l_2 = " + Integer.toString(led_2) + ", p_0_R = " + Integer.toString(p_0_R) + ", p_1_R = " + Integer.toString(p_1_R) + ", p_2_R = " + Integer.toString(p_2_R);
-            txt_inst5.setText(msg);
+            txt_inst.setText(msg);
 
         }
 
@@ -1536,26 +1539,25 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 	}
 
 
-private int temp = 0;
+    //private int temp = 0;
 	private void Output_LED_and_PATCH(int l0, int l1, int l2, int p0, int p1, int p2){
 
-        txt_inst4.setText(Integer.toString(temp));
-        temp++;
+        //txt_inst4.setText(Integer.toString(temp));
+        //temp++;
 		SetLED(0, l0);
 		SetLED(1, l1);
 		SetLED(2, l2);
         patch_1.setColorFilter(Color.rgb(p1, 255 - p1, 0));
 
-        if (Consts.DEBUG_NO_DICHROMATIC_PATCH) {
-
-			patch_0.setColorFilter(Color.rgb(p0, p0, 0));
+        if (Consts.DEBUG_NO_DICHROMATIC_PATCH && separation_of_normals_PA_and_DA_complete && !stimulus_on_patch0_and_patch1[it]) {
+			patch_0.setColorFilter(Color.rgb(0, 0,0));
 		}
 		else {
 			patch_0.setColorFilter(Color.rgb(p0, 255 - p0, 0));
 		}
 
-        if (Consts.DEBUG_NO_DICHROMATIC_PATCH) {
-			patch_2.setColorFilter(Color.rgb(p2, p2, 0));
+        if (Consts.DEBUG_NO_DICHROMATIC_PATCH && separation_of_normals_PA_and_DA_complete && stimulus_on_patch0_and_patch1[it]) {
+			patch_2.setColorFilter(Color.rgb(0, 0,0));
 		}
 		else {
 			patch_2.setColorFilter(Color.rgb(p2, 255 - p2, 0));

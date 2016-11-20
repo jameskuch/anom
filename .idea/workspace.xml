@@ -43,23 +43,146 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7e5f311-ea6b-4683-8221-6a55cc9c8a6d" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental/packageDebug/zip-cache/2y1QXIH+jGfEmzrzr31kdKJkPPI=" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental/packageDebug/zip-cache/vFEH07NNQpyf0BDuNGMZVeRQeBs=" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/pre-dexed/debug/com.android.support-support-v4-22.1.1_304e11c63d8d78644fb70df31ea0ae7547ecc90f.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/pre-dexed/debug/com.android.support.constraint-constraint-layout-1.0.0-alpha9_c98f13dd81faf5a9b23576149adafa6fbdc92ef1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/pre-dexed/debug/constraint-layout-solver-1.0.0-alpha9_f8286eacfebb25e857836c4ecd1622f9e7ae2344.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/pre-dexed/debug/debug_54c42e368cdec004e1b8860cbea254ee5577804b.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/pre-dexed/debug/eventbus-2.4.0_206f162c41aefd9dd8b9fde74df0fbe4b8e23927.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/pre-dexed/debug/internal_impl-22.1.1_3dcdc2b0840e8c55e98f8468c32a4319ea2f57b6.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/pre-dexed/debug/mockito-all-1.9.5_913dc3a671fa9ca6607d9edb64ac1298191566ee.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/pre-dexed/debug/nanohttpd-2.1.1_e524ac28a38cb8c22209d64c563f82d7546299ad.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/pre-dexed/debug/nanohttpd-websocket-2.1.1_2cd37ed17b1eb99a84721cecfb48036fdafcceaa.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/pre-dexed/debug/support-annotations-22.1.1_0d15aba36b7f37f925e49bb8e161387dc0194d78.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/buildId.txt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/generated/mockable-android-22.jar" afterPath="$PROJECT_DIR$/build/generated/mockable-android-22.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/android/support/constraint/R.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/android/support/constraint/R.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/appspot/usbhidterminal/R$id.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/appspot/usbhidterminal/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/appspot/usbhidterminal/R.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/appspot/usbhidterminal/R.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/appspot/usbhidterminal/SettingsActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/appspot/usbhidterminal/SettingsActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/appspot/usbhidterminal/USBHIDTerminal$6.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/appspot/usbhidterminal/USBHIDTerminal$6.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/appspot/usbhidterminal/USBHIDTerminal$7.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/appspot/usbhidterminal/USBHIDTerminal$7.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/appspot/usbhidterminal/USBHIDTerminal.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/appspot/usbhidterminal/USBHIDTerminal.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/appspot/usbhidterminal/core/Consts.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/appspot/usbhidterminal/core/Consts.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/pre-dexed/debug/debug_54c42e368cdec004e1b8860cbea254ee5577804b.jar" afterPath="$PROJECT_DIR$/build/intermediates/pre-dexed/debug/debug_54c42e368cdec004e1b8860cbea254ee5577804b.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/appspot/usbhidterminal/core/services/SocketService.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/appspot/usbhidterminal/core/services/SocketService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/appspot/usbhidterminal/core/webserver/WebServer.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/appspot/usbhidterminal/core/webserver/WebServer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar" afterPath="$PROJECT_DIR$/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-runtime-classes/debug/instant-run.jar" afterPath="$PROJECT_DIR$/build/intermediates/incremental-runtime-classes/debug/instant-run.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/android/support/constraint/R.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/android/support/constraint/R.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/R$id.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/R$layout.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/R$layout.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/R$menu.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/R$menu.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/R$string.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/R$style.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/R$style.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/R$styleable.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/R$styleable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/R$xml.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/R$xml.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/R.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/R.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/SettingsActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/SettingsActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/USBHIDTerminal$1.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/USBHIDTerminal$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/USBHIDTerminal$2.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/USBHIDTerminal$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/USBHIDTerminal$3.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/USBHIDTerminal$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/USBHIDTerminal$4.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/USBHIDTerminal$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/USBHIDTerminal$5.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/USBHIDTerminal$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/USBHIDTerminal$6.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/USBHIDTerminal$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/USBHIDTerminal$7.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/USBHIDTerminal$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/USBHIDTerminal.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/USBHIDTerminal.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/core/Consts.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/core/Consts.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/core/services/SocketService.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/core/services/SocketService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/core/webserver/WebServer.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/core/webserver/WebServer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental/packageInstantRunResourcesDebug/zip-cache/emHNICuv_eNNizcR0011RjCxnv8=" afterPath="$PROJECT_DIR$/build/intermediates/incremental/packageInstantRunResourcesDebug/zip-cache/emHNICuv_eNNizcR0011RjCxnv8=" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/instant-run-resources/resources-debug.ir.ap_" afterPath="$PROJECT_DIR$/build/intermediates/instant-run-resources/resources-debug.ir.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/instant-run-support/debug/instant-run.zip" afterPath="$PROJECT_DIR$/build/intermediates/instant-run-support/debug/instant-run.zip" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/build/intermediates/res/resources-debug-androidTest.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/build/intermediates/res/resources-debug.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/constraint/R.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/constraint/R.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/R$id.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/R$layout.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/R$layout.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/R$menu.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/R$menu.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/R$string.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/R$style.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/R$style.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/R$styleable.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/R$styleable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/R$xml.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/R$xml.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/R.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/R.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/SettingsActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/SettingsActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/USBHIDTerminal$1.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/USBHIDTerminal$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/USBHIDTerminal$2.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/USBHIDTerminal$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/USBHIDTerminal$3.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/USBHIDTerminal$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/USBHIDTerminal$4.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/USBHIDTerminal$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/USBHIDTerminal$5.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/USBHIDTerminal$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/USBHIDTerminal$6.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/USBHIDTerminal$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/USBHIDTerminal$7.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/USBHIDTerminal$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/USBHIDTerminal.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/USBHIDTerminal.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/core/Consts.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/core/Consts.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/core/services/SocketService.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/core/services/SocketService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/core/webserver/WebServer.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/core/webserver/WebServer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/com/appspot/usbhidterminal/core/webserver/WebServer.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/com/appspot/usbhidterminal/core/webserver/WebServer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/appspot/usbhidterminal/core/Consts.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/appspot/usbhidterminal/core/Consts.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/R$id.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/R$layout.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/R$layout.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/R$menu.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/R$menu.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/R$string.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/R$style.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/R$style.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/R$styleable.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/R$styleable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/R$xml.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/R$xml.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/R.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/R.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/SettingsActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/SettingsActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/USBHIDTerminal$1.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/USBHIDTerminal$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/USBHIDTerminal$2.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/USBHIDTerminal$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/USBHIDTerminal$3.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/USBHIDTerminal$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/USBHIDTerminal$4.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/USBHIDTerminal$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/USBHIDTerminal$5.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/USBHIDTerminal$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/USBHIDTerminal$6.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/USBHIDTerminal$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/USBHIDTerminal$7.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/USBHIDTerminal$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/USBHIDTerminal.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/USBHIDTerminal.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_8/com/appspot/usbhidterminal/core/services/SocketService.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_8/com/appspot/usbhidterminal/core/services/SocketService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_9/android/support/constraint/R.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_9/android/support/constraint/R.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/outputs/apk/anom-debug.apk" afterPath="$PROJECT_DIR$/build/outputs/apk/anom-debug.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/anom.iml" afterPath="$PROJECT_DIR$/anom.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/appspot/usbhidterminal/R.java" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/appspot/usbhidterminal/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/multi/values-v11.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/multi/values-v11.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/multi/values-v14.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/multi/values-v14.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/multi/values.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/multi/values.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/drawable-hdpi.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/drawable-hdpi.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/drawable-ldpi.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/drawable-ldpi.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/drawable-mdpi.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/drawable-mdpi.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/drawable-xhdpi.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/drawable-xhdpi.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/layout-large-v4.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/layout-large-v4.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/layout-normal-v4.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/layout-normal-v4.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/layout.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/layout.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/menu.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/menu.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/xml.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/xml.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugAndroidTestResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugAndroidTestResources/compile-file-map.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugAndroidTestResources/merger.xml" afterPath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugAndroidTestResources/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugAssets/merger.xml" afterPath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugAssets/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" afterPath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merger.xml" afterPath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugShaders/merger.xml" afterPath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugShaders/merger.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental/packageDebug/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/build/intermediates/incremental/packageDebug/dex-renamer-state.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental/packageDebug/file-input-save-data.txt" afterPath="$PROJECT_DIR$/build/intermediates/incremental/packageDebug/file-input-save-data.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental/packageInstantRunResourcesDebug/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/build/intermediates/incremental/packageInstantRunResourcesDebug/dex-renamer-state.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental/packageInstantRunResourcesDebug/file-input-save-data.txt" afterPath="$PROJECT_DIR$/build/intermediates/incremental/packageInstantRunResourcesDebug/file-input-save-data.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/instant-run-support/debug/manifest.xml" afterPath="$PROJECT_DIR$/build/intermediates/instant-run-support/debug/manifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/manifests/instant-run/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/build/intermediates/manifests/instant-run/debug/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout-large-v4/activity_main.xml" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout-large-v4/activity_main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/restart-dex/debug/build-info.xml" afterPath="$PROJECT_DIR$/build/intermediates/restart-dex/debug/build-info.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/build/intermediates/symbols/debug/R.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/build/outputs/logs/manifest-merger-debug-report.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-large/activity_main.xml" afterPath="$PROJECT_DIR$/res/layout-large/activity_main.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/appspot/usbhidterminal/USBHIDTerminal.java" afterPath="$PROJECT_DIR$/src/com/appspot/usbhidterminal/USBHIDTerminal.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/appspot/usbhidterminal/core/Consts.java" afterPath="$PROJECT_DIR$/src/com/appspot/usbhidterminal/core/Consts.java" />
     </list>
@@ -101,22 +224,22 @@
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/layout-large/activity_main.xml">
-          <provider selected="true" editor-type-id="android-designer2">
-            <state />
-          </provider>
           <provider editor-type-id="text-editor">
             <state relative-caret-position="187">
               <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
+          <provider selected="true" editor-type-id="android-designer2">
+            <state />
+          </provider>
         </entry>
       </file>
       <file leaf-file-name="USBHIDTerminal.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/appspot/usbhidterminal/USBHIDTerminal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
-              <caret line="858" column="53" selection-start-line="858" selection-start-column="53" selection-end-line="858" selection-end-column="53" />
+            <state relative-caret-position="314">
+              <caret line="722" column="72" selection-start-line="722" selection-start-column="72" selection-end-line="722" selection-end-column="72" />
               <folding>
                 <element signature="e#3184#4625#0" expanded="true" />
                 <element signature="e#4624#4625#0" expanded="true" />
@@ -128,31 +251,11 @@
                 <element signature="e#6640#6641#0" expanded="true" />
                 <element signature="e#7240#7819#0" expanded="true" />
                 <element signature="e#7818#7819#0" expanded="true" />
-                <element signature="e#25638#26004#0" expanded="true" />
-                <element signature="e#26003#26004#0" expanded="true" />
-                <element signature="e#26048#26273#0" expanded="true" />
-                <element signature="e#26272#26273#0" expanded="true" />
+                <element signature="e#25770#26183#0" expanded="true" />
+                <element signature="e#26182#26183#0" expanded="true" />
+                <element signature="e#26227#26452#0" expanded="true" />
+                <element signature="e#26451#26452#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="anom_droid.iml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/anom_droid.iml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="USBUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/appspot/usbhidterminal/core/USBUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -160,8 +263,8 @@
       <file leaf-file-name="Consts.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/appspot/usbhidterminal/core/Consts.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="671">
-              <caret line="65" column="62" selection-start-line="65" selection-start-column="62" selection-end-line="65" selection-end-column="62" />
+            <state relative-caret-position="494">
+              <caret line="61" column="47" selection-start-line="61" selection-start-column="47" selection-end-line="61" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -846,7 +949,7 @@
     <option name="modificationStamps">
       <map>
         <entry key="$PROJECT_DIR$" value="1479471411704" />
-        <entry key="C:\gitlocal\anom" value="1479471411704" />
+        <entry key="C:\gitlocal\anom" value="1479660265842" />
         <entry key="C:\gitprojects\anom" value="1479596649613" />
         <entry key="C:\gitprojects\anom_droid2" value="1479112563000" />
       </map>
@@ -948,6 +1051,71 @@
               <option name="name" value="anom" />
               <option name="projectBuildClasspath">
                 <list>
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/ant-1.9.6.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/ant-launcher-1.9.6.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/gradle-base-services-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/gradle-base-services-groovy-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/gradle-cli-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/gradle-core-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/gradle-docs-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/gradle-installation-beacon-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/gradle-jvm-services-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/gradle-launcher-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/gradle-logging-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/gradle-messaging-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/gradle-model-core-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/gradle-model-groovy-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/gradle-native-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/gradle-open-api-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/gradle-process-services-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/gradle-resources-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/gradle-tooling-api-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/gradle-ui-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/gradle-wrapper-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/groovy-all-2.4.4.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-announce-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-antlr-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-build-comparison-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-build-init-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-code-quality-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-dependency-management-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-diagnostics-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-ear-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-ide-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-ide-native-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-ide-play-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-ivy-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-jacoco-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-javascript-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-jetty-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-language-groovy-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-language-java-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-language-jvm-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-language-native-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-language-scala-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-maven-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-osgi-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-platform-base-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-platform-jvm-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-platform-native-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-platform-play-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-plugin-development-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-plugin-use-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-plugins-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-publish-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-reporting-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-resources-http-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-resources-s3-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-resources-sftp-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-scala-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-signing-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-sonar-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-test-kit-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-testing-base-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-testing-jvm-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-testing-native-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-tooling-api-builders-2.14.1.jar" />
+                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/ivy-2.2.0.jar" />
                   <option value="$PROJECT_DIR$/buildSrc/src/main/java" />
                   <option value="$PROJECT_DIR$/buildSrc/src/main/groovy" />
                 </list>
@@ -976,9 +1144,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="width" value="2576" />
-    <option name="height" value="1416" />
+    <option name="x" value="-11" />
+    <option name="width" value="3014" />
+    <option name="height" value="1931" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -1005,42 +1173,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="anom" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="anom" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.NonAndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="anom" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.NonAndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.NonAndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -1112,6 +1244,42 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="AndroidView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="anom" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="anom" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.NonAndroidModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="anom" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.NonAndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.NonAndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1121,7 +1289,7 @@
     <property name="android.project.structure.last.selected" value="SDK Location" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../anom_droid" />
-    <property name="device.picker.selection" value="G000H40562360CKT" />
+    <property name="device.picker.selection" value="Nexus_7_API_23" />
     <property name="UI_DESIGNER_EDITOR_MODE.NlPaletteManager-NlPreviewForm.SHOW" value="false" />
     <property name="DEBUGGABLE_DEVICE" value="amazon-kffowi-G0K0H40460420LSX" />
     <property name="DEBUGGABLE_PROCESS" value="com.appspot.usbhidterminal" />
@@ -1494,32 +1662,33 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="2576" height="1416" extended-state="0" />
+    <frame x="-11" y="0" width="3014" height="1931" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969216" sideWeight="0.49358973" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282989" sideWeight="0.46383148" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32782874" sideWeight="0.52827585" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290938" sideWeight="0.49403816" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39920557" sideWeight="0.491453" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969216" sideWeight="0.49358973" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32782874" sideWeight="0.4624138" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3282989" sideWeight="0.5361685" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290938" sideWeight="0.49403816" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282989" sideWeight="0.4745628" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959402" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969216" sideWeight="0.49786323" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32782874" sideWeight="0.47172415" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969216" sideWeight="0.49786323" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25238475" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25206897" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959402" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39920557" sideWeight="0.491453" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1527,7 +1696,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959402" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1550,14 +1718,14 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/res/layout-large/activity_main.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/appspot/usbhidterminal/USBHIDTerminal.java">
@@ -1575,10 +1743,10 @@
             <element signature="e#6640#6641#0" expanded="true" />
             <element signature="e#7240#7819#0" expanded="true" />
             <element signature="e#7818#7819#0" expanded="true" />
-            <element signature="e#25638#26004#0" expanded="true" />
-            <element signature="e#26003#26004#0" expanded="true" />
-            <element signature="e#26048#26273#0" expanded="true" />
-            <element signature="e#26272#26273#0" expanded="true" />
+            <element signature="e#25770#26183#0" expanded="true" />
+            <element signature="e#26182#26183#0" expanded="true" />
+            <element signature="e#26227#26452#0" expanded="true" />
+            <element signature="e#26451#26452#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1622,14 +1790,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout-large/activity_main.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/appspot/usbhidterminal/USBHIDTerminal.java">
@@ -1647,10 +1815,10 @@
             <element signature="e#6640#6641#0" expanded="true" />
             <element signature="e#7240#7819#0" expanded="true" />
             <element signature="e#7818#7819#0" expanded="true" />
-            <element signature="e#25638#26004#0" expanded="true" />
-            <element signature="e#26003#26004#0" expanded="true" />
-            <element signature="e#26048#26273#0" expanded="true" />
-            <element signature="e#26272#26273#0" expanded="true" />
+            <element signature="e#25770#26183#0" expanded="true" />
+            <element signature="e#26182#26183#0" expanded="true" />
+            <element signature="e#26227#26452#0" expanded="true" />
+            <element signature="e#26451#26452#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1694,15 +1862,15 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout-large/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1887">
+          <caret line="111" column="44" selection-start-line="111" selection-start-column="44" selection-end-line="111" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1887">
-          <caret line="111" column="44" selection-start-line="111" selection-start-column="44" selection-end-line="111" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/appspot/usbhidterminal/USBHIDTerminal.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1719,10 +1887,10 @@
             <element signature="e#6640#6641#0" expanded="true" />
             <element signature="e#7240#7819#0" expanded="true" />
             <element signature="e#7818#7819#0" expanded="true" />
-            <element signature="e#25638#26004#0" expanded="true" />
-            <element signature="e#26003#26004#0" expanded="true" />
-            <element signature="e#26048#26273#0" expanded="true" />
-            <element signature="e#26272#26273#0" expanded="true" />
+            <element signature="e#25770#26183#0" expanded="true" />
+            <element signature="e#26182#26183#0" expanded="true" />
+            <element signature="e#26227#26452#0" expanded="true" />
+            <element signature="e#26451#26452#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1766,10 +1934,10 @@
             <element signature="e#6640#6641#0" expanded="true" />
             <element signature="e#7240#7819#0" expanded="true" />
             <element signature="e#7818#7819#0" expanded="true" />
-            <element signature="e#25638#26004#0" expanded="true" />
-            <element signature="e#26003#26004#0" expanded="true" />
-            <element signature="e#26048#26273#0" expanded="true" />
-            <element signature="e#26272#26273#0" expanded="true" />
+            <element signature="e#25770#26183#0" expanded="true" />
+            <element signature="e#26182#26183#0" expanded="true" />
+            <element signature="e#26227#26452#0" expanded="true" />
+            <element signature="e#26451#26452#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1813,10 +1981,10 @@
             <element signature="e#6640#6641#0" expanded="true" />
             <element signature="e#7240#7819#0" expanded="true" />
             <element signature="e#7818#7819#0" expanded="true" />
-            <element signature="e#25638#26004#0" expanded="true" />
-            <element signature="e#26003#26004#0" expanded="true" />
-            <element signature="e#26048#26273#0" expanded="true" />
-            <element signature="e#26272#26273#0" expanded="true" />
+            <element signature="e#25770#26183#0" expanded="true" />
+            <element signature="e#26182#26183#0" expanded="true" />
+            <element signature="e#26227#26452#0" expanded="true" />
+            <element signature="e#26451#26452#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1860,10 +2028,10 @@
             <element signature="e#6640#6641#0" expanded="true" />
             <element signature="e#7240#7819#0" expanded="true" />
             <element signature="e#7818#7819#0" expanded="true" />
-            <element signature="e#25638#26004#0" expanded="true" />
-            <element signature="e#26003#26004#0" expanded="true" />
-            <element signature="e#26048#26273#0" expanded="true" />
-            <element signature="e#26272#26273#0" expanded="true" />
+            <element signature="e#25770#26183#0" expanded="true" />
+            <element signature="e#26182#26183#0" expanded="true" />
+            <element signature="e#26227#26452#0" expanded="true" />
+            <element signature="e#26451#26452#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1898,10 +2066,10 @@
             <element signature="e#6640#6641#0" expanded="true" />
             <element signature="e#7240#7819#0" expanded="true" />
             <element signature="e#7818#7819#0" expanded="true" />
-            <element signature="e#25638#26004#0" expanded="true" />
-            <element signature="e#26003#26004#0" expanded="true" />
-            <element signature="e#26048#26273#0" expanded="true" />
-            <element signature="e#26272#26273#0" expanded="true" />
+            <element signature="e#25770#26183#0" expanded="true" />
+            <element signature="e#26182#26183#0" expanded="true" />
+            <element signature="e#26227#26452#0" expanded="true" />
+            <element signature="e#26451#26452#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1936,10 +2104,10 @@
             <element signature="e#6640#6641#0" expanded="true" />
             <element signature="e#7240#7819#0" expanded="true" />
             <element signature="e#7818#7819#0" expanded="true" />
-            <element signature="e#25638#26004#0" expanded="true" />
-            <element signature="e#26003#26004#0" expanded="true" />
-            <element signature="e#26048#26273#0" expanded="true" />
-            <element signature="e#26272#26273#0" expanded="true" />
+            <element signature="e#25770#26183#0" expanded="true" />
+            <element signature="e#26182#26183#0" expanded="true" />
+            <element signature="e#26227#26452#0" expanded="true" />
+            <element signature="e#26451#26452#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2010,6 +2178,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/appspot/usbhidterminal/core/USBUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/anom_droid.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -2019,36 +2195,28 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout-large/activity_main.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/appspot/usbhidterminal/core/USBUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/appspot/usbhidterminal/core/Consts.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="671">
-          <caret line="65" column="62" selection-start-line="65" selection-start-column="62" selection-end-line="65" selection-end-column="62" />
+        <state relative-caret-position="494">
+          <caret line="61" column="47" selection-start-line="61" selection-start-column="47" selection-end-line="61" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/appspot/usbhidterminal/USBHIDTerminal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="858" column="53" selection-start-line="858" selection-start-column="53" selection-end-line="858" selection-end-column="53" />
+        <state relative-caret-position="314">
+          <caret line="722" column="72" selection-start-line="722" selection-start-column="72" selection-end-line="722" selection-end-column="72" />
           <folding>
             <element signature="e#3184#4625#0" expanded="true" />
             <element signature="e#4624#4625#0" expanded="true" />
@@ -2060,10 +2228,10 @@
             <element signature="e#6640#6641#0" expanded="true" />
             <element signature="e#7240#7819#0" expanded="true" />
             <element signature="e#7818#7819#0" expanded="true" />
-            <element signature="e#25638#26004#0" expanded="true" />
-            <element signature="e#26003#26004#0" expanded="true" />
-            <element signature="e#26048#26273#0" expanded="true" />
-            <element signature="e#26272#26273#0" expanded="true" />
+            <element signature="e#25770#26183#0" expanded="true" />
+            <element signature="e#26182#26183#0" expanded="true" />
+            <element signature="e#26227#26452#0" expanded="true" />
+            <element signature="e#26451#26452#0" expanded="true" />
           </folding>
         </state>
       </provider>

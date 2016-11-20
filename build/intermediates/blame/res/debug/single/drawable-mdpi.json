@@ -1,9 +1,5 @@
 [
     {
-        "merged": "C:\\gitprojects\\anom\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_launcher.png",
-        "source": "C:\\gitprojects\\anom\\res\\drawable-mdpi\\ic_launcher.png"
-    },
-    {
         "merged": "C:\\gitlocal\\anom\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_launcher.png",
         "source": "C:\\gitlocal\\anom\\res\\drawable-mdpi\\ic_launcher.png"
     }

@@ -59,12 +59,12 @@ public abstract class Consts {
 	public static final int NUMBER_OF_TRIALS_BETWEEN_TRAINING_TRIAL_PLUS_MINUS = 1;
 	public static final int NUMBER_OF_REPEATS_BEFORE_MOVE = 2;
 
-	public static final int THRESHOLD_LARGE = 40;
+	public static final int THRESHOLD_LARGE = 80;
 	//public static final boolean DEBUG = false;
-	public static final boolean DEBUG_ALTERNATE_0 = false;
+	public static final boolean DEBUG_ALTERNATE_0 = true;
 	public static final boolean DEBUG_ALTERNATE_1 = false;
-	public static final boolean DEBUG_PROCESS_RESPONSE = false;
-	public static final boolean DEBUG_NO_DICHROMATIC_PATCH = false;
+	public static final boolean DEBUG_PROCESS_RESPONSE = true;
+	public static final boolean DEBUG_NO_DICHROMATIC_PATCH = true;
 
 	//public static final int NUMBER_OF_MISSED_EQUALS_BETWEEN_STOPPING = 5;
 
