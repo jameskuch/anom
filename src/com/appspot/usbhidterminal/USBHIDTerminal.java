@@ -390,25 +390,14 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 		}
 		else if (!finished && separation_of_normals_PA_and_DA_complete)
 		{
+            //Note, this will actually generate the finish variable. So, this will run one extra time unless you intercept
+
+
 			Process_Response_To_Find_Boundaries();
 		}
 
 
 	}
-
-	private int Subject_Not_Being_Trained = 0;
-	private int Subject_Being_Trained = 0;
-	private int Dichromat_Hits = 0;
-	private boolean[] LeftBoundaryFound = new boolean[Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES];
-    private int[] LeftBoundary = new int[Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES];
-	private boolean[] InsideThreshold = new boolean[Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES];
-	private boolean[] RightBoundaryFound = new boolean[Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES];
-    private int[] RightBoundary = new int[Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES];
-	private int[] Separation = new int[Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES + 1];
-	private boolean[] MoveLeft = new boolean[Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES];
-	private boolean[] MoveRight = new boolean[Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES];
-	private int[] MoveLeftInt = new int[Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES];
-	private int[] MoveRightInt = new int[Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES];
 
 	void Process_Response_To_Find_Boundaries() {
 
@@ -470,9 +459,9 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 		}
 		else
 		{
-            String msg4 = "";
+            String msg2 = "";
 			//increment the specific staircase
-			it_sc[which_sc[it-1]] ++;
+			//it_sc[which_sc[it-1]] ++;
             controls=0;
 
 			if (lane05[it-1] == 1 && stimulus_on_patch0_and_patch1[it-1])
@@ -520,9 +509,9 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 			else if (lane00[it-1] == 1 && stimulus_on_patch0_and_patch1[it-1])
 			{
 
-                if (Consts.DEBUG)
+                if (Consts.DEBUG_PROCESS_RESPONSE)
                 {
-                    msg4 += "Lane 00 and Top";
+                    msg2 += "Lane 00 and Top";
                 }
 				if (p_0_R > p_1_R)
 				{
@@ -533,9 +522,9 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 					{
 						MoveLeftInt[which_sc[it-1]] = 0;
 					}
-                    if (Consts.DEBUG)
+                    if (Consts.DEBUG_PROCESS_RESPONSE)
                     {
-                        msg4 += ". p0 more red";
+                        msg2 += ". p0 more red";
                     }
 
 				}
@@ -548,9 +537,9 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 					{
 						MoveRightInt[which_sc[it-1]] = 0;
 					}
-                    if (Consts.DEBUG)
+                    if (Consts.DEBUG_PROCESS_RESPONSE)
                     {
-                        msg4 += ". p1 more red";
+                        msg2 += ". p1 more red";
                     }
 				}
 
@@ -571,9 +560,9 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 			}
 			else if (lane10[it-1] == 1 && stimulus_on_patch0_and_patch1[it-1])
 			{
-                if (Consts.DEBUG)
+                if (Consts.DEBUG_PROCESS_RESPONSE)
                 {
-                    msg4 += "Lane 10 and Top";
+                    msg2 += "Lane 10 and Top";
                 }
 				if (p_0_R < p_1_R)
 				{
@@ -583,9 +572,9 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 					{
 						MoveLeftInt[which_sc[it-1]] = 0;
 					}
-                    if (Consts.DEBUG)
+                    if (Consts.DEBUG_PROCESS_RESPONSE)
                     {
-                        msg4 += ". p1 more red";
+                        msg2 += ". p1 more red";
                     }
 
 				}
@@ -597,9 +586,9 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 					{
 						MoveRightInt[which_sc[it-1]] = 0;
 					}
-                    if (Consts.DEBUG)
+                    if (Consts.DEBUG_PROCESS_RESPONSE)
                     {
-                        msg4 += ". p0 more red";
+                        msg2 += ". p0 more red";
                     }
 				}
 
@@ -618,9 +607,9 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 			}
 			else if (lane10[it-1] == 1 && !stimulus_on_patch0_and_patch1[it-1])
 			{
-                if (Consts.DEBUG)
+                if (Consts.DEBUG_PROCESS_RESPONSE)
                 {
-                    msg4 += "Lane 10 and Bottom";
+                    msg2 += "Lane 10 and Bottom";
                 }
 
 				if (p_2_R > p_1_R)
@@ -631,9 +620,9 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 					{
 						MoveRightInt[which_sc[it-1]] = 0;
 					}
-                    if (Consts.DEBUG)
+                    if (Consts.DEBUG_PROCESS_RESPONSE)
                     {
-                        msg4 += ". p2 more red";
+                        msg2 += ". p2 more red";
                     }
 
 				}
@@ -646,9 +635,9 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 					{
 						MoveLeftInt[which_sc[it-1]] = 0;
 					}
-                    if (Consts.DEBUG)
+                    if (Consts.DEBUG_PROCESS_RESPONSE)
                     {
-                        msg4 += ". p1 more red";
+                        msg2 += ". p1 more red";
                     }
 				}
 
@@ -667,9 +656,9 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 			}
 			else if (lane20[it-1] == 1 && !stimulus_on_patch0_and_patch1[it-1])
 			{
-                if (Consts.DEBUG)
+                if (Consts.DEBUG_PROCESS_RESPONSE)
                 {
-                    msg4 += "Lane 20 and Bottom";
+                    msg2 += "Lane 20 and Bottom";
                 }
 
 				if (p_2_R < p_1_R)
@@ -680,9 +669,9 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 					{
 						MoveRightInt[which_sc[it-1]] = 0;
 					}
-                    if (Consts.DEBUG)
+                    if (Consts.DEBUG_PROCESS_RESPONSE)
                     {
-                        msg4 += ". p1 more red";
+                        msg2 += ". p1 more red";
                     }
 				}
 				//
@@ -694,9 +683,9 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 					{
 						MoveLeftInt[which_sc[it-1]] = 0;
 					}
-                    if (Consts.DEBUG)
+                    if (Consts.DEBUG_PROCESS_RESPONSE)
                     {
-                        msg4 += ". p2 more red";
+                        msg2 += ". p2 more red";
                     }
 				}
 
@@ -714,17 +703,51 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 				}
 			}
 
-			if (Consts.DEBUG) {
-				String msg = "";
-				String msg2 = "";
+            //if Left and Right boundaries are found for this particular staircase
+            if (LeftBoundaryFound[which_sc[it-1]] && RightBoundaryFound[which_sc[it-1]]) {
+                Separation[which_sc[it-1]] = Separation[which_sc[it-1]] / 2;
+                if (Separation[which_sc[it-1]] <= Consts.FINAL_SEPARATION) {
+                    sc_finished[which_sc[it-1]] = true;
 
-				msg = "Last: MoveRightInt = " + Integer.toString(MoveRightInt[which_sc[it-1]]) + ", MoveLeftInt = " + Integer.toString(MoveLeftInt[which_sc[it-1]]) + ", sc = " + Integer.toString(which_sc[it-1]);
+                }
+            }
+            finished = true;
+            for (int x = 0; x < Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES; x++) {
+                if (!sc_finished[x])
+                {
+                    finished = false;
+                }
+            }
+
+            if (finished) {
+                int LboundaryAvg = 0;
+                int RboundaryAvg = 0;
+
+                for (int x = 0; x < Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES; x++) {
+                    LboundaryAvg += LeftBoundary[x];
+                    RboundaryAvg += RightBoundary[x];
+                }
+                LboundaryAvg = LboundaryAvg / Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES;
+                RboundaryAvg = RboundaryAvg / Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES;
+
+                txt_inst.setText("Test finished");
+                //txt_inst5.setText("Left boundary = " + Integer.toString(LboundaryAvg) + ", Right boundary = " + Integer.toString(RboundaryAvg));
+                txt_inst5.setText("L1 = " + Integer.toString(LeftBoundary[0]) + ", L2 = " + Integer.toString(LeftBoundary[1]) + ", R1 = " + Integer.toString(RightBoundary[0]) + ", R2 = " + Integer.toString(RightBoundary[1]));
+
+                intest = false;
+            }
+
+			if (Consts.DEBUG_PROCESS_RESPONSE) {
+				String msg = "";
+
+
+				//msg = "Last: MoveRightInt = " + Integer.toString(MoveRightInt[which_sc[it-1]]) + ", MoveLeftInt = " + Integer.toString(MoveLeftInt[which_sc[it-1]]) + ", sc = " + Integer.toString(which_sc[it-1]);
 				txt_inst2.setText(msg);
-				msg2 = "Last: MoveRightBoolean = " + Boolean.toString(MoveRight[which_sc[it-1]]) + ", MoveLeftBoolean = " + Boolean.toString(MoveLeft[which_sc[it-1]]);
-                msg2 = msg4;
-				txt_inst3.setText(msg2);
+				//msg2 = "Last: MoveRightBoolean = " + Boolean.toString(MoveRight[which_sc[it-1]]) + ", MoveLeftBoolean = " + Boolean.toString(MoveLeft[which_sc[it-1]]);
+                txt_inst3.setText(msg2);
+                txt_inst.setText("Left and Right Boundary Found = " + Boolean.toString(sc_finished[which_sc[it-1]]) + ", Finished = " + Boolean.toString(finished));
 				//txt_inst4.setText("Last:  Dichromat++ = " + Integer.toString(Dichromat_Hits) + " bot if");
-                txt_inst4.setText("Separation = " + Integer.toString(Separation[which_sc[it-1]]));
+
 			}
 
 
@@ -740,9 +763,12 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 			lane00[it] = 1;
 
 			Iterate_Direct_and_Process_Experiment_Variables();
-
-			Blank(true);
-
+            if (intest) {
+                Blank(true);
+            } else {
+                Blank(false);
+                txt_inst.setText("Finished");
+            }
 		}
 		else if (v == btn_1) {
 			//txtHidInput.setText("btn1");
@@ -751,7 +777,12 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 
 			Iterate_Direct_and_Process_Experiment_Variables();
 
-			Blank(true);
+            if (intest) {
+                Blank(true);
+            } else {
+                Blank(false);
+                txt_inst.setText("Finished");
+            }
 		}
 		else if (v == btn_2) {
 			//txtHidInput.setText("btn2");
@@ -759,9 +790,12 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 			lane10[it] = 1;
 
 			Iterate_Direct_and_Process_Experiment_Variables();
-
-			Blank(true);
-
+            if (intest) {
+                Blank(true);
+            } else {
+                Blank(false);
+                txt_inst.setText("Finished");
+            }
 		}
 		else if (v == btn_3) {
 			//txtHidInput.setText("btn3");
@@ -770,8 +804,12 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 			lane15[it] = 1;
 
 			Iterate_Direct_and_Process_Experiment_Variables();
-
-			Blank(true);
+            if (intest) {
+                Blank(true);
+            } else {
+                Blank(false);
+                txt_inst.setText("Finished");
+            }
 		}
 		else if (v == btn_4) {
 			//txtHidInput.setText("btn4");
@@ -781,8 +819,12 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 			lane20[it] = 1;
 
 			Iterate_Direct_and_Process_Experiment_Variables();
-
-			Blank(true);
+            if (intest) {
+                Blank(true);
+            } else {
+                Blank(false);
+                txt_inst.setText("Finished");
+            }
 		}
 		else if (v == btn_begin) {
 			//txtHidInput.setText("btnbegin");
@@ -810,7 +852,13 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 					meowBuilder.setCancelable(false);
 					meowBuilder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int id) {
+                            btn_0.setVisibility(View.VISIBLE);
+
+                            btn_2.setVisibility(View.VISIBLE);
+
+                            btn_4.setVisibility(View.VISIBLE);
 							Reset_Experimental_Variables();
+
 							Experiment();
 						}
 					});
@@ -893,7 +941,7 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
         for (int x = 0; x < Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES; x++)
         {
             sc_finished[x] = false;
-			it_sc[x] = 0;
+			//it_sc[x] = 0;
 			firsttime[x] = true;
 			RightBoundaryFound[x] = false;
             RightBoundary[x] = 0;
@@ -910,6 +958,7 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 		firsttime[Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES] = true;
 		Separation[Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES] = Consts.INITIAL_SEPARATION;
         finished = false;
+
 		it = 0;
         controls = 0;
 
@@ -945,13 +994,7 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 
 
 	private int it = 0; //iterations
-	private int[] it_sc = new int[Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES];
 	private int[] which_sc = new int[Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES * Consts.MAX_TRIALS];
-
-//	private int it_PA_0 = 0; //iterations for protanomolous trichromat staircase 0
-//	private int it_PA_1 = 0; //iterations for protanomolous trichromat staircase 1
-//	private int it_DA_0 = 0; //iterations for deuteranomolous trichromat staircase 0
-//	private int it_DA_1 = 0; //iterations for deuteranomolous trichromat staircase 1
 
 	private boolean[] firsttime = new boolean[Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES + 1];
     private boolean[] sc_finished = new boolean[Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES + 1];
@@ -977,7 +1020,20 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 	private int[] lane20 = new int[Consts.MAX_TRIALS];
 
 
+    private boolean[] LeftBoundaryFound = new boolean[Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES];
+    private int[] LeftBoundary = new int[Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES];
+    private boolean[] InsideThreshold = new boolean[Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES];
+    private boolean[] RightBoundaryFound = new boolean[Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES];
+    private int[] RightBoundary = new int[Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES];
+    private int[] Separation = new int[Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES + 1];
+    private boolean[] MoveLeft = new boolean[Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES];
+    private boolean[] MoveRight = new boolean[Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES];
+    private int[] MoveLeftInt = new int[Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES];
+    private int[] MoveRightInt = new int[Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES];
 
+    private int Subject_Not_Being_Trained = 0;
+    private int Subject_Being_Trained = 0;
+    private int Dichromat_Hits = 0;
 
 
 	private void Experiment() {
@@ -1098,76 +1154,36 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 			sc_led_int[it] = sc_led_int[it-1];
             if (which_sc[it]<Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES) {
 
-                boolean AllStaircasesComplete = true;
-                for (int x = 0; x < Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES; x++) {
-                    if (!sc_finished[x])
-                    {
-                        AllStaircasesComplete = false;
-                    }
-                }
-
-                if (AllStaircasesComplete) {
-                    Blank(false);
-                    int Lavg = 0;
-                    int Ravg = 0;
-                    for (int x = 0; x < Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES; x++)
-                    {
-                        Lavg += LeftBoundary[x];
-                        Ravg += RightBoundary[x];
-                    }
-                    Lavg = Lavg / Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES;
-                    Ravg = Ravg / Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES;
-                    txt_inst.setText("Finished");
-                    txt_inst5.setText("Threshold color detection: L bound = " + Integer.toString(Lavg) + " and R bound = " + Integer.toString(Ravg));
-                    btn_begin.setImageResource(R.drawable.button_begintest);
-                    finished = true;
-                    // show the response buttons
-
-                }
-
-                else {
-                    //if Left and Right boundaries are found for this particular staircase
-                    if (LeftBoundaryFound[which_sc[it]] && RightBoundaryFound[which_sc[it]]) {
-                        Separation[which_sc[it]] = Separation[which_sc[it]] / 2;
-                        if (Separation[which_sc[it]] <= Consts.FINAL_SEPARATION) {
-                            sc_finished[which_sc[it]] = true;
-
-
-                        }
-                    }
-
-
                     //continue processing
-                    int valtoassign;
-                    if (!sc_finished[which_sc[it]]) {
-                        if (MoveLeft[which_sc[it - 1 - controls]]) {
-                            valtoassign = sc_pat_valR[it - 1 - controls] - Separation[which_sc[it - 1 - controls]];
-                            if (valtoassign < 0) {
-                                //extreme case, probably a dichromat
-                                valtoassign = 0;
-                                LeftBoundaryFound[which_sc[it]] = true;
-                                LeftBoundary[which_sc[it]] = 0;
-                            } else {
-                                RightBoundaryFound[which_sc[it]] = true;
-                                RightBoundary[which_sc[it]] = sc_pat_valR[it - 1 - controls];
-                            }
-                            sc_pat_valR[it] = valtoassign;
-                            MoveLeft[which_sc[it - 1 - controls]] = false;
-                        } else if (MoveRight[which_sc[it - 1 - controls]]) {
-                            valtoassign = sc_pat_valR[it - 1 - controls] + Separation[which_sc[it - 1 - controls]];
-                            if (valtoassign > 255) {
-                                valtoassign = 255;
-                                RightBoundaryFound[which_sc[it]] = true;
-                                RightBoundary[which_sc[it]] = 255;
-                            } else {
-                                LeftBoundaryFound[which_sc[it]] = true;
-                                LeftBoundary[which_sc[it]] = sc_pat_valR[it - 1 - controls];
-                            }
-                            sc_pat_valR[it] = valtoassign;
-                            MoveRight[which_sc[it - 1 - controls]] = false;
+                int valtoassign;
+                if (!sc_finished[which_sc[it]]) {
+                    if (MoveLeft[which_sc[it - 1 - controls]]) {
+                        valtoassign = sc_pat_valR[it - 1 - controls] - Separation[which_sc[it - 1 - controls]];
+                        if (valtoassign < 0) {
+                            //extreme case, probably a dichromat
+                            valtoassign = 0;
+                            LeftBoundaryFound[which_sc[it]] = true;
+                            LeftBoundary[which_sc[it]] = 0;
                         } else {
-                            sc_pat_valR[it] = sc_pat_valR[it - 1 - controls];
+                            RightBoundaryFound[which_sc[it]] = true;
+                            RightBoundary[which_sc[it]] = sc_pat_valR[it - 1 - controls];
                         }
+                        sc_pat_valR[it] = valtoassign;
+                        MoveLeft[which_sc[it - 1 - controls]] = false;
+                    } else if (MoveRight[which_sc[it - 1 - controls]]) {
+                        valtoassign = sc_pat_valR[it - 1 - controls] + Separation[which_sc[it - 1 - controls]];
+                        if (valtoassign > 255) {
+                            valtoassign = 255;
+                            RightBoundaryFound[which_sc[it]] = true;
+                            RightBoundary[which_sc[it]] = 255;
+                        } else {
+                            LeftBoundaryFound[which_sc[it]] = true;
+                            LeftBoundary[which_sc[it]] = sc_pat_valR[it - 1 - controls];
+                        }
+                        sc_pat_valR[it] = valtoassign;
+                        MoveRight[which_sc[it - 1 - controls]] = false;
+                    } else {
+                        sc_pat_valR[it] = sc_pat_valR[it - 1 - controls];
                     }
                 }
             }
@@ -1176,48 +1192,57 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 			}
 		}
 
-        if (!sc_finished[which_sc[it]]) {
-            // We now have our initial guesses. Set LEDs and PATCH colors for all three areas
-            if (r.nextBoolean()) {
-                stimulus_on_patch0_and_patch1[it] = true;
-            } else {
-                stimulus_on_patch0_and_patch1[it] = false;
-            }
-            int val = stimulus_on_patch0_and_patch1[it] ? 1 : 0;
-            int valnot = stimulus_on_patch0_and_patch1[it] ? 0 : 1;
 
-            if (which_sc[it] == Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES) {
-                p_1_R = sc_pat_valR[it];
-            } else {
-                if (sc_dir_R_to_G[it]) {
-                    p_1_R = sc_pat_valR[it] - Separation[which_sc[it]];
-                } else {
-                    p_1_R = sc_pat_valR[it] + Separation[which_sc[it]];
-                }
-            }
-            led_1 = sc_led_int[it];
-            p_0_R = valnot * Dichromat_Patch + val * sc_pat_valR[it];
-            p_2_R = val * Dichromat_Patch + valnot * sc_pat_valR[it];
-            led_0 = valnot * Dichromat_LED + val * sc_led_int[it];
-            led_2 = val * Dichromat_LED + valnot * sc_led_int[it];
+        // We now have our initial guesses. Set LEDs and PATCH colors for all three areas
+        if (r.nextBoolean()) {
+            stimulus_on_patch0_and_patch1[it] = true;
+        } else {
+            stimulus_on_patch0_and_patch1[it] = false;
+        }
+        int val = stimulus_on_patch0_and_patch1[it] ? 1 : 0;
+        int valnot = stimulus_on_patch0_and_patch1[it] ? 0 : 1;
 
-            //txt_inst.setText(Boolean.toString(Probably_Normal) + " " +  Integer.toString(led_0) + " " + Integer.toString(led_1) + " " + Integer.toString(led_2) + " " + Integer.toString(p_0_R) + " " + Integer.toString(p_1_R) + " " + Integer.toString(p_2_R));
-            if (Consts.DEBUG) {
-                String msg = "";
-                if (Probably_Protanomolous) {
-                    msg = "prot, p0 = ";
-                } else if (Probably_Deuteranomolous) {
-                    msg = "deut, p0 = ";
-                } else {
-                    msg = "normal, p0 = ";
-                }
-                txt_inst.setText("Current: " + msg + Integer.toString(p_0_R) + ", p1 = " + Integer.toString(p_1_R) + ", p2 = " + Integer.toString(p_2_R) + ", sc = " + Integer.toString(which_sc[it]) + ", it = " + Integer.toString(it));
-                txt_inst5.setText("Current: Top = " + Boolean.toString(stimulus_on_patch0_and_patch1[it]) + ", sc_patch_ValR = " + Integer.toString(sc_pat_valR[it]));
+        if (which_sc[it] == Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES) {
+            p_1_R = sc_pat_valR[it];
+        } else {
+            if (sc_dir_R_to_G[it]) {
+                p_1_R = sc_pat_valR[it] - Separation[which_sc[it]];
+            } else {
+                p_1_R = sc_pat_valR[it] + Separation[which_sc[it]];
             }
-            Output_LED_and_PATCH(led_0, led_1, led_2, p_0_R, p_1_R, p_2_R);
+        }
+        led_1 = sc_led_int[it];
+        p_0_R = valnot * Dichromat_Patch + val * sc_pat_valR[it];
+        p_2_R = val * Dichromat_Patch + valnot * sc_pat_valR[it];
+        led_0 = valnot * Dichromat_LED + val * sc_led_int[it];
+        led_2 = val * Dichromat_LED + valnot * sc_led_int[it];
+
+        //txt_inst.setText(Boolean.toString(Probably_Normal) + " " +  Integer.toString(led_0) + " " + Integer.toString(led_1) + " " + Integer.toString(led_2) + " " + Integer.toString(p_0_R) + " " + Integer.toString(p_1_R) + " " + Integer.toString(p_2_R));
+        if (Consts.DEBUG_ALTERNATE_0) {
+            String msg = "";
+            if (Probably_Protanomolous) {
+                msg = "prot, p0 = ";
+            } else if (Probably_Deuteranomolous) {
+                msg = "deut, p0 = ";
+            } else {
+                msg = "normal, p0 = ";
+            }
+            //txt_inst.setText(msg + Integer.toString(p_0_R) + ", p1 = " + Integer.toString(p_1_R) + ", p2 = " + Integer.toString(p_2_R) + ", sc = " + Integer.toString(which_sc[it]) + ", it = " + Integer.toString(it) + ", Separation = " + Integer.toString(Separation[which_sc[it]]));
+            txt_inst.setText(msg + Integer.toString(p_0_R) + ", p1 = " + Integer.toString(p_1_R) + ", p2 = " + Integer.toString(p_2_R) + ", sc = " + Integer.toString(which_sc[it]) + " Separation = " + Integer.toString(Separation[which_sc[it]]));
+            txt_inst5.setText("Top = " + Boolean.toString(stimulus_on_patch0_and_patch1[it]) + ", sc_patch_ValR = " + Integer.toString(sc_pat_valR[it]));
+        }
+
+        if (Consts.DEBUG_ALTERNATE_1)
+        {
+            String msg = "l_0 = " + Integer.toString(led_0) + ", l_1 = " + Integer.toString(led_1) + ", l_2 = " + Integer.toString(led_2) + ", p_0_R = " + Integer.toString(p_0_R) + ", p_1_R = " + Integer.toString(p_1_R) + ", p_2_R = " + Integer.toString(p_2_R);
+            txt_inst5.setText(msg);
+
         }
 
 
+
+
+        Output_LED_and_PATCH(led_0, led_1, led_2, p_0_R, p_1_R, p_2_R);
 	}
 
 
@@ -1502,29 +1527,34 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
             msg = "Normal, Prot = ";
 
 		}
-        if (!Consts.DEBUG) {
-            msg += Double.toString(prot_anom) + ", Deut = " + Double.toString(deut_anom) + ", Norm = " + Double.toString(normal);
-            txt_inst.setText(msg);
-            startTime2 = System.currentTimeMillis();
-            timerHandler2.postDelayed(timerRunnable2, 0);
-        }
+        msg += Double.toString(prot_anom) + ", Deut = " + Double.toString(deut_anom) + ", Norm = " + Double.toString(normal);
+        txt_inst.setText(msg);
+        startTime2 = System.currentTimeMillis();
+        timerHandler2.postDelayed(timerRunnable2, 0);
+
 
 	}
 
 
-
+private int temp = 0;
 	private void Output_LED_and_PATCH(int l0, int l1, int l2, int p0, int p1, int p2){
+
+        txt_inst4.setText(Integer.toString(temp));
+        temp++;
 		SetLED(0, l0);
 		SetLED(1, l1);
 		SetLED(2, l2);
-		if (p0 == 0) {
+        patch_1.setColorFilter(Color.rgb(p1, 255 - p1, 0));
+
+        if (Consts.DEBUG_NO_DICHROMATIC_PATCH) {
+
 			patch_0.setColorFilter(Color.rgb(p0, p0, 0));
 		}
 		else {
 			patch_0.setColorFilter(Color.rgb(p0, 255 - p0, 0));
 		}
-		patch_1.setColorFilter(Color.rgb(p1, 255 - p1, 0));
-		if (p2 == 0) {
+
+        if (Consts.DEBUG_NO_DICHROMATIC_PATCH) {
 			patch_2.setColorFilter(Color.rgb(p2, p2, 0));
 		}
 		else {
