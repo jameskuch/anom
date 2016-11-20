@@ -27,13 +27,14 @@ public abstract class Consts {
 	public static final int WEB_SERVER_NOTIFICATION = 45277992;
 	public static final int SOCKET_SERVER_NOTIFICATION = 45277993;
 
-	public static final int PA_RED_START_LOW = 50;
-	public static final int PA_RED_START_HIGH = 245;
-	public static final int DA_RED_START_LOW = 50;
-	public static final int DA_RED_START_HIGH = 245;
+	public static final int PA_RED_START_LOW = 200;
+	public static final int PA_RED_START_HIGH = 255;
+	public static final int DA_RED_START_LOW = 120;
+	public static final int DA_RED_START_HIGH = 200;
 	public static final int NO_RED_START_LOW = 140;
 	public static final int NO_RED_START_HIGH = 219;
 	public static final int INITIAL_SEPARATION = 20;
+	public static final int FINAL_SEPARATION = 4;
 	//public static final int PROTANOPE_LED = 10;
 	//public static final int PROTANOPE_PATCH = 255;
 	//public static final int DEUTERANOPE_LED = 245;
@@ -55,6 +56,11 @@ public abstract class Consts {
 	public static final int NUMBER_OF_TRIALS_BETWEEN_TRAINING_TRIAL  = 5;
 	public static final int NUMBER_OF_TRIALS_BETWEEN_TRAINING_TRIAL_PLUS_MINUS = 1;
 	public static final int NUMBER_OF_REPEATS_BEFORE_MOVE = 2;
+
+	public static final int THRESHOLD_LARGE = 40;
+	//public static final boolean DEBUG = false;
+	public static final boolean DEBUG = true;
+
 	//public static final int NUMBER_OF_MISSED_EQUALS_BETWEEN_STOPPING = 5;
 
 	private Consts() {

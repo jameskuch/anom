@@ -10,8 +10,21 @@ android:background="#000000"
 tools:context=".USBHIDTerminal">
 
 
+    <TextView
+        android:textColor="#FFFF00"
+        android:layout_width="574dp"
+        android:layout_height="43dp"
+        android:id="@+id/txt_inst5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="120dp"
+        android:layout_marginStart="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="15dp"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:gravity="center" />
 
-<ImageView
+    <ImageView
     android:layout_width="0dp"
     android:layout_height="166dp"
     android:id="@+id/iv_circleC"
@@ -135,8 +148,7 @@ tools:context=".USBHIDTerminal">
         android:layout_marginStart="136dp"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginLeft="136dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="24dp" />
+        app:layout_constraintBottom_toBottomOf="parent" />
 
     <TextView
         android:textColor="#FFFF00"
@@ -144,7 +156,7 @@ tools:context=".USBHIDTerminal">
         android:layout_height="43dp"
         android:id="@+id/txt_inst"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="120dp"
+        android:layout_marginBottom="72dp"
         android:layout_marginStart="15dp"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginLeft="15dp"
@@ -158,10 +170,24 @@ tools:context=".USBHIDTerminal">
         android:layout_height="43dp"
         android:id="@+id/txt_inst3"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="200dp"
+        android:layout_marginBottom="216dp"
         android:layout_marginStart="15dp"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginLeft="15dp"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:gravity="center" />
+
+    <TextView
+        android:textColor="#FFFF00"
+        android:layout_width="397dp"
+        android:layout_height="42dp"
+        android:id="@+id/txt_inst4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="264dp"
+        android:layout_marginStart="192dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="192dp"
         android:textSize="18sp"
         android:textAlignment="center"
         android:gravity="center" />
@@ -172,7 +198,7 @@ tools:context=".USBHIDTerminal">
         android:layout_height="43dp"
         android:id="@+id/txt_inst2"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="160dp"
+        android:layout_marginBottom="168dp"
         android:layout_marginStart="15dp"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginLeft="15dp"

@@ -10,5 +10,17 @@
     {
         "merged": "C:\\gitlocal\\anom\\build\\intermediates\\res\\merged\\debug\\xml\\pref_headers.xml",
         "source": "C:\\gitlocal\\anom\\res\\xml\\pref_headers.xml"
+    },
+    {
+        "merged": "C:\\gitprojects\\anom\\build\\intermediates\\res\\merged\\debug\\xml\\pref_headers.xml",
+        "source": "C:\\gitprojects\\anom\\res\\xml\\pref_headers.xml"
+    },
+    {
+        "merged": "C:\\gitprojects\\anom\\build\\intermediates\\res\\merged\\debug\\xml\\usb_device_filter.xml",
+        "source": "C:\\gitprojects\\anom\\res\\xml\\usb_device_filter.xml"
+    },
+    {
+        "merged": "C:\\gitprojects\\anom\\build\\intermediates\\res\\merged\\debug\\xml\\pref_general.xml",
+        "source": "C:\\gitprojects\\anom\\res\\xml\\pref_general.xml"
     }
 ]
