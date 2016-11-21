@@ -34,7 +34,7 @@ public abstract class Consts {
 	public static final int NO_RED_START_LOW = 140;
 	public static final int NO_RED_START_HIGH = 219;
 	public static final int INITIAL_SEPARATION = 20;
-	public static final int FINAL_SEPARATION = 4;
+	public static final int FINAL_SEPARATION = 2;
 	//public static final int PROTANOPE_LED = 10;
 	//public static final int PROTANOPE_PATCH = 255;
 	//public static final int DEUTERANOPE_LED = 245;
@@ -61,10 +61,10 @@ public abstract class Consts {
 
 	public static final int THRESHOLD_LARGE = 80;
 	//public static final boolean DEBUG = false;
-	public static final boolean DEBUG_ALTERNATE_0 = true;
+	public static final boolean DEBUG_ALTERNATE_0 = false;
 	public static final boolean DEBUG_ALTERNATE_1 = false;
-	public static final boolean DEBUG_PROCESS_RESPONSE = true;
-	public static final boolean DEBUG_NO_DICHROMATIC_PATCH = true;
+	public static final boolean DEBUG_PROCESS_RESPONSE = false;
+	public static final boolean DEBUG_NO_DICHROMATIC_PATCH = false;
 
 	//public static final int NUMBER_OF_MISSED_EQUALS_BETWEEN_STOPPING = 5;
 

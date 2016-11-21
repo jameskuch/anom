@@ -1,37 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="x86_64,x86"
-    api-level="23"
-    density="xhdpi"
+    abi="armeabi-v7a,armeabi"
+    api-level="22"
+    density="mdpi"
     format="8"
     plugin-version="2.2.2"
-    timestamp="19750415052932"
+    timestamp="93337281573851"
     token="9039148736717572945"
-    verifier="FULL_BUILD_REQUESTED" >
+    verifier="FIELD_TYPE_CHANGE" >
 
     <task
         name="javac"
-        duration="436" />
+        duration="453" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="1238" />
+        duration="45" />
     <task
         name="verifier"
-        duration="314" />
+        duration="14" />
 
     <artifact
-        location="C:\gitlocal\anom\build\outputs\apk\anom-debug.apk"
-        type="MAIN" />
+        location="C:\gitlocal\anom\build\intermediates\transforms\dex\debug\folders\1000\5\slice_6\classes.dex"
+        type="DEX" />
+    <artifact
+        location="C:\gitlocal\anom\build\intermediates\transforms\dex\debug\folders\1000\5\slice_7\classes.dex"
+        type="DEX" />
 
     <build
-        timestamp="19750415052932"
+        timestamp="93230763999576"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\gitlocal\anom\build\outputs\apk\anom-debug.apk"
             type="MAIN" />
+    </build>
+    <build
+        timestamp="93337281573851"
+        verifier="FIELD_TYPE_CHANGE" >
+        <artifact
+            location="C:\gitlocal\anom\build\intermediates\transforms\dex\debug\folders\1000\5\slice_6\classes.dex"
+            type="DEX" />
+        <artifact
+            location="C:\gitlocal\anom\build\intermediates\transforms\dex\debug\folders\1000\5\slice_7\classes.dex"
+            type="DEX" />
     </build>
 
 </instant-run>

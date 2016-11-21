@@ -732,8 +732,8 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
                 RboundaryAvg = RboundaryAvg / Consts.NUMBER_OF_SIMULTANEOUS_STAIRCASES;
 
                 txt_inst.setText("Test finished");
-                //txt_inst2.setText("Left boundary = " + Integer.toString(LboundaryAvg) + ", Right boundary = " + Integer.toString(RboundaryAvg));
-                txt_inst2.setText("L1 = " + Integer.toString(LeftBoundary[0]) + ", L2 = " + Integer.toString(LeftBoundary[1]) + ", R1 = " + Integer.toString(RightBoundary[0]) + ", R2 = " + Integer.toString(RightBoundary[1]));
+                txt_inst2.setText("Left boundary = " + Integer.toString(LboundaryAvg) + ", Right boundary = " + Integer.toString(RboundaryAvg));
+                //txt_inst2.setText("L1 = " + Integer.toString(LeftBoundary[0]) + ", L2 = " + Integer.toString(LeftBoundary[1]) + ", R1 = " + Integer.toString(RightBoundary[0]) + ", R2 = " + Integer.toString(RightBoundary[1]));
 				txt_inst3.setText("iterations = " + Integer.toString(it));
                 intest = false;
             }
@@ -859,6 +859,11 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 
                             btn_4.setVisibility(View.VISIBLE);
 							Reset_Experimental_Variables();
+							txt_inst.setText("");
+							txt_inst2.setText("");
+							txt_inst3.setText("");
+							txt_inst4.setText("");
+							txt_inst5.setText("");
 							intest = true;
 							finished = false;
 

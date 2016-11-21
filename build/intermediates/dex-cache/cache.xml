@@ -61,7 +61,7 @@
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
-        sha1="f94f93fc6b3772448eb6222427bf9ed4b64f33df">
+        sha1="121aa72b746c05f35ba44876277f5416f113cdc9">
         <dex dex="C:\gitlocal\anom\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_0f849d3f114b76487d06956270018989f058336f\classes.dex" />
     </item>
     <item
@@ -79,7 +79,7 @@
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
-        sha1="b79155fdbd84d9d2adf8a97cfefc885f5264687e">
+        sha1="c1c6013df4315a5eb341090a0f82872e738b7e42">
         <dex dex="C:\gitlocal\anom\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_e5209204f667431db10000459098e4eac6880986\classes.dex" />
     </item>
     <item
