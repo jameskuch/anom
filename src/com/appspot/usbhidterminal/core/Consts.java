@@ -30,7 +30,7 @@ public abstract class Consts {
 	public static final int PA_RED_START_LOW = 200;
 	public static final int PA_RED_START_HIGH = 255;
 	public static final int DA_RED_START_LOW = 120;
-	public static final int DA_RED_START_HIGH = 200;
+	public static final int DA_RED_START_HIGH = 190;
 	public static final int NO_RED_START_LOW = 140;
 	public static final int NO_RED_START_HIGH = 219;
 	public static final int INITIAL_SEPARATION = 20;
@@ -64,7 +64,7 @@ public abstract class Consts {
 	public static final boolean DEBUG_ALTERNATE_0 = false;
 	public static final boolean DEBUG_ALTERNATE_1 = false;
 	public static final boolean DEBUG_PROCESS_RESPONSE = false;
-	public static final boolean DEBUG_NO_DICHROMATIC_PATCH = false;
+	public static final boolean DEBUG_NO_DICHROMATIC_PATCH = true;
 
 	//public static final int NUMBER_OF_MISSED_EQUALS_BETWEEN_STOPPING = 5;
 
