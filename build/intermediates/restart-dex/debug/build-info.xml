@@ -5,33 +5,42 @@
     density="mdpi"
     format="8"
     plugin-version="2.2.2"
-    timestamp="112632232990055"
+    timestamp="120854187082951"
     token="9039148736717572945"
-    verifier="FULL_BUILD_REQUESTED" >
+    verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="637" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="65" />
+        duration="0" />
     <task
         name="verifier"
-        duration="15" />
-
-    <artifact
-        location="C:\gitlocal\anom\build\outputs\apk\anom-debug.apk"
-        type="MAIN" />
+        duration="0" />
 
     <build
-        timestamp="112632232990055"
+        timestamp="120710187759418"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\gitlocal\anom\build\outputs\apk\anom-debug.apk"
             type="MAIN" />
     </build>
+    <build
+        timestamp="120829975980147"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\gitlocal\anom\build\intermediates\transforms\dex\debug\folders\1000\5\slice_6\classes.dex"
+            type="DEX" />
+        <artifact
+            location="C:\gitlocal\anom\build\intermediates\transforms\dex\debug\folders\1000\5\slice_7\classes.dex"
+            type="DEX" />
+    </build>
+    <build
+        timestamp="120854187082951"
+        verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>

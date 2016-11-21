@@ -42,8 +42,8 @@ public abstract class Consts {
 	//public static final int DEUTERANOPE_LED = 80;
 	//public static final int DEUTERANOPE_PATCH = 174;
 	public static final int PROTANOPE_LED = 40;
-	public static final int PROTANOPE_PATCH = 100;
-	public static final int DEUTERANOPE_LED = 40;
+	public static final int PROTANOPE_PATCH = 20;
+	public static final int DEUTERANOPE_LED = 20;
 	public static final int DEUTERANOPE_PATCH = 100;
 
 	public static final int LED_INT_NORMAL = 255;
@@ -64,7 +64,7 @@ public abstract class Consts {
 	public static final boolean DEBUG_ALTERNATE_0 = false;
 	public static final boolean DEBUG_ALTERNATE_1 = false;
 	public static final boolean DEBUG_PROCESS_RESPONSE = false;
-	public static final boolean DEBUG_NO_DICHROMATIC_PATCH = true;
+	public static final boolean DEBUG_NO_DICHROMATIC_PATCH = false;
 
 	//public static final int NUMBER_OF_MISSED_EQUALS_BETWEEN_STOPPING = 5;
 
