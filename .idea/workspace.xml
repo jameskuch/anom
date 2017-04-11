@@ -42,7 +42,281 @@
     <last-search-timestamp>1479541097773</last-search-timestamp>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7e5f311-ea6b-4683-8221-6a55cc9c8a6d" name="Default" comment="" />
+    <list default="true" id="d7e5f311-ea6b-4683-8221-6a55cc9c8a6d" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/android_android_22.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/constraint_layout_1_0_0_alpha9.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/constraint_layout_solver_1_0_0_alpha9.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/eventbus_2_4_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/mockito_all_1_9_5.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/nanohttpd_2_1_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/nanohttpd_websocket_2_1_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/support_annotations_22_1_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_22_1_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/builds/debug/92673563509822/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/exploded-aar/com.android.support.constraint/constraint-layout/1.0.0-alpha9/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/exploded-aar/com.android.support.constraint/constraint-layout/1.0.0-alpha9/R.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/exploded-aar/com.android.support.constraint/constraint-layout/1.0.0-alpha9/jars/classes.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/exploded-aar/com.android.support.constraint/constraint-layout/1.0.0-alpha9/res/values/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/aapt/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/aidl/android/support/v4/media/MediaMetadataCompat.aidl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/aidl/android/support/v4/media/RatingCompat.aidl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/aidl/android/support/v4/media/session/MediaSessionCompat.aidl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/aidl/android/support/v4/media/session/ParcelableVolumeInfo.aidl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/aidl/android/support/v4/media/session/PlaybackStateCompat.aidl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/jars/classes.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/jars/libs/internal_impl-22.1.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-runtime-classes/debug/instant-run.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/android/support/constraint/R$attr.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/android/support/constraint/R$id.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/android/support/constraint/R$styleable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/android/support/constraint/R.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/BuildConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/R$attr.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/R$drawable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/R$id.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/R$layout.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/R$menu.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/R$string.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/R$style.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/R$styleable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/R$xml.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/R.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/SettingsActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/SettingsActivity$DataSyncPreferenceFragment.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/SettingsActivity$GeneralPreferenceFragment.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/SettingsActivity$NotificationPreferenceFragment.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/SettingsActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/USBHIDTerminal$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/USBHIDTerminal$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/USBHIDTerminal$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/USBHIDTerminal$4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/USBHIDTerminal$5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/USBHIDTerminal$6.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/USBHIDTerminal$7.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/USBHIDTerminal.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/core/Consts.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/core/USBUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/core/events/DeviceAttachedEvent.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/core/events/DeviceDetachedEvent.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/core/events/LogMessageEvent.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/core/events/PrepareDevicesListEvent.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/core/events/SelectDeviceEvent.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/core/events/ShowDevicesListEvent.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/core/events/USBDataReceiveEvent.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/core/events/USBDataSendEvent.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/core/services/AbstractUSBHIDService$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/core/services/AbstractUSBHIDService$USBThreadDataReceiver$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/core/services/AbstractUSBHIDService$USBThreadDataReceiver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/core/services/AbstractUSBHIDService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/core/services/SocketService$LocalBinder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/core/services/SocketService$SocketThreadDataReceiver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/core/services/SocketService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/core/services/USBHIDService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/core/services/WebServerService$LocalBinder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/core/services/WebServerService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/core/webserver/WebServer$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/core/webserver/WebServer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/appspot/usbhidterminal/core/webserver/Ws.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental/packageDebug/zip-cache/+ZtTqwbuusC2koBA3KHzJqoY67o=" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental/packageDebug/zip-cache/emHNICuv_eNNizcR0011RjCxnv8=" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental/packageInstantRunResourcesDebug/dex-renamer-state.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental/packageInstantRunResourcesDebug/file-input-save-data.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental/packageInstantRunResourcesDebug/zip-cache/emHNICuv_eNNizcR0011RjCxnv8=" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/instant-run-resources/resources-debug.ir.ap_" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/instant-run-support/debug/instant-run.zip" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/instant-run-support/debug/manifest.crc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/instant-run-support/debug/manifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/manifests/instant-run/debug/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/restart-dex/debug/build-info.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-22.1.1_97e93721137a0b53e0fa2e97577a0c88d3d12618/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support.constraint-constraint-layout-1.0.0-alpha9_176bd5b25b6deb54147a6b7ddaef10a78dc0c8c6/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/dex/debug/folders/1000/10/constraint-layout-solver-1.0.0-alpha9_bdd1b479742dc9fce7932f1bc5529a3b0c9635ec/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/dex/debug/folders/1000/10/eventbus-2.4.0_c885e6ca8315eeb3c59fc64ed4bfa44fbda57924/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_0f849d3f114b76487d06956270018989f058336f/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_e5209204f667431db10000459098e4eac6880986/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-22.1.1_822d40e7dd1ebb7609a0f4131685df761655f487/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/dex/debug/folders/1000/10/mockito-all-1.9.5_70c0ec27cea5d0156b1d550d3399d0fa86fb418c/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/dex/debug/folders/1000/10/nanohttpd-2.1.1_99a63d2a985d908cf6cbacc58038d48f1aad8dd1/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/dex/debug/folders/1000/10/nanohttpd-websocket-2.1.1_06603a1b6d3f45fcc95f0f4905faab75ee98dac0/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-22.1.1_fd51425e14b16e801e8d26528be1284ee9006645/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/dex/debug/folders/1000/5/slice_0/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/dex/debug/folders/1000/5/slice_1/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/dex/debug/folders/1000/5/slice_2/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/dex/debug/folders/1000/5/slice_3/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/dex/debug/folders/1000/5/slice_5/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/dex/debug/folders/1000/5/slice_8/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/dex/debug/folders/1000/5/slice_9/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/constraint/R$attr.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/constraint/R$id.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/constraint/R$styleable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/constraint/R.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/BuildConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/R$attr.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/R$drawable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/R$id.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/R$layout.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/R$menu.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/R$string.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/R$style.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/R$styleable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/R$xml.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/R.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/SettingsActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/SettingsActivity$DataSyncPreferenceFragment.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/SettingsActivity$GeneralPreferenceFragment.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/SettingsActivity$NotificationPreferenceFragment.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/SettingsActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/USBHIDTerminal$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/USBHIDTerminal$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/USBHIDTerminal$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/USBHIDTerminal$4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/USBHIDTerminal$5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/USBHIDTerminal$6.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/USBHIDTerminal$7.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/USBHIDTerminal.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/core/Consts.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/core/USBUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/core/events/DeviceAttachedEvent.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/core/events/DeviceDetachedEvent.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/core/events/LogMessageEvent.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/core/events/PrepareDevicesListEvent.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/core/events/SelectDeviceEvent.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/core/events/ShowDevicesListEvent.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/core/events/USBDataReceiveEvent.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/core/events/USBDataSendEvent.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/core/services/AbstractUSBHIDService$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/core/services/AbstractUSBHIDService$USBThreadDataReceiver$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/core/services/AbstractUSBHIDService$USBThreadDataReceiver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/core/services/AbstractUSBHIDService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/core/services/SocketService$LocalBinder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/core/services/SocketService$SocketThreadDataReceiver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/core/services/SocketService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/core/services/USBHIDService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/core/services/WebServerService$LocalBinder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/core/services/WebServerService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/core/webserver/WebServer$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/core/webserver/WebServer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/appspot/usbhidterminal/core/webserver/Ws.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/com/android/tools/fd/dummy/slice_0.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/com/android/tools/fd/dummy/slice_1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/com/appspot/usbhidterminal/core/webserver/WebServer$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/com/appspot/usbhidterminal/core/webserver/WebServer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/com/appspot/usbhidterminal/core/webserver/Ws.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/com/android/tools/fd/dummy/slice_2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/com/android/tools/fd/dummy/slice_3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/com/appspot/usbhidterminal/core/events/DeviceAttachedEvent.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/com/appspot/usbhidterminal/core/events/DeviceDetachedEvent.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/com/appspot/usbhidterminal/core/events/LogMessageEvent.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/com/appspot/usbhidterminal/core/events/PrepareDevicesListEvent.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/com/appspot/usbhidterminal/core/events/SelectDeviceEvent.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/com/appspot/usbhidterminal/core/events/ShowDevicesListEvent.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/com/appspot/usbhidterminal/core/events/USBDataReceiveEvent.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/com/appspot/usbhidterminal/core/events/USBDataSendEvent.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/com/android/tools/fd/dummy/slice_4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_5/com/android/tools/fd/dummy/slice_5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/buildId.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/android/tools/fd/dummy/slice_6.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/appspot/usbhidterminal/core/Consts.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/appspot/usbhidterminal/core/USBUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/buildId.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/android/tools/fd/dummy/slice_7.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/BuildConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/R$attr.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/R$drawable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/R$id.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/R$layout.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/R$menu.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/R$string.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/R$style.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/R$styleable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/R$xml.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/R.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/SettingsActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/SettingsActivity$DataSyncPreferenceFragment.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/SettingsActivity$GeneralPreferenceFragment.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/SettingsActivity$NotificationPreferenceFragment.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/SettingsActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/USBHIDTerminal$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/USBHIDTerminal$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/USBHIDTerminal$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/USBHIDTerminal$4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/USBHIDTerminal$5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/USBHIDTerminal$6.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/USBHIDTerminal$7.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/appspot/usbhidterminal/USBHIDTerminal.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_8/com/android/tools/fd/dummy/slice_8.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_8/com/appspot/usbhidterminal/core/services/AbstractUSBHIDService$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_8/com/appspot/usbhidterminal/core/services/AbstractUSBHIDService$USBThreadDataReceiver$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_8/com/appspot/usbhidterminal/core/services/AbstractUSBHIDService$USBThreadDataReceiver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_8/com/appspot/usbhidterminal/core/services/AbstractUSBHIDService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_8/com/appspot/usbhidterminal/core/services/SocketService$LocalBinder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_8/com/appspot/usbhidterminal/core/services/SocketService$SocketThreadDataReceiver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_8/com/appspot/usbhidterminal/core/services/SocketService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_8/com/appspot/usbhidterminal/core/services/USBHIDService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_8/com/appspot/usbhidterminal/core/services/WebServerService$LocalBinder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_8/com/appspot/usbhidterminal/core/services/WebServerService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_9/android/support/constraint/R$attr.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_9/android/support/constraint/R$id.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_9/android/support/constraint/R$styleable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_9/android/support/constraint/R.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_9/com/android/tools/fd/dummy/slice_9.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/generated/mockable-android-22.jar" afterPath="$PROJECT_DIR$/build/generated/mockable-android-22.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/android/support/constraint/R.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/android/support/constraint/R.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/appspot/usbhidterminal/R.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/appspot/usbhidterminal/R.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/appspot/usbhidterminal/SettingsActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/appspot/usbhidterminal/SettingsActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/appspot/usbhidterminal/USBHIDTerminal.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/appspot/usbhidterminal/USBHIDTerminal.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/appspot/usbhidterminal/core/services/SocketService.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/appspot/usbhidterminal/core/services/SocketService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/appspot/usbhidterminal/core/webserver/WebServer.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/appspot/usbhidterminal/core/webserver/WebServer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/drawable-xhdpi/button_begintest.png" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/drawable-xhdpi/button_begintest.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/drawable-xhdpi/button_onearrow.png" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/drawable-xhdpi/button_onearrow.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/drawable-xhdpi/button_reset.png" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/drawable-xhdpi/button_reset.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/drawable-xhdpi/button_twoarrows.png" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/drawable-xhdpi/button_twoarrows.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/build/intermediates/res/resources-debug-androidTest.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/build/intermediates/res/resources-debug.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/outputs/apk/anom-debug.apk" afterPath="$PROJECT_DIR$/build/outputs/apk/anom-debug.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/anom.iml" afterPath="$PROJECT_DIR$/anom.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/generated/source/r/debug/android/support/constraint/R.java" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/android/support/constraint/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/multi/values-v11.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/multi/values-v11.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/multi/values-v14.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/multi/values-v14.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/multi/values.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/multi/values.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/drawable-hdpi.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/drawable-hdpi.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/drawable-ldpi.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/drawable-ldpi.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/drawable-mdpi.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/drawable-mdpi.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/drawable-xhdpi.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/drawable-xhdpi.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/layout-large-v4.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/layout-large-v4.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/layout-normal-v4.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/layout-normal-v4.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/layout.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/layout.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/menu.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/menu.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/xml.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/xml.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugAndroidTestResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugAndroidTestResources/compile-file-map.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugAndroidTestResources/merger.xml" afterPath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugAndroidTestResources/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugAssets/merger.xml" afterPath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugAssets/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" afterPath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v11/values-v11.xml" afterPath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v11/values-v11.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v14/values-v14.xml" afterPath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v14/values-v14.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml" afterPath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merger.xml" afterPath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugShaders/merger.xml" afterPath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugShaders/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental/packageDebug/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/build/intermediates/incremental/packageDebug/dex-renamer-state.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental/packageDebug/file-input-save-data.txt" afterPath="$PROJECT_DIR$/build/intermediates/incremental/packageDebug/file-input-save-data.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/build/outputs/logs/manifest-merger-debug-report.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
+    </list>
     <ignored path="anom.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,7 +326,6 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -79,23 +352,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/res/layout-large/activity_main.xml">
+          <provider selected="true" editor-type-id="android-designer2">
+            <state />
+          </provider>
           <provider editor-type-id="text-editor">
-            <state relative-caret-position="363">
+            <state relative-caret-position="187">
               <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
-          </provider>
-          <provider selected="true" editor-type-id="android-designer2">
-            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="USBHIDTerminal.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/appspot/usbhidterminal/USBHIDTerminal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22506">
+            <state relative-caret-position="11594">
               <caret line="735" column="18" selection-start-line="735" selection-start-column="18" selection-end-line="735" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="false" />
@@ -106,11 +379,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Consts.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Consts.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/appspot/usbhidterminal/core/Consts.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="593">
-              <caret line="55" column="37" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="37" />
+            <state relative-caret-position="833">
+              <caret line="49" column="45" selection-start-line="49" selection-start-column="45" selection-end-line="49" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -130,6 +403,16 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
+    <option name="myGradleHomes">
+      <map>
+        <entry key="$PROJECT_DIR$" value="C:\Users\James\.gradle\wrapper\dists\gradle-3.3-all\55gk2rcmfc6p2dg9u9ohc3hw9\gradle-3.3" />
+      </map>
+    </option>
+    <option name="myGradleVersions">
+      <map>
+        <entry key="$PROJECT_DIR$" value="3.3" />
+      </map>
+    </option>
     <option name="availableProjects">
       <map>
         <entry>
@@ -271,16 +554,17 @@
                 <option name="name" value="testReleaseUnitTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Deletes the build cache directory." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="cleanBuildCache" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="compileDebugAndroidTestShaders" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="mergeDebugShaders" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="transformNative_libsWithMergeJniLibsForDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
@@ -329,6 +613,10 @@
                 <option name="name" value="processReleaseUnitTestJavaRes" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="javaPreCompileDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Uninstalls the Release build." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="uninstallRelease" />
@@ -356,6 +644,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="checkReleaseManifest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="javaPreCompileDebugUnitTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
@@ -444,6 +736,14 @@
                 <option name="name" value="mergeDebugAssets" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="javaPreCompileReleaseUnitTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="javaPreCompileRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Runs all device checks on currently connected devices." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="connectedCheck" />
@@ -459,6 +759,10 @@
                 <option name="name" value="uninstallAll" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="transformNativeLibsWithMergeJniLibsForDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Assembles all the Test applications." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="assembleAndroidTest" />
@@ -466,10 +770,6 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="processDebugAndroidTestResources" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="transformNative_libsWithMergeJniLibsForDebug" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
@@ -506,6 +806,10 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="transformNativeLibsWithMergeJniLibsForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="mergeReleaseShaders" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -520,6 +824,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="compileDebugUnitTestSources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="transformNativeLibsWithMergeJniLibsForRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
@@ -576,10 +884,6 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="transformNative_libsWithMergeJniLibsForRelease" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="mergeDebugAndroidTestResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -594,6 +898,10 @@
                 <option name="description" value="Runs all checks." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="check" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="javaPreCompileDebug" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Run unit tests for the debug build." />
@@ -664,6 +972,11 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="generateDebugAssets" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the dependent components of components in root project 'anom'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="dependentComponents" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Displays all buildscript dependencies declared in root project 'anom'." />
@@ -796,7 +1109,7 @@
       <map>
         <entry key="$PROJECT_DIR$" value="1479471411704" />
         <entry key="C:\gitlocal\anom" value="1479660265842" />
-        <entry key="C:\gitprojects\anom" value="1479596649613" />
+        <entry key="C:\gitprojects\anom" value="1491953998940" />
         <entry key="C:\gitprojects\anom_droid2" value="1479112563000" />
       </map>
     </option>
@@ -812,80 +1125,64 @@
                       <ExternalModuleBuildClasspathPojo>
                         <option name="entries">
                           <list>
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle/2.2.2/gradle-2.2.2.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle-core/2.2.2/gradle-core-2.2.2.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder/2.2.2/builder-2.2.2.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint/25.2.2/lint-25.2.2.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle/2.3.1/gradle-2.3.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle-core/2.3.1/gradle-core-2.3.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder/2.3.1/builder-2.3.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint/25.3.1/lint-25.3.1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/transform-api/2.0.0-deprecated-use-gradle-api/transform-api-2.0.0-deprecated-use-gradle-api.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle-api/2.2.2/gradle-api-2.2.2.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/databinding/compilerCommon/2.2.2/compilerCommon-2.2.2.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle-api/2.3.1/gradle-api-2.3.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/databinding/compilerCommon/2.3.1/compilerCommon-2.3.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm/5.0.4/asm-5.0.4-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm/5.0.4/asm-5.0.4.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-commons/5.0.4/asm-commons-5.0.4.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/proguard/proguard-gradle/5.2.1/proguard-gradle-5.2.1-sources.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/proguard/proguard-gradle/5.2.1/proguard-gradle-5.2.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/proguard/proguard-gradle/5.3.2/proguard-gradle-5.3.2.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/jacoco/org.jacoco.core/0.7.5.201505241946/org.jacoco.core-0.7.5.201505241946.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/jacoco/org.jacoco.report/0.7.5.201505241946/org.jacoco.report-0.7.5.201505241946.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/jopt-simple/jopt-simple/4.9/jopt-simple-4.9.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/google/protobuf/protobuf-java/2.5.0/protobuf-java-2.5.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-model/2.2.2/builder-model-2.2.2.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-test-api/2.2.2/builder-test-api-2.2.2.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/sdklib/25.2.2/sdklib-25.2.2.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/sdk-common/25.2.2/sdk-common-25.2.2.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/common/25.2.2/common-25.2.2.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/manifest-merger/25.2.2/manifest-merger-25.2.2.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/ddms/ddmlib/25.2.2/ddmlib-25.2.2.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/jack/jack-api/0.11.0/jack-api-0.11.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/google/protobuf/protobuf-java/3.0.0/protobuf-java-3.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-model/2.3.1/builder-model-2.3.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-test-api/2.3.1/builder-test-api-2.3.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/sdklib/25.3.1/sdklib-25.3.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/sdk-common/25.3.1/sdk-common-25.3.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/common/25.3.1/common-25.3.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/manifest-merger/25.3.1/manifest-merger-25.3.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/ddms/ddmlib/25.3.1/ddmlib-25.3.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/jack/jack-api/0.13.0/jack-api-0.13.0.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/jill/jill-api/0.10.0/jill-api-0.10.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/analytics-library/protos/25.2.2/protos-25.2.2.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/analytics-library/shared/25.2.2/shared-25.2.2.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/analytics-library/tracker/25.2.2/tracker-25.2.2.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/squareup/javawriter/2.5.0/javawriter-2.5.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/analytics-library/protos/25.3.1/protos-25.3.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/analytics-library/shared/25.3.1/shared-25.3.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/analytics-library/tracker/25.3.1/tracker-25.3.1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/squareup/javawriter/2.5.0/javawriter-2.5.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/bouncycastle/bcpkix-jdk15on/1.48/bcpkix-jdk15on-1.48-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/bouncycastle/bcpkix-jdk15on/1.48/bcpkix-jdk15on-1.48.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/bouncycastle/bcprov-jdk15on/1.48/bcprov-jdk15on-1.48-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/bouncycastle/bcprov-jdk15on/1.48/bcprov-jdk15on-1.48.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-tree/5.0.4/asm-tree-5.0.4.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-checks/25.2.2/lint-checks-25.2.2.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/eclipse/jdt/core/compiler/ecj/4.5.1/ecj-4.5.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-checks/25.3.1/lint-checks-25.3.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/eclipse/jdt/core/compiler/ecj/4.6.1/ecj-4.6.1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/google/guava/guava/18.0/guava-18.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/databinding/baseLibrary/2.2.2/baseLibrary-2.2.2.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/databinding/baseLibrary/2.3.1/baseLibrary-2.3.1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/antlr/antlr4/4.5.3/antlr4-4.5.3.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-io/commons-io/2.4/commons-io-2.4-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-io/commons-io/2.4/commons-io-2.4.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/googlecode/juniversalchardet/juniversalchardet/1.0.3/juniversalchardet-1.0.3.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/annotations/25.2.2/annotations-25.2.2.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/proguard/proguard-base/5.2.1/proguard-base-5.2.1-sources.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/proguard/proguard-base/5.2.1/proguard-base-5.2.1.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-debug-all/5.0.1/asm-debug-all-5.0.1-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/annotations/25.3.1/annotations-25.3.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/proguard/proguard-base/5.3.2/proguard-base-5.3.2.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-debug-all/5.0.1/asm-debug-all-5.0.1.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/layoutlib/layoutlib-api/25.2.2/layoutlib-api-25.2.2.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/dvlib/25.2.2/dvlib-25.2.2.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/repository/25.2.2/repository-25.2.2.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/google/code/gson/gson/2.2.4/gson-2.2.4-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/layoutlib/layoutlib-api/25.3.1/layoutlib-api-25.3.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/dvlib/25.3.1/dvlib-25.3.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/repository/25.3.1/repository-25.3.1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/google/code/gson/gson/2.2.4/gson-2.2.4.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/commons/commons-compress/1.8.1/commons-compress-1.8.1-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/commons/commons-compress/1.8.1/commons-compress-1.8.1.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/httpcomponents/httpclient/4.1.1/httpclient-4.1.1-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/httpcomponents/httpclient/4.1.1/httpclient-4.1.1.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/httpcomponents/httpmime/4.1/httpmime-4.1-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/httpcomponents/httpmime/4.1/httpmime-4.1.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/kxml/kxml2/2.3.0/kxml2-2.3.0-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/kxml/kxml2/2.3.0/kxml2-2.3.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-api/25.2.2/lint-api-25.2.2.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-api/25.3.1/lint-api-25.3.1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-analysis/5.0.4/asm-analysis-5.0.4.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/intellij/annotations/12.0/annotations-12.0-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/intellij/annotations/12.0/annotations-12.0.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/google/jimfs/jimfs/1.1/jimfs-1.1.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/httpcomponents/httpcore/4.1/httpcore-4.1-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/httpcomponents/httpcore/4.1/httpcore-4.1.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-codec/commons-codec/1.4/commons-codec-1.4-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-codec/commons-codec/1.4/commons-codec-1.4.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/external/lombok/lombok-ast/0.2.3/lombok-ast-0.2.3-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/external/com-intellij/uast/162.2228.14/uast-162.2228.14.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/external/lombok/lombok-ast/0.2.3/lombok-ast-0.2.3.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/external/com-intellij/uast/145.597.3/uast-145.597.3.jar" />
                           </list>
                         </option>
                         <option name="path" value="$PROJECT_DIR$" />
@@ -897,71 +1194,6 @@
               <option name="name" value="anom" />
               <option name="projectBuildClasspath">
                 <list>
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/ant-1.9.6.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/ant-launcher-1.9.6.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/gradle-base-services-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/gradle-base-services-groovy-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/gradle-cli-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/gradle-core-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/gradle-docs-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/gradle-installation-beacon-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/gradle-jvm-services-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/gradle-launcher-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/gradle-logging-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/gradle-messaging-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/gradle-model-core-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/gradle-model-groovy-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/gradle-native-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/gradle-open-api-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/gradle-process-services-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/gradle-resources-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/gradle-tooling-api-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/gradle-ui-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/gradle-wrapper-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/groovy-all-2.4.4.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-announce-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-antlr-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-build-comparison-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-build-init-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-code-quality-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-dependency-management-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-diagnostics-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-ear-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-ide-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-ide-native-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-ide-play-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-ivy-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-jacoco-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-javascript-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-jetty-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-language-groovy-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-language-java-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-language-jvm-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-language-native-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-language-scala-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-maven-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-osgi-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-platform-base-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-platform-jvm-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-platform-native-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-platform-play-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-plugin-development-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-plugin-use-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-plugins-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-publish-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-reporting-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-resources-http-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-resources-s3-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-resources-sftp-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-scala-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-signing-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-sonar-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-test-kit-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-testing-base-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-testing-jvm-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-testing-native-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/gradle-tooling-api-builders-2.14.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/lib/plugins/ivy-2.2.0.jar" />
                   <option value="$PROJECT_DIR$/buildSrc/src/main/java" />
                   <option value="$PROJECT_DIR$/buildSrc/src/main/groovy" />
                 </list>
@@ -990,9 +1222,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-11" />
-    <option name="width" value="3014" />
-    <option name="height" value="1931" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="2576" />
+    <option name="height" value="1416" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -1019,7 +1252,43 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="anom" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="anom" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.NonAndroidModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="anom" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.NonAndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.NonAndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1088,44 +1357,26 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-        </subPane>
-      </pane>
-      <pane id="AndroidView">
-        <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="anom" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="anom" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.NonAndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="anom" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.NonAndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.NonAndroidSourceTypeNode" />
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1134,8 +1385,8 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="android.project.structure.last.selected" value="SDK Location" />
     <property name="android.project.structure.proportion" value="0.15" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../anom_droid" />
-    <property name="device.picker.selection" value="G000H40562360CKT" />
+    <property name="last_opened_file_path" value="C:/Dropbox/Wedding Planning/OniWeddingCLIENT" />
+    <property name="device.picker.selection" value="G0K0KJ0264250N9F" />
     <property name="UI_DESIGNER_EDITOR_MODE.NlPaletteManager-NlPreviewForm.SHOW" value="false" />
     <property name="DEBUGGABLE_DEVICE" value="amazon-kffowi-G0K0H40460420LSX" />
     <property name="DEBUGGABLE_PROCESS" value="com.appspot.usbhidterminal" />
@@ -1146,6 +1397,30 @@
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunManager" selected="Android App.anom">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method>
+        <option name="Make" enabled="false" />
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="" />
       <option name="DEPLOY" value="true" />
@@ -1153,86 +1428,46 @@
       <option name="PM_INSTALL_OPTIONS" value="" />
       <option name="ACTIVITY_EXTRA_FLAGS" value="" />
       <option name="MODE" value="default_activity" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
       <option name="PREFERRED_AVD" value="" />
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
       <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
       <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="DEBUGGER_TYPE" value="Auto" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
       <option name="USE_LAST_SELECTED_DEVICE" value="false" />
       <option name="PREFERRED_AVD" value="" />
       <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
       <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
       <Auto>
         <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
         <option name="WORKING_DIR" value="" />
         <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
       </Auto>
       <Hybrid>
         <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
         <option name="WORKING_DIR" value="" />
         <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
       </Hybrid>
       <Java />
       <Native>
         <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
         <option name="WORKING_DIR" value="" />
         <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
       </Native>
       <Profilers>
         <option name="ENABLE_ADVANCED_PROFILING" value="true" />
-        <option name="GAPID_ENABLED" value="false" />
-        <option name="GAPID_DISABLE_PCS" value="false" />
         <option name="SUPPORT_LIB_ENABLED" value="true" />
         <option name="INSTRUMENTATION_ENABLED" value="true" />
       </Profilers>
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
-      <module name="" />
-      <option name="TESTING_TYPE" value="0" />
-      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="EXTRA_OPTIONS" value="" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="DEBUGGER_TYPE" value="Auto" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
-      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
-      <Auto>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-      </Auto>
-      <Hybrid>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-      </Hybrid>
-      <Java />
-      <Native>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-      </Native>
-      <Profilers>
-        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
-        <option name="GAPID_ENABLED" value="false" />
-        <option name="GAPID_DISABLE_PCS" value="false" />
-        <option name="SUPPORT_LIB_ENABLED" value="true" />
-        <option name="INSTRUMENTATION_ENABLED" value="true" />
-      </Profilers>
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -1265,30 +1500,6 @@
         <option name="vmOptions" />
       </ExternalSystemSettings>
       <method />
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method>
-        <option name="Make" enabled="false" />
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-      </method>
     </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -1382,37 +1593,41 @@
       <option name="PM_INSTALL_OPTIONS" value="" />
       <option name="ACTIVITY_EXTRA_FLAGS" value="" />
       <option name="MODE" value="default_activity" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
       <option name="PREFERRED_AVD" value="" />
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
       <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
       <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="DEBUGGER_TYPE" value="Auto" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
       <option name="USE_LAST_SELECTED_DEVICE" value="true" />
       <option name="PREFERRED_AVD" value="" />
       <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
       <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
       <Auto>
         <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
         <option name="WORKING_DIR" value="" />
         <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
       </Auto>
       <Hybrid>
         <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
         <option name="WORKING_DIR" value="" />
         <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
       </Hybrid>
       <Java />
       <Native>
         <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
         <option name="WORKING_DIR" value="" />
         <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
       </Native>
       <Profilers>
         <option name="ENABLE_ADVANCED_PROFILING" value="true" />
-        <option name="GAPID_ENABLED" value="false" />
-        <option name="GAPID_DISABLE_PCS" value="false" />
         <option name="SUPPORT_LIB_ENABLED" value="true" />
         <option name="INSTRUMENTATION_ENABLED" value="true" />
       </Profilers>
@@ -1427,6 +1642,60 @@
       <option name="PM_INSTALL_OPTIONS" value="" />
       <option name="ACTIVITY_EXTRA_FLAGS" value="" />
       <option name="MODE" value="default_activity" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method />
+    </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Android App.anom" />
+      <item index="1" class="java.lang.String" itemvalue="Android App.anom_droid2" />
+    </list>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
       <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
       <option name="PREFERRED_AVD" value="" />
       <option name="CLEAR_LOGCAT" value="false" />
@@ -1461,14 +1730,8 @@
         <option name="SUPPORT_LIB_ENABLED" value="true" />
         <option name="INSTRUMENTATION_ENABLED" value="true" />
       </Profilers>
-      <option name="DEEP_LINK" value="" />
-      <option name="ACTIVITY_CLASS" value="" />
       <method />
     </configuration>
-    <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="Android App.anom" />
-      <item index="1" class="java.lang.String" itemvalue="Android App.anom_droid2" />
-    </list>
     <configuration name="&lt;template&gt;" type="Applet" default="true" selected="false">
       <option name="MAIN_CLASS_NAME" />
       <option name="HTML_FILE_NAME" />
@@ -1508,38 +1771,38 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="0" width="3014" height="1931" extended-state="0" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="2576" height="1416" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969216" sideWeight="0.49358973" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32782874" sideWeight="0.4624138" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32750398" sideWeight="0.4610493" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32782874" sideWeight="0.52827585" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32591414" sideWeight="0.53895074" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290938" sideWeight="0.49403816" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32750398" sideWeight="0.4701908" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969216" sideWeight="0.49786323" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32782874" sideWeight="0.47172415" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969216" sideWeight="0.49786323" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25206897" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25198728" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959402" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39920557" sideWeight="0.491453" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959402" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1564,14 +1827,14 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/res/layout-large/activity_main.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/appspot/usbhidterminal/USBHIDTerminal.java">
@@ -1623,14 +1886,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout-large/activity_main.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/appspot/usbhidterminal/USBHIDTerminal.java">
@@ -1682,14 +1945,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout-large/activity_main.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1887">
           <caret line="111" column="44" selection-start-line="111" selection-start-column="44" selection-end-line="111" selection-end-column="44" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/appspot/usbhidterminal/USBHIDTerminal.java">
@@ -1943,20 +2206,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout-large/activity_main.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/appspot/usbhidterminal/USBHIDTerminal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22506">
+        <state relative-caret-position="11594">
           <caret line="735" column="18" selection-start-line="735" selection-start-column="18" selection-end-line="735" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="false" />
@@ -1968,8 +2220,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/appspot/usbhidterminal/core/Consts.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="593">
-          <caret line="55" column="37" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="37" />
+        <state relative-caret-position="833">
+          <caret line="49" column="45" selection-start-line="49" selection-start-column="45" selection-end-line="49" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout-large/activity_main.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>

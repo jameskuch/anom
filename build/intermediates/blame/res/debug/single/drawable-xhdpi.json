@@ -1,22 +1,22 @@
 [
     {
-        "merged": "C:\\gitlocal\\anom\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_launcher.png",
-        "source": "C:\\gitlocal\\anom\\res\\drawable-xhdpi\\ic_launcher.png"
+        "merged": "C:\\gitprojects\\anom\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_begintest.png",
+        "source": "C:\\gitprojects\\anom\\res\\drawable-xhdpi\\button_begintest.png"
     },
     {
-        "merged": "C:\\gitlocal\\anom\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_onearrow.png",
-        "source": "C:\\gitlocal\\anom\\res\\drawable-xhdpi\\button_onearrow.png"
+        "merged": "C:\\gitprojects\\anom\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_launcher.png",
+        "source": "C:\\gitprojects\\anom\\res\\drawable-xhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\gitlocal\\anom\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_twoarrows.png",
-        "source": "C:\\gitlocal\\anom\\res\\drawable-xhdpi\\button_twoarrows.png"
+        "merged": "C:\\gitprojects\\anom\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_twoarrows.png",
+        "source": "C:\\gitprojects\\anom\\res\\drawable-xhdpi\\button_twoarrows.png"
     },
     {
-        "merged": "C:\\gitlocal\\anom\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_reset.png",
-        "source": "C:\\gitlocal\\anom\\res\\drawable-xhdpi\\button_reset.png"
+        "merged": "C:\\gitprojects\\anom\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_onearrow.png",
+        "source": "C:\\gitprojects\\anom\\res\\drawable-xhdpi\\button_onearrow.png"
     },
     {
-        "merged": "C:\\gitlocal\\anom\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_begintest.png",
-        "source": "C:\\gitlocal\\anom\\res\\drawable-xhdpi\\button_begintest.png"
+        "merged": "C:\\gitprojects\\anom\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_reset.png",
+        "source": "C:\\gitprojects\\anom\\res\\drawable-xhdpi\\button_reset.png"
     }
 ]
