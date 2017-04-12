@@ -25,35 +25,34 @@ tools:context=".USBHIDTerminal">
         android:gravity="center" />
 
     <ImageView
-    android:layout_width="0dp"
-    android:layout_height="166dp"
-    android:id="@+id/iv_circleC"
-    android:src="#FF0000"
-    tools:layout_constraintRight_creator="1"
-    tools:layout_constraintBottom_creator="1"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintRight_toRightOf="@+id/iv_circleB"
-    tools:layout_constraintLeft_creator="1"
-    app:layout_constraintLeft_toLeftOf="@+id/iv_circleB"
-    android:layout_marginBottom="264dp"
-    app:layout_constraintHorizontal_bias="1.0">
+        android:id="@+id/iv_circleC"
+        android:layout_width="166dp"
+        android:layout_height="166dp"
+        android:src="#FF0000"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_editor_absoluteY="1dp"
+        android:layout_marginRight="40dp"
+        app:layout_constraintRight_toRightOf="parent">
 
-</ImageView>
+    </ImageView>
 
-<ImageView
-    android:layout_width="0dp"
-    android:layout_height="166dp"
-    android:id="@+id/iv_circleB"
-    android:src="#FF0000"
-    tools:layout_constraintRight_creator="1"
-    tools:layout_constraintBottom_creator="1"
-    app:layout_constraintBottom_toTopOf="@+id/iv_circleC"
-    app:layout_constraintRight_toRightOf="@+id/iv_circleA"
-    tools:layout_constraintLeft_creator="1"
-    app:layout_constraintLeft_toLeftOf="@+id/iv_circleA"
-    app:layout_constraintHorizontal_bias="0.0">
+    <ImageView
+        android:id="@+id/iv_circleB"
+        android:layout_width="166dp"
+        android:layout_height="166dp"
+        android:src="#FF0000"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_editor_absoluteY="1dp"
+        app:layout_constraintLeft_toRightOf="@+id/iv_circleA"
+        android:layout_marginLeft="1dp"
+        app:layout_constraintRight_toLeftOf="@+id/iv_circleC"
+        android:layout_marginRight="1dp">
 
-</ImageView>
+    </ImageView>
 
 <ImageView
     android:layout_width="166dp"
@@ -61,9 +60,10 @@ tools:context=".USBHIDTerminal">
     android:id="@+id/iv_circleA"
     android:src="#FF0000"
     tools:layout_constraintBottom_creator="1"
-    app:layout_constraintBottom_toTopOf="@+id/iv_circleB"
     tools:layout_constraintLeft_creator="1"
-    app:layout_constraintLeft_toLeftOf="parent">
+    app:layout_constraintLeft_toLeftOf="parent"
+    android:layout_marginLeft="40dp"
+    tools:layout_editor_absoluteY="1dp">
 
 </ImageView>
 
@@ -74,70 +74,64 @@ tools:context=".USBHIDTerminal">
     android:textColor="#FFFF00"
     android:id="@+id/chk_USBattached"
     app:layout_constraintRight_toRightOf="parent"
-    tools:layout_editor_absoluteY="0dp"
-    app:layout_constraintHorizontal_bias="1.0" />
+    android:layout_marginRight="16dp"
+    android:layout_marginBottom="8dp"
+    app:layout_constraintBottom_toTopOf="@+id/txt_inst5" />
 
     <ImageButton
-        android:src="@drawable/button_onearrow"
+        android:src="@drawable/button_onearrow_up"
         android:layout_width="wrap_content"
         android:layout_height="80dp"
         android:id="@+id/btn_0"
         android:background="@null"
-        app:layout_constraintBottom_toTopOf="@+id/btn_1"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="184dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginRight="184dp" />
+        android:layout_marginLeft="90dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="57dp"
+        app:layout_constraintTop_toBottomOf="@+id/iv_circleA" />
 
     <ImageButton
-        android:src="@drawable/button_twoarrows"
-        android:layout_width="wrap_content"
-        android:layout_height="76dp"
         android:id="@+id/btn_1"
+        android:layout_width="69dp"
+        android:layout_height="69dp"
         android:background="@null"
-        android:layout_marginEnd="240dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginRight="240dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_2"
-        android:layout_marginBottom="8dp" />
+        android:src="@drawable/button_twoarrows_up"
+        android:layout_marginLeft="182dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="244dp" />
 
     <ImageButton
-        android:src="@drawable/button_onearrow"
+        android:src="@drawable/button_onearrow_up"
         android:layout_width="wrap_content"
         android:layout_height="80dp"
         android:id="@+id/btn_2"
         android:background="@null"
-        android:layout_marginEnd="184dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginRight="184dp"
-        app:layout_constraintVertical_bias="0.33"
-        app:layout_constraintBottom_toTopOf="@+id/btn_3"
-        android:layout_marginBottom="8dp" />
+        android:layout_marginTop="57dp"
+        app:layout_constraintTop_toBottomOf="@+id/iv_circleB"
+        android:layout_marginLeft="258dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
     <ImageButton
-        android:src="@drawable/button_twoarrows"
+        android:src="@drawable/button_twoarrows_up"
         android:layout_width="wrap_content"
         android:layout_height="69dp"
         android:id="@+id/btn_3"
         android:background="@null"
-        android:layout_marginEnd="240dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginRight="240dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_4"
-        android:layout_marginBottom="8dp" />
+        android:layout_marginLeft="351dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="244dp" />
 
     <ImageButton
-        android:src="@drawable/button_onearrow"
-        android:layout_width="wrap_content"
+        android:src="@drawable/button_onearrow_up"
+        android:layout_width="0dp"
         android:layout_height="80dp"
         android:id="@+id/btn_4"
         android:background="@null"
-        android:layout_marginEnd="184dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginRight="184dp"
-        app:layout_constraintVertical_bias="0.25"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="304dp" />
+        android:layout_marginTop="57dp"
+        app:layout_constraintTop_toBottomOf="@+id/iv_circleC"
+        android:layout_marginLeft="427dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
     <ImageButton
         android:src="@drawable/button_begintest"
