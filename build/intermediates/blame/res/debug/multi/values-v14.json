@@ -1,5 +1,6 @@
 [
     {
+<<<<<<< HEAD
         "outputFile": "C:\\gitlocal\\anom\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v14\\values-v14.xml",
         "map": [
             {
@@ -27,6 +28,9 @@
     },
     {
         "outputFile": "C:\\gitprojects\\anom_droid2\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v14\\values-v14.xml",
+=======
+        "outputFile": "C:\\gitprojects\\anom\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v14\\values-v14.xml",
+>>>>>>> working
         "map": [
             {
                 "to": {
@@ -38,7 +42,7 @@
                     "endOffset": 201
                 },
                 "from": {
-                    "file": "C:\\gitprojects\\anom_droid2\\res\\values-v14\\styles.xml",
+                    "file": "C:\\gitprojects\\anom\\res\\values-v14\\styles.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
