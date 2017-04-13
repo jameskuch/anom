@@ -55,6 +55,10 @@ import com.appspot.usbhidterminal.core.services.WebServerService;
 import de.greenrobot.event.EventBus;
 import de.greenrobot.event.EventBusException;
 
+//import static com.appspot.usbhidterminal.core.Consts.LED_L;
+//import static com.appspot.usbhidterminal.core.Consts.LED_M;
+//import static com.appspot.usbhidterminal.core.Consts.LED_R;
+
 public class USBHIDTerminal extends Activity implements View.OnClickListener {
 
 	private SharedPreferences sharedPreferences;
@@ -239,6 +243,7 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 	{
 		String USBout = "";
 		String whichLED = "";
+		//double value2 = 0;
 
 		// top, position 0 is LED 2
 		// middle, position 1 is LED 0
@@ -248,14 +253,17 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 		// 1 is position 2
 		if (LED==2) {
 			whichLED = "1 ";
+			//value2 = (double)value * LED_L;
 		}
 		else if (LED==1)
 		{
 			whichLED = "0 ";
+			//value2 = (double)value * LED_M;
 		}
 		else if (LED==0)
 		{
 			whichLED = "2 ";
+			//value2 = (double)value * LED_R;
 		}
 		//String msg = "1 " + t + " 0";
 		USBout = whichLED + Integer.toString(value) + " 0";
