@@ -386,17 +386,17 @@ containing a value of this type.
         public static final int iv_circleB=0x7f080009;
         public static final int iv_circleC=0x7f080012;
         public static final int iv_circleT=0x7f080008;
-        public static final int menuSettings=0x7f080014;
-        public static final int menuSettingsDelimiter=0x7f08001b;
-        public static final int menuSettingsDelimiterNewLine=0x7f08001e;
-        public static final int menuSettingsDelimiterNone=0x7f08001c;
-        public static final int menuSettingsDelimiterSpace=0x7f08001d;
-        public static final int menuSettingsReceive=0x7f080016;
-        public static final int menuSettingsReceiveBinary=0x7f080017;
-        public static final int menuSettingsReceiveDataFormat=0x7f080015;
-        public static final int menuSettingsReceiveHexadecimal=0x7f080019;
-        public static final int menuSettingsReceiveInteger=0x7f080018;
-        public static final int menuSettingsReceiveText=0x7f08001a;
+        public static final int menuSettings=0x7f080015;
+        public static final int menuSettingsDelimiter=0x7f08001c;
+        public static final int menuSettingsDelimiterNewLine=0x7f08001f;
+        public static final int menuSettingsDelimiterNone=0x7f08001d;
+        public static final int menuSettingsDelimiterSpace=0x7f08001e;
+        public static final int menuSettingsReceive=0x7f080017;
+        public static final int menuSettingsReceiveBinary=0x7f080018;
+        public static final int menuSettingsReceiveDataFormat=0x7f080016;
+        public static final int menuSettingsReceiveHexadecimal=0x7f08001a;
+        public static final int menuSettingsReceiveInteger=0x7f080019;
+        public static final int menuSettingsReceiveText=0x7f08001b;
         public static final int parent=0x7f080000;
         public static final int radioGroup=0x7f080002;
         public static final int rbSendData=0x7f080003;
@@ -408,6 +408,7 @@ containing a value of this type.
         public static final int sld_RG2=0x7f08000c;
         public static final int sld_RG3=0x7f080011;
         public static final int sld_RGint=0x7f080007;
+        public static final int textView=0x7f080014;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;

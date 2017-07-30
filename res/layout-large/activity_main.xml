@@ -224,17 +224,18 @@ tools:context=".USBHIDTerminal">
 
 </ImageView>
 
-<CheckBox
-    android:text="Anomaloscope Attached"
-    android:layout_width="219dp"
-    android:layout_height="36dp"
-    android:textColor="#FFFF00"
-    android:id="@+id/chk_USBattached"
-    android:layout_marginRight="8dp"
-    app:layout_constraintRight_toRightOf="parent"
-    app:layout_constraintBottom_toBottomOf="parent"
-    android:layout_marginBottom="8dp"
-    tools:layout_editor_absoluteY="851dp" />
+    <CheckBox
+        android:id="@+id/chk_USBattached"
+        android:layout_width="147dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Anom Attached"
+        android:textColor="#FFFF00"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="852dp"
+        tools:layout_editor_absoluteX="445dp" />
 
     <EditText
         android:id="@+id/edtxtHidInput"
@@ -247,6 +248,14 @@ tools:context=".USBHIDTerminal">
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="chk_AnomAttached"
+        tools:layout_editor_absoluteX="1231dp"
+        tools:layout_editor_absoluteY="487dp" />
 
 
 </android.support.constraint.ConstraintLayout>

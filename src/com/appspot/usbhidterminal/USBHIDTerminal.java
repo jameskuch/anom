@@ -14,6 +14,7 @@ import android.graphics.ColorFilter;
 import android.graphics.LightingColorFilter;
 import android.graphics.Paint;
 import android.os.Bundle;
+import android.os.Handler;
 import android.preference.PreferenceManager;
 
 import android.view.Menu;
@@ -21,6 +22,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
@@ -48,6 +50,7 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 
 	private Intent usbService;
 
+	private CheckBox chk_AnomAttached;
 	private EditText txtHidInput;
 	private Button btnSend;
 	private Button btnSelectHIDDevice;
@@ -66,6 +69,70 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 	private String delimiter;
 
 	protected EventBus eventBus;
+
+
+
+    private boolean called0 = false;
+    private boolean called1 = false;
+    long startTime = 0;
+    Handler timerHandler = new Handler();
+    Runnable timerRunnable = new Runnable() {
+
+        @Override
+        public void run() {
+            long millis = System.currentTimeMillis() - startTime;
+            //int seconds = (int) (millis / 1000);
+            //int minutes = seconds / 60;
+            //seconds = seconds % 60;
+
+            //txt_TimerView.setText(String.format("%d:%02d", minutes, seconds));
+            timerHandler.postDelayed(this, 25);
+
+            // here is where I will check for the USB
+            if (millis >= 50 && millis < 300)
+            {
+                // this one only needs to happen once. I do it once, called0 gets set to true, and
+                // it should never be set again.
+                if (!called0) {
+                    called0 = true;
+                    sendToUSBService(Consts.ACTION_USB_DATA_TYPE, true);
+                }
+
+
+            }
+            else if (millis >= 300 && millis <= 750)
+            {
+                if (!called1) {
+                    called1 = true;
+                    eventBus.post(new PrepareDevicesListEvent());
+
+                }
+
+            }
+            else if (millis > 2000)
+            {
+                if (chk_AnomAttached.isChecked())
+                {
+                    //this stops the timer.
+                    // I thought about trying to restart the timer if the device de or reattached
+                    // ...it caused weird behavior. Therefore, as is, you have to have the device
+                    // connected before you go to the screen. This shouldn't be a problem
+                    timerHandler.removeCallbacks(timerRunnable);
+                }
+                else
+                {
+                    //Device is not connected
+                    //Continue looking for it by restarting the timer
+                    called1 = false;
+                    startTime = System.currentTimeMillis();
+                    timerHandler.postDelayed(timerRunnable, 0);
+
+                }
+            }
+
+        }
+    };
+
 
 	private SharedPreferences.OnSharedPreferenceChangeListener listener = new SharedPreferences.OnSharedPreferenceChangeListener() {
 		@Override
@@ -110,7 +177,7 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 		txtHidInput = (EditText) findViewById(R.id.edtxtHidInput);
 
 		rbSendDataType = (RadioButton) findViewById(R.id.rbSendData);
-
+		chk_AnomAttached = (CheckBox) findViewById(R.id.chk_USBattached);
 		//rbSendDataType.setOnClickListener(this);
 		btnSend = (Button) findViewById(R.id.btnSendText);
 		btnSend.setOnClickListener(this);
