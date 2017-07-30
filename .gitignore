@@ -1,4 +1,8 @@
 build/*
 .gradle/*
 .idea/*
-anom.iml
+*.iml
+/local.properties
+.DS_Store
+/captures
+.externalNativeBuild
