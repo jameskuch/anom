@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sun Jul 30 15:56:34 PDT 2017
+#Sun Jul 30 16:08:17 PDT 2017
 25.file=C\:\\gitprojects\\anom\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex
 25.base=C\:\\gitprojects\\anom\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
 22.set=ASSET
@@ -41,7 +41,7 @@ count=27
 17.file=C\:\\gitprojects\\anom\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-hdpi-v4\\circle_hor.png
 25.set=DEX
 17.base=C\:\\gitprojects\\anom\\build\\intermediates\\res\\resources-debug.ap_
-10.file=C\:\\gitprojects\\anom\\build\\intermediates\\res\\resources-debug.ap_\\AndroidManifest.xml
+10.file=C\:\\gitprojects\\anom\\build\\intermediates\\res\\resources-debug.ap_\\resources.arsc
 10.base=C\:\\gitprojects\\anom\\build\\intermediates\\res\\resources-debug.ap_
 14.set=ANDROID_RESOURCE
 2.file=C\:\\gitprojects\\anom\\build\\intermediates\\res\\resources-debug.ap_\\res\\xml\\pref_headers.xml
@@ -55,7 +55,7 @@ count=27
 18.file=C\:\\gitprojects\\anom\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\activity_main.xml
 9.base=C\:\\gitprojects\\anom\\build\\intermediates\\assets\\debug
 18.base=C\:\\gitprojects\\anom\\build\\intermediates\\res\\resources-debug.ap_
-11.file=C\:\\gitprojects\\anom\\build\\intermediates\\res\\resources-debug.ap_\\resources.arsc
+11.file=C\:\\gitprojects\\anom\\build\\intermediates\\res\\resources-debug.ap_\\AndroidManifest.xml
 11.base=C\:\\gitprojects\\anom\\build\\intermediates\\res\\resources-debug.ap_
 24.set=ANDROID_RESOURCE
 3.file=C\:\\gitprojects\\anom\\build\\intermediates\\transforms\\mergeJavaRes\\debug\\jars\\2\\1f\\main.jar\\org\\mockito\\internal\\matchers\\apachecommons\\commons-lang-license.txt
