@@ -1,7 +1,19 @@
 [
     {
+        "merged": "C:\\gitprojects\\anom\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\circle_hor.png",
+        "source": "C:\\gitprojects\\anom\\res\\drawable-hdpi\\circle_hor.png"
+    },
+    {
+        "merged": "C:\\gitprojects\\anom\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\black_large.png",
+        "source": "C:\\gitprojects\\anom\\res\\drawable-hdpi\\black_large.png"
+    },
+    {
         "merged": "C:\\gitprojects\\anom_droid2\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\circle_hor.png",
         "source": "C:\\gitprojects\\anom_droid2\\res\\drawable-hdpi\\circle_hor.png"
+    },
+    {
+        "merged": "C:\\gitprojects\\anom\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\circle_vert.png",
+        "source": "C:\\gitprojects\\anom\\res\\drawable-hdpi\\circle_vert.png"
     },
     {
         "merged": "C:\\gitlocal\\anom\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\circle_vert.png",
@@ -14,6 +26,10 @@
     {
         "merged": "C:\\gitlocal\\anom\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\black_large.png",
         "source": "C:\\gitlocal\\anom\\res\\drawable-hdpi\\black_large.png"
+    },
+    {
+        "merged": "C:\\gitprojects\\anom\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_launcher.png",
+        "source": "C:\\gitprojects\\anom\\res\\drawable-hdpi\\ic_launcher.png"
     },
     {
         "merged": "C:\\gitlocal\\anom\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_launcher.png",

@@ -379,12 +379,12 @@ containing a value of this type.
     public static final class id {
         public static final int btnSelectHIDDevice=0x7f080001;
         public static final int btnSend=0x7f080004;
-        public static final int button_calibrate=0x7f08000a;
+        public static final int btnSendText=0x7f08000a;
         public static final int chk_USBattached=0x7f080013;
         public static final int edtxtHidInput=0x7f080005;
-        public static final int iv_circleA=0x7f080012;
+        public static final int iv_circleA=0x7f080010;
         public static final int iv_circleB=0x7f080009;
-        public static final int iv_circleC=0x7f080011;
+        public static final int iv_circleC=0x7f080012;
         public static final int iv_circleT=0x7f080008;
         public static final int menuSettings=0x7f080014;
         public static final int menuSettingsDelimiter=0x7f08001b;
@@ -401,12 +401,12 @@ containing a value of this type.
         public static final int radioGroup=0x7f080002;
         public static final int rbSendData=0x7f080003;
         public static final int sld_LED0int=0x7f08000b;
-        public static final int sld_LED1int=0x7f08000c;
-        public static final int sld_LED2int=0x7f08000d;
+        public static final int sld_LED1int=0x7f08000d;
+        public static final int sld_LED2int=0x7f08000e;
         public static final int sld_LEDint=0x7f080006;
-        public static final int sld_RG1=0x7f08000e;
-        public static final int sld_RG2=0x7f08000f;
-        public static final int sld_RG3=0x7f080010;
+        public static final int sld_RG1=0x7f08000f;
+        public static final int sld_RG2=0x7f08000c;
+        public static final int sld_RG3=0x7f080011;
         public static final int sld_RGint=0x7f080007;
     }
     public static final class layout {

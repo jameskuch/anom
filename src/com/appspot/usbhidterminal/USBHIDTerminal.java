@@ -13,11 +13,9 @@ import android.graphics.Color;
 import android.graphics.ColorFilter;
 import android.graphics.LightingColorFilter;
 import android.graphics.Paint;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.util.DisplayMetrics;
+
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -105,8 +103,6 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 
 	private void initUI() {
 		setVersionToTitle();
-		btnSend = (Button) findViewById(R.id.btnSend);
-		btnSend.setOnClickListener(this);
 
 		btnSelectHIDDevice = (Button) findViewById(R.id.btnSelectHIDDevice);
 		btnSelectHIDDevice.setOnClickListener(this);
@@ -115,8 +111,9 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 
 		rbSendDataType = (RadioButton) findViewById(R.id.rbSendData);
 
-		rbSendDataType.setOnClickListener(this);
-		//rbSendText.setOnClickListener(this);
+		//rbSendDataType.setOnClickListener(this);
+		btnSend = (Button) findViewById(R.id.btnSendText);
+		btnSend.setOnClickListener(this);
 
 		mLog("Initialized\nPlease select your USB HID device\n", false);
 		getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
@@ -250,9 +247,11 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 	public void onClick(View v) {
 		if (v == btnSend) {
 			eventBus.post(new USBDataSendEvent(txtHidInput.getText().toString()));
-		} else if (v == rbSendDataType) {
-			sendToUSBService(Consts.ACTION_USB_DATA_TYPE, rbSendDataType.isChecked());
+		//} else if (v == rbSendDataType) {
+
+			//sendToUSBService(Consts.ACTION_USB_DATA_TYPE, rbSendDataType.isChecked());
 		} else if (v == btnSelectHIDDevice) {
+
 			eventBus.post(new PrepareDevicesListEvent());
 		}
 	}
