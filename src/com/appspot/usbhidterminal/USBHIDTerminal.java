@@ -55,9 +55,10 @@ import com.appspot.usbhidterminal.core.services.WebServerService;
 import de.greenrobot.event.EventBus;
 import de.greenrobot.event.EventBusException;
 
-//import static com.appspot.usbhidterminal.core.Consts.LED_L;
-//import static com.appspot.usbhidterminal.core.Consts.LED_M;
-//import static com.appspot.usbhidterminal.core.Consts.LED_R;
+import static com.appspot.usbhidterminal.core.Consts.LED_0;
+import static com.appspot.usbhidterminal.core.Consts.LED_1;
+import static com.appspot.usbhidterminal.core.Consts.LED_2;
+
 
 public class USBHIDTerminal extends Activity implements View.OnClickListener {
 
@@ -243,7 +244,8 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 	{
 		String USBout = "";
 		String whichLED = "";
-		//double value2 = 0;
+		double interim_value = 0.0;
+		int value2 = 0;
 
 		// top, position 0 is LED 2
 		// middle, position 1 is LED 0
@@ -251,24 +253,41 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 		// 2 is position 1
 		// 1 is position 0
 		// 1 is position 2
-		if (LED==2) {
-			whichLED = "1 ";
-			//value2 = (double)value * LED_L;
+		if (LED==2)
+		{
+			//whichLED = "1 ";
+			whichLED = "2 ";
+			interim_value = (double)value * LED_2;
+			value2 = (int)interim_value;
+			USBout = whichLED + Integer.toString(value2) + " 0";
+			txt_inst.setText(USBout);
 		}
 		else if (LED==1)
 		{
-			whichLED = "0 ";
-			//value2 = (double)value * LED_M;
+			//whichLED = "0 ";
+			whichLED = "1 ";
+			interim_value = (double)value * LED_1;
+			value2 = (int)interim_value;
+			USBout = whichLED + Integer.toString(value2) + " 0";
+			txt_inst2.setText(USBout);
 		}
 		else if (LED==0)
 		{
-			whichLED = "2 ";
-			//value2 = (double)value * LED_R;
+			//whichLED = "2 ";
+			whichLED = "0 ";
+			interim_value = (double)value * LED_0;
+			value2 = (int)interim_value;
+			USBout = whichLED + Integer.toString(value2) + " 0";
+			txt_inst3.setText(USBout);
 		}
-		//String msg = "1 " + t + " 0";
-		USBout = whichLED + Integer.toString(value) + " 0";
+
+
+		//USBout = whichLED + Integer.toString(value) + " 0";
+
 
 		eventBus.post(new USBDataSendEvent(USBout));
+
+
 
 	}
 

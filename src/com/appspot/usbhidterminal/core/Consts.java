@@ -53,9 +53,9 @@ public abstract class Consts {
 	public static final int LED_INT_DA = 100;
 	public static final int LED_INT_PA = 20;
 
-	//public static final double LED_L = 0.75;
-	//public static final double LED_M = 1.00;
-	//public static final double LED_R = 1.00;
+	public static final double LED_0 = 1.000;
+	public static final double LED_1 = 0.710;
+	public static final double LED_2 = 1.000;
 
 	//public static final int LED_INT_NORMAL = 150;
 	//public static final int LED_INT_DA = 150;
