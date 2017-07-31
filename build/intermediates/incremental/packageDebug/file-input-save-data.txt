@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sun Jul 30 16:08:17 PDT 2017
+#Sun Jul 30 18:16:38 PDT 2017
 25.file=C\:\\gitprojects\\anom\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex
 25.base=C\:\\gitprojects\\anom\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
 22.set=ASSET

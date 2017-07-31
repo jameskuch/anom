@@ -10,6 +10,87 @@ android:background="#000000"
 tools:context=".USBHIDTerminal">
 
 
+    <EditText
+        android:id="@+id/txt_LED1"
+        android:layout_width="109dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="294dp"
+        android:layout_marginLeft="440dp"
+        android:layout_marginRight="8dp"
+        android:text=""
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <EditText
+        android:id="@+id/txt_LED0"
+        android:layout_width="109dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="419dp"
+        android:layout_marginLeft="440dp"
+        android:layout_marginRight="8dp"
+        android:text=""
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <EditText
+        android:id="@+id/txt_Patch2"
+        android:layout_width="109dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="594dp"
+        android:layout_marginLeft="413dp"
+        android:text=""
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <EditText
+        android:id="@+id/txt_Patch1"
+        android:layout_width="109dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="594dp"
+        android:layout_marginLeft="246dp"
+        android:text=""
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <EditText
+        android:id="@+id/txt_Patch0"
+        android:layout_width="109dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="594dp"
+        android:layout_marginLeft="80dp"
+        android:text=""
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <EditText
+        android:id="@+id/txt_LED2"
+        android:layout_width="109dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="169dp"
+        android:layout_marginLeft="440dp"
+        android:layout_marginRight="8dp"
+        android:text=""
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
     <Button
         android:id="@+id/btnSendText"
         android:layout_width="83dp"

@@ -63,6 +63,13 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 	private SeekBar sbRG1int;
 	private SeekBar sbRG2int;
 
+
+	private EditText txt_P0;
+	private EditText txt_P1;
+	private EditText txt_P2;
+	private EditText txt_L0;
+	private EditText txt_L1;
+	private EditText txt_L2;
 	private String settingsDelimiter;
 
 	private String receiveDataFormat;
@@ -177,7 +184,12 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 		btnSelectHIDDevice.setOnClickListener(this);
 
 		txtHidInput = (EditText) findViewById(R.id.edtxtHidInput);
-
+		txt_L0 = (EditText) findViewById(R.id.txt_LED0);
+		txt_L1 = (EditText) findViewById(R.id.txt_LED1);
+		txt_L2 = (EditText) findViewById(R.id.txt_LED2);
+		txt_P0 = (EditText) findViewById(R.id.txt_Patch0);
+		txt_P1 = (EditText) findViewById(R.id.txt_Patch1);
+		txt_P2 = (EditText) findViewById(R.id.txt_Patch2);
 		rbSendDataType = (RadioButton) findViewById(R.id.rbSendData);
 		chk_AnomAttached = (CheckBox) findViewById(R.id.chk_USBattached);
 		//rbSendDataType.setOnClickListener(this);
@@ -201,6 +213,7 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 				String t = String.valueOf(progress);
 				String msg = "0 " + t + " 0";
 				txtHidInput.setText(msg);
+				txt_L0.setText(t);
 				eventBus.post(new USBDataSendEvent(txtHidInput.getText().toString()));
 			}
 		});
@@ -218,6 +231,7 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 				String t = String.valueOf(progress);
 				String msg = "1 " + t + " 0";
 				txtHidInput.setText(msg);
+				txt_L1.setText(t);
 				eventBus.post(new USBDataSendEvent(txtHidInput.getText().toString()));
 			}
 		});
@@ -235,6 +249,7 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 				String t = String.valueOf(progress);
 				String msg = "2 " + t + " 0";
 				txtHidInput.setText(msg);
+				txt_L2.setText(t);
 				eventBus.post(new USBDataSendEvent(txtHidInput.getText().toString()));
 			}
 		});
@@ -250,8 +265,10 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 
 			public void onProgressChanged(SeekBar sbRG0int, int progress, boolean fromUser) {
 
-				ImageView ivcircleB = (ImageView) findViewById(R.id.iv_circleA);
-				ivcircleB.setColorFilter(Color.rgb(255 - progress, progress, 0));
+				ImageView ivcircleA = (ImageView) findViewById(R.id.iv_circleA);
+				ivcircleA.setColorFilter(Color.rgb(255 - progress, progress, 0));
+				String msg = String.valueOf(255 - progress);
+				txt_P0.setText(msg);
 			}
 		});
 
@@ -268,6 +285,8 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 
 				ImageView ivcircleB = (ImageView) findViewById(R.id.iv_circleB);
 				ivcircleB.setColorFilter(Color.rgb(255 - progress, progress, 0));
+				String msg = String.valueOf(255 - progress);
+				txt_P1.setText(msg);
 			}
 		});
 
@@ -282,8 +301,10 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 
 			public void onProgressChanged(SeekBar sbRG2int, int progress, boolean fromUser) {
 
-				ImageView ivcircle = (ImageView) findViewById(R.id.iv_circleC);
-				ivcircle.setColorFilter(Color.rgb(255 - progress, progress, 0));
+				ImageView ivcircleC = (ImageView) findViewById(R.id.iv_circleC);
+				ivcircleC.setColorFilter(Color.rgb(255 - progress, progress, 0));
+				String msg = String.valueOf(255 - progress);
+				txt_P2.setText(msg);
 			}
 		});
 		rbSendDataType.setChecked(true);
@@ -326,22 +347,17 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 	}
 
 	void showListOfDevices(CharSequence devicesName[]) {
-		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
-		if (devicesName.length == 0) {
-			builder.setTitle(Consts.MESSAGE_CONNECT_YOUR_USB_HID_DEVICE);
-		} else {
-			builder.setTitle(Consts.MESSAGE_SELECT_YOUR_USB_HID_DEVICE);
-		}
 
-		builder.setItems(devicesName, new DialogInterface.OnClickListener() {
-			@Override
-			public void onClick(DialogInterface dialog, int which) {
-				eventBus.post(new SelectDeviceEvent(which));
-			}
-		});
-		builder.setCancelable(true);
-		builder.show();
+        if (devicesName.length == 0) {
+            chk_AnomAttached.setChecked(false);
+        }
+        else
+        {
+            eventBus.post(new SelectDeviceEvent(0));
+            chk_AnomAttached.setChecked(true);
+        }
+
 	}
 
 	public void onEvent(USBDataReceiveEvent event) {
