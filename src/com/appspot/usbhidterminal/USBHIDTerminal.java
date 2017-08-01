@@ -3,6 +3,7 @@ package com.appspot.usbhidterminal;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.NotificationManager;
+import android.content.ContentResolver;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -20,10 +21,13 @@ import android.os.Handler;
 import android.os.Message;
 import android.os.Handler.Callback;
 import android.preference.PreferenceManager;
+import android.provider.Settings;
 import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -55,9 +59,6 @@ import com.appspot.usbhidterminal.core.services.WebServerService;
 import de.greenrobot.event.EventBus;
 import de.greenrobot.event.EventBusException;
 
-import static com.appspot.usbhidterminal.core.Consts.LED_0;
-import static com.appspot.usbhidterminal.core.Consts.LED_1;
-import static com.appspot.usbhidterminal.core.Consts.LED_2;
 
 
 public class USBHIDTerminal extends Activity implements View.OnClickListener {
@@ -240,6 +241,10 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 		}
 	};
 
+
+
+
+
 	private void SetLED(int LED, int value)
 	{
 		String USBout = "";
@@ -257,7 +262,7 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 		{
 			//whichLED = "1 ";
 			whichLED = "2 ";
-			interim_value = (double)value * LED_2;
+			interim_value = (double)value * Consts.LED_2_gain;
 			value2 = (int)interim_value;
 			USBout = whichLED + Integer.toString(value2) + " 0";
 			txt_inst.setText(USBout);
@@ -266,7 +271,7 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 		{
 			//whichLED = "0 ";
 			whichLED = "1 ";
-			interim_value = (double)value * LED_1;
+			interim_value = (double)value * Consts.LED_1_gain;
 			value2 = (int)interim_value;
 			USBout = whichLED + Integer.toString(value2) + " 0";
 			txt_inst2.setText(USBout);
@@ -275,7 +280,7 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 		{
 			//whichLED = "2 ";
 			whichLED = "0 ";
-			interim_value = (double)value * LED_0;
+			interim_value = (double)value * Consts.LED_0_gain;
 			value2 = (int)interim_value;
 			USBout = whichLED + Integer.toString(value2) + " 0";
 			txt_inst3.setText(USBout);
@@ -311,6 +316,13 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 		socketServiceIsStart(sharedPreferences.getBoolean("enable_socket_server", false));
 	}
 
+	//Variable to store brightness value
+	private int brightness;
+	//Content resolver used as a handle to the system's settings
+	private ContentResolver cResolver;
+	//Window object, that will store a reference to the current window
+	private Window window;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -323,7 +335,40 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 		sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
 		sharedPreferences.registerOnSharedPreferenceChangeListener(listener);
 
+		//Get the content resolver
+		cResolver = getContentResolver();
+
+		//Get the current window
+		window = getWindow();
+
+		try
+		{
+			// To handle the auto
+			Settings.System.putInt(cResolver, Settings.System.SCREEN_BRIGHTNESS_MODE, Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL);
+			//Get the current system brightness
+			brightness = Settings.System.getInt(cResolver, Settings.System.SCREEN_BRIGHTNESS);
+
+			//brightness = System.getInt(cResolver, Settings.System.SCREEN_BRIGHTNESS);
+			//Set the system brightness using the brightness variable value
+			Settings.System.putInt(cResolver, Settings.System.SCREEN_BRIGHTNESS, brightness);
+			//Get the current window attributes
+			WindowManager.LayoutParams layoutpars = window.getAttributes();
+			//Set the brightness of this window
+			layoutpars.screenBrightness = Consts.SCREEN_BRIGHTNESS / (float)255;
+			//Apply attribute changes to this window
+			window.setAttributes(layoutpars);
+
+		}
+		catch (Settings.SettingNotFoundException e)
+		{
+			//Throw an error case it couldn't be retrieved
+			//Log.e("Error", "Cannot access system brightness");
+			e.printStackTrace();
+		}
+
+
 		initUI();
+		txt_inst5.setText(Integer.toString(brightness));
 		Reset_Experimental_Variables();
 		startTime = System.currentTimeMillis();
 		timerHandler.postDelayed(timerRunnable, 0);

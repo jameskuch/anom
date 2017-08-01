@@ -27,6 +27,7 @@ public abstract class Consts {
 	public static final int WEB_SERVER_NOTIFICATION = 45277992;
 	public static final int SOCKET_SERVER_NOTIFICATION = 45277993;
 
+	public static final int SCREEN_BRIGHTNESS = 180;
 	public static final int PA_RED_START_LOW = 200;
 	public static final int PA_RED_START_HIGH = 255;
 	public static final int DA_RED_START_LOW = 120;
@@ -53,9 +54,9 @@ public abstract class Consts {
 	public static final int LED_INT_DA = 100;
 	public static final int LED_INT_PA = 20;
 
-	public static final double LED_0 = 1.000;
-	public static final double LED_1 = 0.710;
-	public static final double LED_2 = 1.000;
+	public static final double LED_0_gain = 1.000;
+	public static final double LED_1_gain = 0.710;
+	public static final double LED_2_gain = 1.000;
 
 	//public static final int LED_INT_NORMAL = 150;
 	//public static final int LED_INT_DA = 150;
