@@ -7,7 +7,7 @@ import android.hardware.usb.UsbDevice;
 import android.support.v4.app.NotificationCompat;
 
 import com.appspot.usbhidterminal.R;
-import com.appspot.usbhidterminal.USBHIDTerminal;
+import com.appspot.usbhidterminal.AutoAnom;
 import com.appspot.usbhidterminal.core.Consts;
 import com.appspot.usbhidterminal.core.USBUtils;
 import com.appspot.usbhidterminal.core.events.LogMessageEvent;
@@ -109,11 +109,11 @@ public class USBHIDService extends AbstractUSBHIDService {
 		NotificationManager mNotificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
 		NotificationCompat.Builder mNotificationBuilder = new NotificationCompat.Builder(this);
 		PendingIntent pendingIntent = PendingIntent.getActivity(this, 0,
-				new Intent(this, USBHIDTerminal.class)
+				new Intent(this, AutoAnom.class)
 						.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP),
 				0);
 		PendingIntent pendingCloseIntent = PendingIntent.getActivity(this, 0,
-				new Intent(this, USBHIDTerminal.class)
+				new Intent(this, AutoAnom.class)
 						.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP)
 						.setAction(Consts.USB_HID_TERMINAL_CLOSE_ACTION),
 				0);

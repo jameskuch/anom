@@ -61,7 +61,7 @@ import de.greenrobot.event.EventBusException;
 
 
 
-public class USBHIDTerminal extends Activity implements View.OnClickListener {
+public class AutoAnom extends Activity implements View.OnClickListener {
 
 	private SharedPreferences sharedPreferences;
 
@@ -265,7 +265,7 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 			interim_value = (double)value * Consts.LED_2_gain;
 			value2 = (int)interim_value;
 			USBout = whichLED + Integer.toString(value2) + " 0";
-			txt_inst.setText(USBout);
+			//txt_inst.setText(USBout);
 		}
 		else if (LED==1)
 		{
@@ -274,7 +274,7 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 			interim_value = (double)value * Consts.LED_1_gain;
 			value2 = (int)interim_value;
 			USBout = whichLED + Integer.toString(value2) + " 0";
-			txt_inst2.setText(USBout);
+			//txt_inst2.setText(USBout);
 		}
 		else if (LED==0)
 		{
@@ -283,7 +283,7 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 			interim_value = (double)value * Consts.LED_0_gain;
 			value2 = (int)interim_value;
 			USBout = whichLED + Integer.toString(value2) + " 0";
-			txt_inst3.setText(USBout);
+			//txt_inst3.setText(USBout);
 		}
 
 
@@ -368,7 +368,7 @@ public class USBHIDTerminal extends Activity implements View.OnClickListener {
 
 
 		initUI();
-		txt_inst5.setText(Integer.toString(brightness));
+		//txt_inst5.setText(Integer.toString(brightness));
 		Reset_Experimental_Variables();
 		startTime = System.currentTimeMillis();
 		timerHandler.postDelayed(timerRunnable, 0);

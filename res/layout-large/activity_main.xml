@@ -7,7 +7,7 @@ android:layout_gravity="start"
 android:orientation="horizontal"
 android:windowSoftInputMode="stateHidden"
 android:background="#000000"
-tools:context=".USBHIDTerminal">
+tools:context=".AutoAnom">
 
 
     <TextView

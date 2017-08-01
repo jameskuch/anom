@@ -3,13 +3,13 @@ package com.appspot.usbhidterminal.tests;
 import android.content.Intent;
 import android.test.ActivityInstrumentationTestCase2;
 
-import com.appspot.usbhidterminal.USBHIDTerminal;
+import com.appspot.usbhidterminal.AutoAnom;
 import com.appspot.usbhidterminal.core.services.SocketService;
 
-public class SocketServiceTest extends ActivityInstrumentationTestCase2<USBHIDTerminal> {
+public class SocketServiceTest extends ActivityInstrumentationTestCase2<AutoAnom> {
 
 	public SocketServiceTest(){
-		super(USBHIDTerminal.class);
+		super(AutoAnom.class);
 	}
 
 	private Intent socketService;

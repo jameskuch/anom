@@ -2,12 +2,12 @@ package com.appspot.usbhidterminal.tests;
 
 import android.test.ActivityInstrumentationTestCase2;
 
-import com.appspot.usbhidterminal.USBHIDTerminal;
+import com.appspot.usbhidterminal.AutoAnom;
 
-public class UITest extends ActivityInstrumentationTestCase2<USBHIDTerminal> {
+public class UITest extends ActivityInstrumentationTestCase2<AutoAnom> {
 
 	public UITest(){
-		super(USBHIDTerminal.class);
+		super(AutoAnom.class);
 	}
 
 	//@Test
