@@ -22,4 +22,5 @@
     <string name="sendText">Send Text</string>
     <string name="sendData">Bytes/0xAB/#AB</string>
     <string name="title_activity_main_screen">MainScreen</string>
+    <string name="title_activity_test_results_">TestResults_Activity</string>
 </resources>

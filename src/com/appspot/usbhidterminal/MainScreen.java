@@ -80,7 +80,8 @@ public class MainScreen extends Activity implements View.OnClickListener{
         }
         else if (v == btn_NewSubject)
         {
-
+            Intent k = new Intent(this, TestResults_Activity.class);
+            startActivity(k);
 
         }
         else if (v == btn_RetestSubject)
@@ -94,7 +95,7 @@ public class MainScreen extends Activity implements View.OnClickListener{
     public void onPause() {
         super.onPause();
         timerMoveToHiddenSettings_handler.removeCallbacks(timerMoveToHiddenSettings_runnable);
-        //numberofPresses = 0;
+        numberofPresses = 0;
         //Button b = (Button)findViewById(R.id.button);
         //b.setText("start");
     }

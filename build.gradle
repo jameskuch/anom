@@ -13,6 +13,10 @@ buildscript {
 apply plugin: 'com.android.application'
 
 repositories {
+
+    jcenter()
+    maven{ url 'https://jitpack.io' }
+    google()
     mavenCentral()
 }
 
@@ -22,11 +26,26 @@ dependencies {
     //compile 'com.nanohttpd:nanohttpd-websocket:2.1.1'
     //compile 'de.greenrobot:eventbus:2.4.0'
     //compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha9'
-    implementation 'com.android.support:support-v4:22.1.1'
+
+    //implementation 'com.android.support:support-v4:22.1.1'
+
+
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.android.support:cardview-v7:27.1.1'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+
+
     implementation 'com.nanohttpd:nanohttpd:2.1.1'
     implementation 'com.nanohttpd:nanohttpd-websocket:2.1.1'
     implementation 'de.greenrobot:eventbus:2.4.0'
     implementation 'com.android.support.constraint:constraint-layout:1.0.0-alpha9'
+
+
+    //compile files('libs/GraphView-4.2.1.jar')
+    implementation 'com.jjoe64:graphview:4.2.2'
+
 
 }
 
@@ -36,13 +55,15 @@ android {
         abortOnError false
     }
 
-    compileSdkVersion 22
+    compileSdkVersion 27
+    //compileSdkVersion 22
     //buildToolsVersion "25.0.0"
 
 
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion 22
+        //targetSdkVersion 22
+        targetSdkVersion 27
     }
 
     sourceSets {
