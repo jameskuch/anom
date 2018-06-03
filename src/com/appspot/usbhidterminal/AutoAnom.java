@@ -1695,7 +1695,7 @@ public class AutoAnom extends Activity implements View.OnClickListener {
 		super.onStart();
 		receiveDataFormat = sharedPreferences.getString(Consts.RECEIVE_DATA_FORMAT, Consts.TEXT);
 		prepareServices();
-		setDelimiter();
+		//setDelimiter();
 		eventBus.register(this);
 	}
 
@@ -1714,26 +1714,26 @@ public class AutoAnom extends Activity implements View.OnClickListener {
 
 	private void setSelectedMenuItemsFromSettings(Menu menu) {
 		receiveDataFormat = sharedPreferences.getString(Consts.RECEIVE_DATA_FORMAT, Consts.TEXT);
-		if (receiveDataFormat != null) {
-			if (receiveDataFormat.equals(Consts.BINARY)) {
-				menu.findItem(R.id.menuSettingsReceiveBinary).setChecked(true);
-			} else if (receiveDataFormat.equals(Consts.INTEGER)) {
-				menu.findItem(R.id.menuSettingsReceiveInteger).setChecked(true);
-			} else if (receiveDataFormat.equals(Consts.HEXADECIMAL)) {
-				menu.findItem(R.id.menuSettingsReceiveHexadecimal).setChecked(true);
-			} else if (receiveDataFormat.equals(Consts.TEXT)) {
-				menu.findItem(R.id.menuSettingsReceiveText).setChecked(true);
-			}
-		}
+		//if (receiveDataFormat != null) {
+		//	if (receiveDataFormat.equals(Consts.BINARY)) {
+		//		menu.findItem(R.id.menuSettingsReceiveBinary).setChecked(true);
+		//	} else if (receiveDataFormat.equals(Consts.INTEGER)) {
+		//		menu.findItem(R.id.menuSettingsReceiveInteger).setChecked(true);
+		//	} else if (receiveDataFormat.equals(Consts.HEXADECIMAL)) {
+		//		menu.findItem(R.id.menuSettingsReceiveHexadecimal).setChecked(true);
+		//	} else if (receiveDataFormat.equals(Consts.TEXT)) {
+		//		menu.findItem(R.id.menuSettingsReceiveText).setChecked(true);
+		//	}
+		//}
 
-		setDelimiter();
-		if (settingsDelimiter.equals(Consts.DELIMITER_NONE)) {
-			menu.findItem(R.id.menuSettingsDelimiterNone).setChecked(true);
-		} else if (settingsDelimiter.equals(Consts.DELIMITER_NEW_LINE)) {
-			menu.findItem(R.id.menuSettingsDelimiterNewLine).setChecked(true);
-		} else if (settingsDelimiter.equals(Consts.DELIMITER_SPACE)) {
-			menu.findItem(R.id.menuSettingsDelimiterSpace).setChecked(true);
-		}
+		//setDelimiter();
+		//if (settingsDelimiter.equals(Consts.DELIMITER_NONE)) {
+		//	menu.findItem(R.id.menuSettingsDelimiterNone).setChecked(true);
+		//} else if (settingsDelimiter.equals(Consts.DELIMITER_NEW_LINE)) {
+		//	menu.findItem(R.id.menuSettingsDelimiterNewLine).setChecked(true);
+		//} else if (settingsDelimiter.equals(Consts.DELIMITER_SPACE)) {
+		//	menu.findItem(R.id.menuSettingsDelimiterSpace).setChecked(true);
+		//}
 	}
 
 	@Override
@@ -1745,31 +1745,31 @@ public class AutoAnom extends Activity implements View.OnClickListener {
 			Intent i = new Intent(this, SettingsActivity.class);
 			startActivityForResult(i, Consts.RESULT_SETTINGS);
 			break;
-		case R.id.menuSettingsReceiveBinary:
-			editor.putString(Consts.RECEIVE_DATA_FORMAT, Consts.BINARY).apply();
-			break;
-		case R.id.menuSettingsReceiveInteger:
-			editor.putString(Consts.RECEIVE_DATA_FORMAT, Consts.INTEGER).apply();
-			break;
-		case R.id.menuSettingsReceiveHexadecimal:
-			editor.putString(Consts.RECEIVE_DATA_FORMAT, Consts.HEXADECIMAL).apply();
-			break;
-		case R.id.menuSettingsReceiveText:
-			editor.putString(Consts.RECEIVE_DATA_FORMAT, Consts.TEXT).apply();
-			break;
-		case R.id.menuSettingsDelimiterNone:
-			editor.putString(Consts.DELIMITER, Consts.DELIMITER_NONE).apply();
-			break;
-		case R.id.menuSettingsDelimiterNewLine:
-			editor.putString(Consts.DELIMITER, Consts.DELIMITER_NEW_LINE).apply();
-			break;
-		case R.id.menuSettingsDelimiterSpace:
-			editor.putString(Consts.DELIMITER, Consts.DELIMITER_SPACE).apply();
-			break;
+//		case R.id.menuSettingsReceiveBinary:
+//			editor.putString(Consts.RECEIVE_DATA_FORMAT, Consts.BINARY).apply();
+//			break;
+//		case R.id.menuSettingsReceiveInteger:
+//			editor.putString(Consts.RECEIVE_DATA_FORMAT, Consts.INTEGER).apply();
+//			break;
+//		case R.id.menuSettingsReceiveHexadecimal:
+//			editor.putString(Consts.RECEIVE_DATA_FORMAT, Consts.HEXADECIMAL).apply();
+//			break;
+//		case R.id.menuSettingsReceiveText:
+//			editor.putString(Consts.RECEIVE_DATA_FORMAT, Consts.TEXT).apply();
+//			break;
+//		case R.id.menuSettingsDelimiterNone:
+//			editor.putString(Consts.DELIMITER, Consts.DELIMITER_NONE).apply();
+//			break;
+//		case R.id.menuSettingsDelimiterNewLine:
+//			editor.putString(Consts.DELIMITER, Consts.DELIMITER_NEW_LINE).apply();
+//			break;
+//		case R.id.menuSettingsDelimiterSpace:
+//			editor.putString(Consts.DELIMITER, Consts.DELIMITER_SPACE).apply();
+//			break;
 		}
 
 		receiveDataFormat = sharedPreferences.getString(Consts.RECEIVE_DATA_FORMAT, Consts.TEXT);
-		setDelimiter();
+		//setDelimiter();
 		return true;
 	}
 

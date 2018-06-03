@@ -53,14 +53,22 @@ public class SettingsActivity extends PreferenceActivity {
         // In the simplified UI, fragments are not used at all and we instead
         // use the older PreferenceActivity APIs.
 
+
+
+
+
         // Add 'general' preferences.
         addPreferencesFromResource(R.xml.pref_general);
+
+
+
+
 
         // Bind the summaries of EditText/List/Dialog/Ringtone preferences to
         // their values. When their values change, their summaries are updated
         // to reflect the new value, per the Android Design guidelines.
-        bindPreferenceSummaryToValue(findPreference("web_server_port"));
-        bindPreferenceSummaryToValue(findPreference("socket_server_port"));
+        //bindPreferenceSummaryToValue(findPreference("web_server_port"));
+        //bindPreferenceSummaryToValue(findPreference("socket_server_port"));
     }
 
     /**
@@ -100,7 +108,16 @@ public class SettingsActivity extends PreferenceActivity {
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     public void onBuildHeaders(List<Header> target) {
         if (!isSimplePreferences(this)) {
+
+
+
+
             loadHeadersFromResource(R.xml.pref_headers, target);
+
+
+
+
+
         }
     }
 
@@ -164,7 +181,15 @@ public class SettingsActivity extends PreferenceActivity {
         @Override
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
+
+
+
+
+
             addPreferencesFromResource(R.xml.pref_general);
+
+
+
 
             // Bind the summaries of EditText/List/Dialog/Ringtone preferences
             // to their values. When their values change, their summaries are

@@ -3,10 +3,10 @@
     <!-- Strings related to Settings -->
     <!-- Example General settings -->
     <string name="pref_header_general">General</string>
-    <string name="pref_title_web_server">Enable WebServer - BETA Version</string>
-    <string name="pref_title_socket_server">Enable SocketServer</string>
-    <string name="pref_title_web_server_port">Web Server port</string>
-    <string name="pref_default_web_server_port">7799</string>
-    <string name="pref_title_socket_server_port">Socket Server port</string>
-    <string name="pref_default_socket_server_port">7899</string>
+    <string name="pref_LEDL_maximum">LED Left max</string>
+    <string name="pref_LEDM_maximum">LED Middle max</string>
+    <string name="pref_LEDR_maximum">LED Right max</string>
+    <string name="pref_LEDL_maximum_default">255</string>
+    <string name="pref_LEDM_maximum_default">255</string>
+    <string name="pref_LEDR_maximum_default">255</string>
 </resources>

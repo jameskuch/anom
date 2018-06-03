@@ -1,11 +1,12 @@
 buildscript {
     repositories {
         jcenter()
+        google()
     }
 
     dependencies {
         //classpath 'com.android.tools.build:gradle:+'
-        classpath 'com.android.tools.build:gradle:2.3.3'
+        classpath 'com.android.tools.build:gradle:3.1.2'
     }
 }
 
@@ -16,11 +17,17 @@ repositories {
 }
 
 dependencies {
-    compile 'com.android.support:support-v4:22.1.1'
-    compile 'com.nanohttpd:nanohttpd:2.1.1'
-    compile 'com.nanohttpd:nanohttpd-websocket:2.1.1'
-    compile 'de.greenrobot:eventbus:2.4.0'
-    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha9'
+    //compile 'com.android.support:support-v4:22.1.1'
+    //compile 'com.nanohttpd:nanohttpd:2.1.1'
+    //compile 'com.nanohttpd:nanohttpd-websocket:2.1.1'
+    //compile 'de.greenrobot:eventbus:2.4.0'
+    //compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha9'
+    implementation 'com.android.support:support-v4:22.1.1'
+    implementation 'com.nanohttpd:nanohttpd:2.1.1'
+    implementation 'com.nanohttpd:nanohttpd-websocket:2.1.1'
+    implementation 'de.greenrobot:eventbus:2.4.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.0-alpha9'
+
 }
 
 android {
@@ -31,7 +38,7 @@ android {
 
     compileSdkVersion 22
     //buildToolsVersion "25.0.0"
-    buildToolsVersion '25.0.0'
+
 
     defaultConfig {
         minSdkVersion 14
@@ -62,6 +69,7 @@ android {
         exclude 'META-INF/notice.txt'
         exclude 'LICENSE.txt'
     }
+    buildToolsVersion '27.0.3'
 }
 
 task adbConfig(type: Exec) {
