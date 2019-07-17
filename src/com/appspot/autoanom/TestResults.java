@@ -9,7 +9,7 @@ import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 
 
-public class TestResults_Activity extends Activity {
+public class TestResults extends Activity {
 
 
     @Override

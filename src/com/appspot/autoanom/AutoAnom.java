@@ -1,4 +1,4 @@
-package com.appspot.usbhidterminal;
+package com.appspot.autoanom;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -13,8 +13,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -26,16 +24,16 @@ import android.widget.TextView;
 import java.util.Random;
 
 
-import com.appspot.usbhidterminal.core.Consts;
-import com.appspot.usbhidterminal.core.events.DeviceAttachedEvent;
-import com.appspot.usbhidterminal.core.events.DeviceDetachedEvent;
-import com.appspot.usbhidterminal.core.events.LogMessageEvent;
-import com.appspot.usbhidterminal.core.events.PrepareDevicesListEvent;
-import com.appspot.usbhidterminal.core.events.SelectDeviceEvent;
-import com.appspot.usbhidterminal.core.events.ShowDevicesListEvent;
-import com.appspot.usbhidterminal.core.events.USBDataReceiveEvent;
-import com.appspot.usbhidterminal.core.events.USBDataSendEvent;
-import com.appspot.usbhidterminal.core.services.USBHIDService;
+import com.appspot.autoanom.core.events.DeviceAttachedEvent;
+//import com.appspot.autoanom.core.events.DeviceDetachedEvent;
+//import com.appspot.autoanom.core.events.LogMessageEvent;
+import com.appspot.autoanom.core.events.PrepareDevicesListEvent;
+import com.appspot.autoanom.core.events.SelectDeviceEvent;
+import com.appspot.autoanom.core.events.SelectDeviceFromListEvent;
+//import com.appspot.autoanom.core.events.USBDataReceiveEvent;
+import com.appspot.autoanom.core.events.USBDataSendEvent;
+import com.appspot.autoanom.core.services.USBHIDService;
+import com.appspot.autoanom.core.Consts;
 
 import de.greenrobot.event.EventBus;
 import de.greenrobot.event.EventBusException;
@@ -145,7 +143,7 @@ public class AutoAnom extends Activity implements View.OnClickListener {
                 if (!called1) {
                     called1 = true;
                     eventBus.post(new PrepareDevicesListEvent());
-
+                    eventBus.post(new SelectDeviceEvent(0));
                 }
 
             } else if (millis > 2000) {
@@ -271,21 +269,24 @@ public class AutoAnom extends Activity implements View.OnClickListener {
             interim_value = (double) value * Consts.LED_2_gain;
             value2 = (int) interim_value;
             USBout = "0 " + whichLED + Integer.toString(value2);
-            //txt_inst.setText(USBout);
+            //USBout = whichLED + Integer.toString(value2) + " 0";
+
         } else if (LED == 1) {
             //whichLED = "0 ";
             whichLED = "1 ";
             interim_value = (double) value * Consts.LED_1_gain;
             value2 = (int) interim_value;
             USBout = "0 " + whichLED + Integer.toString(value2);
-            //txt_inst2.setText(USBout);
+            //USBout = whichLED + Integer.toString(value2) + " 0";
+
         } else if (LED == 0) {
             //whichLED = "2 ";
             whichLED = "0 ";
             interim_value = (double) value * Consts.LED_0_gain;
             value2 = (int) interim_value;
             USBout = "0 " + whichLED + Integer.toString(value2);
-            //txt_inst3.setText(USBout);
+            //USBout = whichLED + Integer.toString(value2) + " 0";
+
         }
 
 
@@ -320,15 +321,18 @@ public class AutoAnom extends Activity implements View.OnClickListener {
         //Get the current window
         window = getWindow();
 
+
+
         try {
+
             // To handle the auto
-            Settings.System.putInt(cResolver, Settings.System.SCREEN_BRIGHTNESS_MODE, Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL);
+            //Settings.System.putInt(cResolver, Settings.System.SCREEN_BRIGHTNESS_MODE, Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL);
             //Get the current system brightness
             brightness = Settings.System.getInt(cResolver, Settings.System.SCREEN_BRIGHTNESS);
 
             //brightness = System.getInt(cResolver, Settings.System.SCREEN_BRIGHTNESS);
             //Set the system brightness using the brightness variable value
-            Settings.System.putInt(cResolver, Settings.System.SCREEN_BRIGHTNESS, brightness);
+            //Settings.System.putInt(cResolver, Settings.System.SCREEN_BRIGHTNESS, brightness);
             //Get the current window attributes
             WindowManager.LayoutParams layoutpars = window.getAttributes();
             //Set the brightness of this window
@@ -1483,6 +1487,8 @@ public class AutoAnom extends Activity implements View.OnClickListener {
         SetLED(0, l0);
         SetLED(1, l1);
         SetLED(2, l2);
+
+
         patch_1.setColorFilter(Color.rgb(p1, 255 - p1, 0));
 
         if (Consts.DEBUG_NO_DICHROMATIC_PATCH && separation_of_normals_PA_and_DA_complete && !stimulus_on_patch0_and_patch1[it]) {
@@ -1498,50 +1504,7 @@ public class AutoAnom extends Activity implements View.OnClickListener {
         }
     }
 
-    void showListOfDevices(CharSequence devicesName[]) {
 
-
-        //So here's my thought. I know that when the "prepare Device list Event" is called,
-        //even though I don't know how it all gets back here, this is where we ultimately build the
-        //pop up menu. The "Builder.show" below pops it up.
-
-        //I'm going to select that integer which is 1 or 0...we'll try both and I'm going to try to
-        //automatically set them.
-
-        //it's either a 0 or a 1...don't know yet.
-        if (devicesName.length == 0) {
-            chk_AnomAttached.setChecked(false);
-        } else {
-            eventBus.post(new SelectDeviceEvent(0));
-            chk_AnomAttached.setChecked(true);
-        }
-
-
-    }
-
-    public void onEvent(USBDataReceiveEvent event) {
-        mLog(event.getData() + " \nReceived " + event.getBytesCount() + " bytes", true);
-    }
-
-    public void onEvent(LogMessageEvent event) {
-        mLog(event.getData(), true);
-    }
-
-    public void onEvent(ShowDevicesListEvent event) {
-        showListOfDevices(event.getCharSequenceArray());
-    }
-
-    public void onEvent(DeviceAttachedEvent event) {
-        //startTime = System.currentTimeMillis();
-        //timerHandler.postDelayed(timerRunnable, 0);
-        //called1 = false;
-    }
-
-    public void onEvent(DeviceDetachedEvent event) {
-        //startTime = System.currentTimeMillis();
-        //timerHandler.postDelayed(timerRunnable, 0);
-        //called1 = false;
-    }
 
     @Override
     protected void onStart() {
@@ -1558,73 +1521,6 @@ public class AutoAnom extends Activity implements View.OnClickListener {
         super.onStop();
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.activity_main, menu);
-        setSelectedMenuItemsFromSettings(menu);
-        return true;
-    }
-
-    private void setSelectedMenuItemsFromSettings(Menu menu) {
-        receiveDataFormat = sharedPreferences.getString(Consts.RECEIVE_DATA_FORMAT, Consts.TEXT);
-        //if (receiveDataFormat != null) {
-        //	if (receiveDataFormat.equals(Consts.BINARY)) {
-        //		menu.findItem(R.id.menuSettingsReceiveBinary).setChecked(true);
-        //	} else if (receiveDataFormat.equals(Consts.INTEGER)) {
-        //		menu.findItem(R.id.menuSettingsReceiveInteger).setChecked(true);
-        //	} else if (receiveDataFormat.equals(Consts.HEXADECIMAL)) {
-        //		menu.findItem(R.id.menuSettingsReceiveHexadecimal).setChecked(true);
-        //	} else if (receiveDataFormat.equals(Consts.TEXT)) {
-        //		menu.findItem(R.id.menuSettingsReceiveText).setChecked(true);
-        //	}
-        //}
-
-        //setDelimiter();
-        //if (settingsDelimiter.equals(Consts.DELIMITER_NONE)) {
-        //	menu.findItem(R.id.menuSettingsDelimiterNone).setChecked(true);
-        //} else if (settingsDelimiter.equals(Consts.DELIMITER_NEW_LINE)) {
-        //	menu.findItem(R.id.menuSettingsDelimiterNewLine).setChecked(true);
-        //} else if (settingsDelimiter.equals(Consts.DELIMITER_SPACE)) {
-        //	menu.findItem(R.id.menuSettingsDelimiterSpace).setChecked(true);
-        //}
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        item.setChecked(true);
-        switch (item.getItemId()) {
-            case R.id.menuSettings:
-                Intent i = new Intent(this, SettingsActivity.class);
-                startActivityForResult(i, Consts.RESULT_SETTINGS);
-                break;
-//		case R.id.menuSettingsReceiveBinary:
-//			editor.putString(Consts.RECEIVE_DATA_FORMAT, Consts.BINARY).apply();
-//			break;
-//		case R.id.menuSettingsReceiveInteger:
-//			editor.putString(Consts.RECEIVE_DATA_FORMAT, Consts.INTEGER).apply();
-//			break;
-//		case R.id.menuSettingsReceiveHexadecimal:
-//			editor.putString(Consts.RECEIVE_DATA_FORMAT, Consts.HEXADECIMAL).apply();
-//			break;
-//		case R.id.menuSettingsReceiveText:
-//			editor.putString(Consts.RECEIVE_DATA_FORMAT, Consts.TEXT).apply();
-//			break;
-//		case R.id.menuSettingsDelimiterNone:
-//			editor.putString(Consts.DELIMITER, Consts.DELIMITER_NONE).apply();
-//			break;
-//		case R.id.menuSettingsDelimiterNewLine:
-//			editor.putString(Consts.DELIMITER, Consts.DELIMITER_NEW_LINE).apply();
-//			break;
-//		case R.id.menuSettingsDelimiterSpace:
-//			editor.putString(Consts.DELIMITER, Consts.DELIMITER_SPACE).apply();
-//			break;
-        }
-
-        receiveDataFormat = sharedPreferences.getString(Consts.RECEIVE_DATA_FORMAT, Consts.TEXT);
-        //setDelimiter();
-        return true;
-    }
 
     @Override
     protected void onNewIntent(Intent intent) {
@@ -1643,21 +1539,23 @@ public class AutoAnom extends Activity implements View.OnClickListener {
         }
     }
 
-    private void setDelimiter() {
-        settingsDelimiter = sharedPreferences.getString(Consts.DELIMITER, Consts.DELIMITER_NEW_LINE);
-        if (settingsDelimiter != null) {
-            if (settingsDelimiter.equals(Consts.DELIMITER_NONE)) {
-                delimiter = "";
-            } else if (settingsDelimiter.equals(Consts.DELIMITER_NEW_LINE)) {
-                delimiter = Consts.NEW_LINE;
-            } else if (settingsDelimiter.equals(Consts.DELIMITER_SPACE)) {
-                delimiter = Consts.SPACE;
-            }
+
+    public void onEvent(SelectDeviceFromListEvent event) {
+        CharSequence devicesName[] = event.getCharSequenceArray();
+        if (devicesName.length == 0) {
+            chk_AnomAttached.setChecked(false);
+        } else {
+            eventBus.post(new SelectDeviceEvent(0));
+            chk_AnomAttached.setChecked(true);
         }
-        usbService.setAction(Consts.RECEIVE_DATA_FORMAT);
-        usbService.putExtra(Consts.RECEIVE_DATA_FORMAT, receiveDataFormat);
-        usbService.putExtra(Consts.DELIMITER, delimiter);
-        startService(usbService);
+        //showListOfDevices(event.getCharSequenceArray());
+
+    }
+
+    public void onEvent(DeviceAttachedEvent event) {
+        //startTime = System.currentTimeMillis();
+        //timerHandler.postDelayed(timerRunnable, 0);
+        //called1 = false;
     }
 
     void sendToUSBService(String action) {
@@ -1683,7 +1581,6 @@ public class AutoAnom extends Activity implements View.OnClickListener {
     private void setVersionToTitle() {
         try {
             this.setTitle(Consts.SPACE + this.getTitle() + Consts.SPACE + getPackageManager().getPackageInfo(getPackageName(), 0).versionName);
-            //this.setTitle("Neitz Anomaloscope");
         } catch (NameNotFoundException e) {
             e.printStackTrace();
         }

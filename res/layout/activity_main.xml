@@ -4,37 +4,37 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="start"
+    android:background="#000000"
     android:orientation="horizontal"
     android:windowSoftInputMode="stateHidden"
-    android:background="#000000"
     tools:context=".AutoAnom">
 
 
     <TextView
-        android:textColor="#FFFF00"
+        android:id="@+id/txt_inst2"
         android:layout_width="574dp"
         android:layout_height="43dp"
-        android:id="@+id/txt_inst2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="120dp"
         android:layout_marginStart="15dp"
-        app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginLeft="15dp"
-        android:textSize="18sp"
+        android:layout_marginBottom="120dp"
+        android:gravity="center"
         android:textAlignment="center"
-        android:gravity="center" />
+        android:textColor="#FFFF00"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
     <ImageView
         android:id="@+id/iv_circleC"
         android:layout_width="166dp"
         android:layout_height="166dp"
+        android:layout_marginRight="40dp"
         android:src="#FF0000"
+        app:layout_constraintRight_toRightOf="parent"
         tools:layout_constraintBottom_creator="1"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintRight_creator="1"
-        tools:layout_editor_absoluteY="1dp"
-        android:layout_marginRight="40dp"
-        app:layout_constraintRight_toRightOf="parent">
+        tools:layout_editor_absoluteY="1dp">
 
     </ImageView>
 
@@ -42,163 +42,163 @@
         android:id="@+id/iv_circleB"
         android:layout_width="166dp"
         android:layout_height="166dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="1dp"
         android:src="#FF0000"
+        app:layout_constraintLeft_toRightOf="@+id/iv_circleA"
+        app:layout_constraintRight_toLeftOf="@+id/iv_circleC"
         tools:layout_constraintBottom_creator="1"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintRight_creator="1"
-        tools:layout_editor_absoluteY="1dp"
-        app:layout_constraintLeft_toRightOf="@+id/iv_circleA"
-        android:layout_marginLeft="1dp"
-        app:layout_constraintRight_toLeftOf="@+id/iv_circleC"
-        android:layout_marginRight="1dp">
+        tools:layout_editor_absoluteY="1dp">
 
     </ImageView>
 
     <ImageView
+        android:id="@+id/iv_circleA"
         android:layout_width="166dp"
         android:layout_height="166dp"
-        android:id="@+id/iv_circleA"
+        android:layout_marginLeft="40dp"
         android:src="#FF0000"
+        app:layout_constraintLeft_toLeftOf="parent"
         tools:layout_constraintBottom_creator="1"
         tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="40dp"
         tools:layout_editor_absoluteY="1dp">
 
     </ImageView>
 
     <CheckBox
-        android:text="Anomaloscope Attached"
+        android:id="@+id/chk_USBattached"
         android:layout_width="240dp"
         android:layout_height="46dp"
-        android:textColor="#FFFF00"
-        android:id="@+id/chk_USBattached"
-        app:layout_constraintRight_toRightOf="parent"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/txt_inst5" />
+        android:text="Anomaloscope Attached"
+        android:textColor="#FFFF00"
+        app:layout_constraintBottom_toTopOf="@+id/txt_inst5"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <ImageButton
-        android:src="@drawable/button_onearrow_up"
+        android:id="@+id/btn_0"
         android:layout_width="wrap_content"
         android:layout_height="80dp"
-        android:id="@+id/btn_0"
-        android:background="@null"
         android:layout_marginLeft="90dp"
-        app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginTop="57dp"
+        android:background="@null"
+        android:src="@drawable/button_onearrow_up"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_circleA" />
 
     <ImageButton
         android:id="@+id/btn_1"
         android:layout_width="69dp"
         android:layout_height="69dp"
+        android:layout_marginLeft="182dp"
+        android:layout_marginTop="244dp"
         android:background="@null"
         android:src="@drawable/button_twoarrows_up"
-        android:layout_marginLeft="182dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="244dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:src="@drawable/button_onearrow_up"
+        android:id="@+id/btn_2"
         android:layout_width="wrap_content"
         android:layout_height="80dp"
-        android:id="@+id/btn_2"
-        android:background="@null"
-        android:layout_marginTop="57dp"
-        app:layout_constraintTop_toBottomOf="@+id/iv_circleB"
         android:layout_marginLeft="258dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        android:layout_marginTop="57dp"
+        android:background="@null"
+        android:src="@drawable/button_onearrow_up"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_circleB" />
 
     <ImageButton
-        android:src="@drawable/button_twoarrows_up"
+        android:id="@+id/btn_3"
         android:layout_width="wrap_content"
         android:layout_height="69dp"
-        android:id="@+id/btn_3"
-        android:background="@null"
         android:layout_marginLeft="351dp"
+        android:layout_marginTop="244dp"
+        android:background="@null"
+        android:src="@drawable/button_twoarrows_up"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="244dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:src="@drawable/button_onearrow_up"
+        android:id="@+id/btn_4"
         android:layout_width="0dp"
         android:layout_height="80dp"
-        android:id="@+id/btn_4"
-        android:background="@null"
-        android:layout_marginTop="57dp"
-        app:layout_constraintTop_toBottomOf="@+id/iv_circleC"
         android:layout_marginLeft="427dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        android:layout_marginTop="57dp"
+        android:background="@null"
+        android:src="@drawable/button_onearrow_up"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_circleC" />
 
     <ImageButton
-        android:src="@drawable/button_begintest"
+        android:id="@+id/btn_Begin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btn_Begin"
-        android:background="@null"
         android:layout_marginStart="136dp"
-        app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginLeft="136dp"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        android:background="@null"
+        android:src="@drawable/button_begintest"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
     <TextView
-        android:textColor="#FFFF00"
-        android:layout_width="574dp"
-        android:layout_height="43dp"
         android:id="@+id/txt_inst"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="72dp"
-        android:layout_marginStart="15dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="15dp"
-        android:textSize="18sp"
-        android:textAlignment="center"
-        android:gravity="center"/>
-
-    <TextView
-        android:textColor="#FFFF00"
         android:layout_width="574dp"
         android:layout_height="43dp"
-        android:id="@+id/txt_inst4"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="216dp"
         android:layout_marginStart="15dp"
-        app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginLeft="15dp"
-        android:textSize="18sp"
+        android:layout_marginBottom="72dp"
+        android:gravity="center"
         android:textAlignment="center"
-        android:gravity="center" />
+        android:textColor="#FFFF00"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
     <TextView
+        android:id="@+id/txt_inst4"
+        android:layout_width="574dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="216dp"
+        android:gravity="center"
+        android:textAlignment="center"
         android:textColor="#FFFF00"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_inst5"
         android:layout_width="397dp"
         android:layout_height="42dp"
-        android:id="@+id/txt_inst5"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="264dp"
         android:layout_marginStart="192dp"
-        app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginLeft="192dp"
-        android:textSize="18sp"
+        android:layout_marginBottom="264dp"
+        android:gravity="center"
         android:textAlignment="center"
-        android:gravity="center" />
+        android:textColor="#FFFF00"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
     <TextView
-        android:textColor="#FFFF00"
+        android:id="@+id/txt_inst3"
         android:layout_width="574dp"
         android:layout_height="43dp"
-        android:id="@+id/txt_inst3"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="168dp"
         android:layout_marginStart="15dp"
-        app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginLeft="15dp"
-        android:textSize="18sp"
+        android:layout_marginBottom="168dp"
+        android:gravity="center"
         android:textAlignment="center"
-        android:gravity="center" />
+        android:textColor="#FFFF00"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
 
 </android.support.constraint.ConstraintLayout>

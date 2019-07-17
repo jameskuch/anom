@@ -30,5 +30,5 @@
         android:selectAllOnFocus="true"
         android:singleLine="true"
         android:title="@string/pref_LEDR_maximum" />
-s
+    s
 </PreferenceScreen>

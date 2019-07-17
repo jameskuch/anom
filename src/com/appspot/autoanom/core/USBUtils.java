@@ -1,4 +1,4 @@
-package com.appspot.usbhidterminal.core;
+package com.appspot.autoanom.core;
 
 public class USBUtils {
 

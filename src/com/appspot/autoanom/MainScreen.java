@@ -1,5 +1,6 @@
-package com.appspot.usbhidterminal;
+package com.appspot.autoanom;
 
+import android.Manifest;
 import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
@@ -7,10 +8,12 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 
 public class MainScreen extends Activity implements View.OnClickListener {
+
+
+
 
     long startTime = 0;
     int numberofPresses = 0;
@@ -50,6 +53,7 @@ public class MainScreen extends Activity implements View.OnClickListener {
         btn_RetestSubject.setOnClickListener(this);
         //txtNumPresses = (TextView) findViewById(R.id.txtNumPresses);
 
+
     }
 
     public void onClick(View v) {
@@ -67,12 +71,14 @@ public class MainScreen extends Activity implements View.OnClickListener {
             numberofPresses += 1;
             //txtNumPresses.setText(Integer.toString(numberofPresses));
             if (numberofPresses >= 5) {
-                Intent k = new Intent(this, SettingsActivity.class);
+                Intent k = new Intent(this, Settings.class);
                 startActivity(k);
 
             }
         } else if (v == btn_NewSubject) {
-            Intent k = new Intent(this, TestResults_Activity.class);
+
+
+            Intent k = new Intent(this, AutoAnom.class);
             startActivity(k);
 
         } else if (v == btn_RetestSubject) {

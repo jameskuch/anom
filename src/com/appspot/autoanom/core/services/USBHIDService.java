@@ -1,4 +1,4 @@
-package com.appspot.usbhidterminal.core.services;
+package com.appspot.autoanom.core.services;
 
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -6,12 +6,12 @@ import android.content.Intent;
 import android.hardware.usb.UsbDevice;
 import android.support.v4.app.NotificationCompat;
 
-import com.appspot.usbhidterminal.R;
-import com.appspot.usbhidterminal.AutoAnom;
-import com.appspot.usbhidterminal.core.Consts;
-import com.appspot.usbhidterminal.core.USBUtils;
-import com.appspot.usbhidterminal.core.events.LogMessageEvent;
-import com.appspot.usbhidterminal.core.events.USBDataReceiveEvent;
+import com.appspot.autoanom.R;
+import com.appspot.autoanom.AutoAnom;
+import com.appspot.autoanom.core.Consts;
+import com.appspot.autoanom.core.USBUtils;
+import com.appspot.autoanom.core.events.LogMessageEvent;
+import com.appspot.autoanom.core.events.USBDataReceiveEvent;
 
 public class USBHIDService extends AbstractUSBHIDService {
 
@@ -79,26 +79,26 @@ public class USBHIDService extends AbstractUSBHIDService {
     @Override
     public void onUSBDataReceive(byte[] buffer) {
 
-        StringBuilder stringBuilder = new StringBuilder();
-        int i = 0;
-        if (receiveDataFormat.equals(Consts.INTEGER)) {
-            for (; i < buffer.length && buffer[i] != 0; i++) {
-                stringBuilder.append(delimiter).append(String.valueOf(USBUtils.toInt(buffer[i])));
-            }
-        } else if (receiveDataFormat.equals(Consts.HEXADECIMAL)) {
-            for (; i < buffer.length && buffer[i] != 0; i++) {
-                stringBuilder.append(delimiter).append(Integer.toHexString(buffer[i]));
-            }
-        } else if (receiveDataFormat.equals(Consts.TEXT)) {
-            for (; i < buffer.length && buffer[i] != 0; i++) {
-                stringBuilder.append(String.valueOf((char) buffer[i]));
-            }
-        } else if (receiveDataFormat.equals(Consts.BINARY)) {
-            for (; i < buffer.length && buffer[i] != 0; i++) {
-                stringBuilder.append(delimiter).append("0b").append(Integer.toBinaryString(Integer.valueOf(buffer[i])));
-            }
-        }
-        eventBus.post(new USBDataReceiveEvent(stringBuilder.toString(), i));
+//        StringBuilder stringBuilder = new StringBuilder();
+//        int i = 0;
+//        if (receiveDataFormat.equals(Consts.INTEGER)) {
+//            for (; i < buffer.length && buffer[i] != 0; i++) {
+//                stringBuilder.append(delimiter).append(String.valueOf(USBUtils.toInt(buffer[i])));
+//            }
+//        } else if (receiveDataFormat.equals(Consts.HEXADECIMAL)) {
+//            for (; i < buffer.length && buffer[i] != 0; i++) {
+//                stringBuilder.append(delimiter).append(Integer.toHexString(buffer[i]));
+//            }
+//        } else if (receiveDataFormat.equals(Consts.TEXT)) {
+//            for (; i < buffer.length && buffer[i] != 0; i++) {
+//                stringBuilder.append(String.valueOf((char) buffer[i]));
+//            }
+//        } else if (receiveDataFormat.equals(Consts.BINARY)) {
+//            for (; i < buffer.length && buffer[i] != 0; i++) {
+//                stringBuilder.append(delimiter).append("0b").append(Integer.toBinaryString(Integer.valueOf(buffer[i])));
+//            }
+//        }
+//        eventBus.post(new USBDataReceiveEvent(stringBuilder.toString(), i));
     }
 
     private void mLog(String log) {

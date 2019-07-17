@@ -1,4 +1,4 @@
-package com.appspot.usbhidterminal.core.services;
+package com.appspot.autoanom.core.services;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -19,14 +19,14 @@ import android.os.Handler;
 import android.os.IBinder;
 import android.util.Log;
 
-import com.appspot.usbhidterminal.core.Consts;
-import com.appspot.usbhidterminal.core.USBUtils;
-import com.appspot.usbhidterminal.core.events.DeviceAttachedEvent;
-import com.appspot.usbhidterminal.core.events.DeviceDetachedEvent;
-import com.appspot.usbhidterminal.core.events.PrepareDevicesListEvent;
-import com.appspot.usbhidterminal.core.events.SelectDeviceEvent;
-import com.appspot.usbhidterminal.core.events.ShowDevicesListEvent;
-import com.appspot.usbhidterminal.core.events.USBDataSendEvent;
+import com.appspot.autoanom.core.Consts;
+import com.appspot.autoanom.core.USBUtils;
+import com.appspot.autoanom.core.events.DeviceAttachedEvent;
+import com.appspot.autoanom.core.events.DeviceDetachedEvent;
+import com.appspot.autoanom.core.events.PrepareDevicesListEvent;
+import com.appspot.autoanom.core.events.SelectDeviceEvent;
+import com.appspot.autoanom.core.events.SelectDeviceFromListEvent;
+import com.appspot.autoanom.core.events.USBDataSendEvent;
 
 import de.greenrobot.event.EventBus;
 
@@ -161,7 +161,7 @@ public abstract class AbstractUSBHIDService extends Service {
         }
         final CharSequence devicesName[] = new CharSequence[mUsbManager.getDeviceList().size()];
         list.toArray(devicesName);
-        eventBus.post(new ShowDevicesListEvent(devicesName));
+        eventBus.post(new SelectDeviceFromListEvent(devicesName));
     }
 
     private void sendData(String data, boolean sendAsString) {
@@ -171,7 +171,7 @@ public abstract class AbstractUSBHIDService extends Service {
             byte[] out = data.getBytes();// UTF-16LE
             // Charset.forName("UTF-16")
             onUSBDataSending(data);
-            if (sendAsString) {
+            if (true) {
                 try {
                     String str[] = data.split("[\\s]");
                     out = new byte[str.length];

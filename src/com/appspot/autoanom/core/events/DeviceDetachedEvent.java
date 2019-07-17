@@ -1,4 +1,4 @@
-package com.appspot.usbhidterminal.core.events;
+package com.appspot.autoanom.core.events;
 
 public class DeviceDetachedEvent {
 }

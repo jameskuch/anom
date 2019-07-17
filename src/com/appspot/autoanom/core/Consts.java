@@ -1,4 +1,4 @@
-package com.appspot.usbhidterminal.core;
+package com.appspot.autoanom.core;
 
 public abstract class Consts {
     public static final String BINARY = "binary";

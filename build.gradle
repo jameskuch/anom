@@ -61,7 +61,7 @@ android {
 
 
     defaultConfig {
-        minSdkVersion 14
+        minSdkVersion 23
         //targetSdkVersion 22
         targetSdkVersion 27
     }
@@ -73,8 +73,8 @@ android {
             res.srcDirs = ['res']
             assets.srcDirs = ['assets']
         }
-        androidTest.setRoot('tests')
-        androidTest.java.srcDirs = ['tests/src']
+        //androidTest.setRoot('tests')
+        //androidTest.java.srcDirs = ['tests/src']
     }
 
     packagingOptions {

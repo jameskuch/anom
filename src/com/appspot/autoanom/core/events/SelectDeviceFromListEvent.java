@@ -1,10 +1,10 @@
-package com.appspot.usbhidterminal.core.events;
+package com.appspot.autoanom.core.events;
 
-public class ShowDevicesListEvent {
+public class SelectDeviceFromListEvent {
 
     private final CharSequence devicesName[];
 
-    public ShowDevicesListEvent(CharSequence devicesName[]) {
+    public SelectDeviceFromListEvent(CharSequence devicesName[]) {
         this.devicesName = devicesName;
     }
 
