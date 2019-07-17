@@ -1,4 +1,4 @@
-package com.appspot.usbhidterminal;
+package com.appspot.autoanom;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -32,95 +32,6 @@ public class SettingsActivity extends PreferenceActivity {
      * shown on tablets.
      */
     private static final boolean ALWAYS_SIMPLE_PREFS = false;
-
-
-    @Override
-    protected void onPostCreate(Bundle savedInstanceState) {
-        super.onPostCreate(savedInstanceState);
-        setupSimplePreferencesScreen();
-    }
-
-    /**
-     * Shows the simplified settings UI if the device configuration if the
-     * device configuration dictates that a simplified, single-pane UI should be
-     * shown.
-     */
-    private void setupSimplePreferencesScreen() {
-        if (!isSimplePreferences(this)) {
-            return;
-        }
-
-        // In the simplified UI, fragments are not used at all and we instead
-        // use the older PreferenceActivity APIs.
-
-
-
-
-
-        // Add 'general' preferences.
-        addPreferencesFromResource(R.xml.pref_general);
-
-
-
-
-
-        // Bind the summaries of EditText/List/Dialog/Ringtone preferences to
-        // their values. When their values change, their summaries are updated
-        // to reflect the new value, per the Android Design guidelines.
-        //bindPreferenceSummaryToValue(findPreference("web_server_port"));
-        //bindPreferenceSummaryToValue(findPreference("socket_server_port"));
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public boolean onIsMultiPane() {
-        return isXLargeTablet(this) && !isSimplePreferences(this);
-    }
-
-    /**
-     * Helper method to determine if the device has an extra-large screen. For
-     * example, 10" tablets are extra-large.
-     */
-    private static boolean isXLargeTablet(Context context) {
-        return (context.getResources().getConfiguration().screenLayout
-                & Configuration.SCREENLAYOUT_SIZE_MASK) >= Configuration.SCREENLAYOUT_SIZE_XLARGE;
-    }
-
-    /**
-     * Determines whether the simplified settings UI should be shown. This is
-     * true if this is forced via {@link #ALWAYS_SIMPLE_PREFS}, or the device
-     * doesn't have newer APIs like {@link PreferenceFragment}, or the device
-     * doesn't have an extra-large screen. In these cases, a single-pane
-     * "simplified" settings UI should be shown.
-     */
-    private static boolean isSimplePreferences(Context context) {
-        return ALWAYS_SIMPLE_PREFS
-                || Build.VERSION.SDK_INT < Build.VERSION_CODES.HONEYCOMB
-                || !isXLargeTablet(context);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
-    public void onBuildHeaders(List<Header> target) {
-        if (!isSimplePreferences(this)) {
-
-
-
-
-            loadHeadersFromResource(R.xml.pref_headers, target);
-
-
-
-
-
-        }
-    }
-
     /**
      * A preference value change listener that updates the preference's summary
      * to reflect its new value.
@@ -152,6 +63,28 @@ public class SettingsActivity extends PreferenceActivity {
     };
 
     /**
+     * Helper method to determine if the device has an extra-large screen. For
+     * example, 10" tablets are extra-large.
+     */
+    private static boolean isXLargeTablet(Context context) {
+        return (context.getResources().getConfiguration().screenLayout
+                & Configuration.SCREENLAYOUT_SIZE_MASK) >= Configuration.SCREENLAYOUT_SIZE_XLARGE;
+    }
+
+    /**
+     * Determines whether the simplified settings UI should be shown. This is
+     * true if this is forced via {@link #ALWAYS_SIMPLE_PREFS}, or the device
+     * doesn't have newer APIs like {@link PreferenceFragment}, or the device
+     * doesn't have an extra-large screen. In these cases, a single-pane
+     * "simplified" settings UI should be shown.
+     */
+    private static boolean isSimplePreferences(Context context) {
+        return ALWAYS_SIMPLE_PREFS
+                || Build.VERSION.SDK_INT < Build.VERSION_CODES.HONEYCOMB
+                || !isXLargeTablet(context);
+    }
+
+    /**
      * Binds a preference's summary to its value. More specifically, when the
      * preference's value is changed, its summary (line of text below the
      * preference title) is updated to reflect the value. The summary is also
@@ -172,6 +105,60 @@ public class SettingsActivity extends PreferenceActivity {
                         .getString(preference.getKey(), ""));
     }
 
+    @Override
+    protected void onPostCreate(Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+        setupSimplePreferencesScreen();
+    }
+
+    /**
+     * Shows the simplified settings UI if the device configuration if the
+     * device configuration dictates that a simplified, single-pane UI should be
+     * shown.
+     */
+    private void setupSimplePreferencesScreen() {
+        if (!isSimplePreferences(this)) {
+            return;
+        }
+
+        // In the simplified UI, fragments are not used at all and we instead
+        // use the older PreferenceActivity APIs.
+
+
+        // Add 'general' preferences.
+        addPreferencesFromResource(R.xml.pref_general);
+
+
+        // Bind the summaries of EditText/List/Dialog/Ringtone preferences to
+        // their values. When their values change, their summaries are updated
+        // to reflect the new value, per the Android Design guidelines.
+        //bindPreferenceSummaryToValue(findPreference("web_server_port"));
+        //bindPreferenceSummaryToValue(findPreference("socket_server_port"));
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public boolean onIsMultiPane() {
+        return isXLargeTablet(this) && !isSimplePreferences(this);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+    public void onBuildHeaders(List<Header> target) {
+        if (!isSimplePreferences(this)) {
+
+
+            loadHeadersFromResource(R.xml.pref_headers, target);
+
+
+        }
+    }
+
     /**
      * This fragment shows general preferences only. It is used when the
      * activity is showing a two-pane settings UI.
@@ -183,12 +170,7 @@ public class SettingsActivity extends PreferenceActivity {
             super.onCreate(savedInstanceState);
 
 
-
-
-
             addPreferencesFromResource(R.xml.pref_general);
-
-
 
 
             // Bind the summaries of EditText/List/Dialog/Ringtone preferences

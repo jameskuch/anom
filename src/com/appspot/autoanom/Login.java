@@ -1,4 +1,4 @@
-package com.appspot.usbhidterminal;
+package com.appspot.autoanom;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -37,7 +37,7 @@ import static android.Manifest.permission.READ_CONTACTS;
 /**
  * A login screen that offers login via email/password.
  */
-public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
+public class Login extends Activity implements LoaderCallbacks<Cursor> {
 
     /**
      * Id to identity READ_CONTACTS permission request.

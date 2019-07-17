@@ -1,20 +1,15 @@
-package com.appspot.usbhidterminal;
-
+package com.appspot.autoanom;
 
 
 import android.os.Bundle;
 import android.app.Activity;
+
 import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 
 
-
 public class TestResults_Activity extends Activity {
-
-
-
-
 
 
     @Override
@@ -23,7 +18,7 @@ public class TestResults_Activity extends Activity {
         setContentView(R.layout.activity_test_results_);
 
         GraphView graph = (GraphView) findViewById(R.id.graph1);
-        LineGraphSeries<DataPoint> series = new LineGraphSeries<>(new DataPoint[] {
+        LineGraphSeries<DataPoint> series = new LineGraphSeries<>(new DataPoint[]{
                 new DataPoint(0, 1),
                 new DataPoint(1, 5),
                 new DataPoint(2, 3),

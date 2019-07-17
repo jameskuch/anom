@@ -10,23 +10,15 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
-public class MainScreen extends Activity implements View.OnClickListener{
-
-    //
-    private ImageButton btn_NewSubject;
-    private ImageButton btn_RetestSubject;
-    private ImageView toHiddenSettings;
+public class MainScreen extends Activity implements View.OnClickListener {
 
     long startTime = 0;
     int numberofPresses = 0;
-
     Handler timerMoveToHiddenSettings_handler = new Handler();
-    Runnable timerMoveToHiddenSettings_runnable = new Runnable()
-    {
+    Runnable timerMoveToHiddenSettings_runnable = new Runnable() {
         @Override
         public void run() {
             long millis = System.currentTimeMillis() - startTime;
-
 
 
             timerMoveToHiddenSettings_handler.postDelayed(this, 25);
@@ -36,6 +28,10 @@ public class MainScreen extends Activity implements View.OnClickListener{
             }
         }
     };
+    //
+    private ImageButton btn_NewSubject;
+    private ImageButton btn_RetestSubject;
+    private ImageView toHiddenSettings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,8 +40,7 @@ public class MainScreen extends Activity implements View.OnClickListener{
         initUI();
     }
 
-    private void initUI()
-    {
+    private void initUI() {
         toHiddenSettings = (ImageView) findViewById(R.id.ToHiddenSettings);
         toHiddenSettings.setOnClickListener(this);
 
@@ -71,21 +66,16 @@ public class MainScreen extends Activity implements View.OnClickListener{
             // increment the number of presses
             numberofPresses += 1;
             //txtNumPresses.setText(Integer.toString(numberofPresses));
-            if (numberofPresses >= 5)
-            {
+            if (numberofPresses >= 5) {
                 Intent k = new Intent(this, SettingsActivity.class);
                 startActivity(k);
 
             }
-        }
-        else if (v == btn_NewSubject)
-        {
+        } else if (v == btn_NewSubject) {
             Intent k = new Intent(this, TestResults_Activity.class);
             startActivity(k);
 
-        }
-        else if (v == btn_RetestSubject)
-        {
+        } else if (v == btn_RetestSubject) {
 
         }
     }
