@@ -11,6 +11,7 @@ import android.content.pm.PackageManager.NameNotFoundException;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.SystemClock;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.view.View;
@@ -107,7 +108,9 @@ public class AutoAnom extends Activity implements View.OnClickListener {
             //txt_TimerView.setText(String.format("%d:%02d", minutes, seconds));
             timerHandler3.postDelayed(this, 0);
             SetLED(0, sin0[(int) millis]);
+            SystemClock.sleep(100);
             SetLED(1, sin1[(int) millis]);
+            SystemClock.sleep(100);
             SetLED(2, sin2[(int) millis]);
             if (millis > 1000) {
                 startTime3 = System.currentTimeMillis();
@@ -115,6 +118,7 @@ public class AutoAnom extends Activity implements View.OnClickListener {
 
         }
     };
+
     private boolean called0 = false;
     private boolean called1 = false;
     Runnable timerRunnable = new Runnable() {
@@ -253,38 +257,31 @@ public class AutoAnom extends Activity implements View.OnClickListener {
 
     private void SetLED(int LED, int value) {
         String USBout = "";
-        String whichLED = "";
         double interim_value = 0.0;
         int value2 = 0;
 
         // left, position 0 is LED 0
         // middle, position 1 is LED 1
         // right, position 2 is LED 2
-        // 2 is position 1
-        // 1 is position 0
-        // 1 is position 2
+        // 2 is position right
+        // 1 is position middle
+        // 0 is position left
         if (LED == 2) {
-            //whichLED = "1 ";
-            whichLED = "2 ";
             interim_value = (double) value * Consts.LED_2_gain;
             value2 = (int) interim_value;
-            USBout = "0 " + whichLED + Integer.toString(value2);
+            USBout = "0 " + LED + " " + value2;
             //USBout = whichLED + Integer.toString(value2) + " 0";
 
         } else if (LED == 1) {
-            //whichLED = "0 ";
-            whichLED = "1 ";
             interim_value = (double) value * Consts.LED_1_gain;
             value2 = (int) interim_value;
-            USBout = "0 " + whichLED + Integer.toString(value2);
+            USBout = "0 " + LED + " " + value2;
             //USBout = whichLED + Integer.toString(value2) + " 0";
 
         } else if (LED == 0) {
-            //whichLED = "2 ";
-            whichLED = "0 ";
             interim_value = (double) value * Consts.LED_0_gain;
             value2 = (int) interim_value;
-            USBout = "0 " + whichLED + Integer.toString(value2);
+            USBout = "0 " + LED + " " + value2;
             //USBout = whichLED + Integer.toString(value2) + " 0";
 
         }
@@ -1485,9 +1482,11 @@ public class AutoAnom extends Activity implements View.OnClickListener {
         //txt_inst4.setText(Integer.toString(temp));
         //temp++;
         SetLED(0, l0);
+        SystemClock.sleep(500);
         SetLED(1, l1);
+        SystemClock.sleep(500);
         SetLED(2, l2);
-
+        SystemClock.sleep(500);
 
         patch_1.setColorFilter(Color.rgb(p1, 255 - p1, 0));
 

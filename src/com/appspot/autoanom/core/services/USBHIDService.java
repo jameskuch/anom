@@ -64,7 +64,7 @@ public class USBHIDService extends AbstractUSBHIDService {
     }
 
     @Override
-    public void onUSBDataSended(int status, byte[] out) {
+    public void onUSBDataSent(int status, byte[] out) {
         mLog("Sended " + status + " bytes");
         for (int i = 0; i < out.length && out[i] != 0; i++) {
             mLog(Consts.SPACE + USBUtils.toInt(out[i]));

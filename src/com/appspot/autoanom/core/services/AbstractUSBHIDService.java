@@ -84,8 +84,10 @@ public abstract class AbstractUSBHIDService extends Service {
                     connection.claimInterface(intf, true);
                 }
                 try {
+                    //if (UsbConstants.USB_DIR_OUT == intf.getEndpoint(1).getDirection()) {
                     if (UsbConstants.USB_DIR_OUT == intf.getEndpoint(1).getDirection()) {
-                        endPointWrite = intf.getEndpoint(1);
+                            //endPointWrite = intf.getEndpoint(1);
+                            endPointWrite = intf.getEndpoint(1);
                     }
                 } catch (Exception e) {
                     Log.e("endPointWrite", "Device have no endPointWrite", e);
@@ -169,21 +171,21 @@ public abstract class AbstractUSBHIDService extends Service {
             // mLog(connection +"\n"+ device +"\n"+ request +"\n"+
             // packetSize);
             byte[] out = data.getBytes();// UTF-16LE
+            //byte[] out = new byte[3];
             // Charset.forName("UTF-16")
             onUSBDataSending(data);
-            if (true) {
-                try {
-                    String str[] = data.split("[\\s]");
-                    out = new byte[str.length];
-                    for (int i = 0; i < str.length; i++) {
-                        out[i] = USBUtils.toByte(Integer.decode(str[i]));
-                    }
-                } catch (Exception e) {
-                    onSendingError(e);
+
+            try {
+                String str[] = data.split("[\\s]");
+                for (int i = 0; i < 3; i++) {
+                    out[i] = USBUtils.toByte(Integer.decode(str[i]));
                 }
+            } catch (Exception e) {
+                onSendingError(e);
             }
-            int status = connection.bulkTransfer(endPointWrite, out, out.length, 250);
-            onUSBDataSended(status, out);
+
+            int status = connection.bulkTransfer(endPointWrite, out, 3, 250);
+            onUSBDataSent(status, out);
         }
     }
 
@@ -209,7 +211,7 @@ public abstract class AbstractUSBHIDService extends Service {
     public void onUSBDataSending(String data) {
     }
 
-    public void onUSBDataSended(int status, byte[] out) {
+    public void onUSBDataSent(int status, byte[] out) {
     }
 
     public void onSendingError(Exception e) {
