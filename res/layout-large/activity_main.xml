@@ -27,7 +27,7 @@
     <ImageView
         android:id="@+id/iv_circleC"
         android:layout_width="166dp"
-        android:layout_height="166dp"
+        android:layout_height="220dp"
         android:layout_marginRight="40dp"
         android:src="#FF0000"
         app:layout_constraintRight_toRightOf="parent"
@@ -41,7 +41,7 @@
     <ImageView
         android:id="@+id/iv_circleB"
         android:layout_width="166dp"
-        android:layout_height="166dp"
+        android:layout_height="220dp"
         android:layout_marginLeft="1dp"
         android:layout_marginRight="1dp"
         android:src="#FF0000"
@@ -57,7 +57,7 @@
     <ImageView
         android:id="@+id/iv_circleA"
         android:layout_width="166dp"
-        android:layout_height="166dp"
+        android:layout_height="220dp"
         android:layout_marginLeft="40dp"
         android:src="#FF0000"
         app:layout_constraintLeft_toLeftOf="parent"
